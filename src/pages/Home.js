@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className='App'>
       <header className='App-header'>
-        <img src={'/assets/logo.png'} className='App-logo' alt='logo' />
+        <img src={'/assets/images/logo.png'} className='App-logo' alt='logo' />
         <div className='content'>
           <p>Crithm is a small company.</p>
           <p id='subtitle'>This website is on development.</p>
