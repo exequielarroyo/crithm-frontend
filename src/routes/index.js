@@ -10,8 +10,8 @@ const Router = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='defaults' element={<Default />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Default />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
