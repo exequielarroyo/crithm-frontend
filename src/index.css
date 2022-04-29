@@ -11,5 +11,5 @@ code {
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/assets/fonts/SFPRODISPLAYREGULAR.OTF');
+  src: url('../public/assets/fonts/SFPRODISPLAYREGULAR.OTF');
 }
