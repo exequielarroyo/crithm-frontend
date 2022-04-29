@@ -18,6 +18,15 @@ const Home = () => {
           Learn React
         </a> */}
       </header>
+      <section>
+        <div className='slogan-container'>
+          <div className='slogan'>Better designs and functions ready for the future</div>
+          <div className='slogan2'>
+            We are a Web Solutions and Digital Marketing company that specializes in developing cutting-edge software solutions. We assist corporate clients in
+            untangling complicated issues that arise frequently along their digital transformation journey.
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
