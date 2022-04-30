@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from '../components/Card';
 
 const Home = () => {
   return (
@@ -26,6 +27,13 @@ const Home = () => {
             untangling complicated issues that arise frequently along their digital transformation journey.
           </div>
         </div>
+
+        <Card
+        content={
+          'Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions.'
+        }
+        button={'Learn More'}
+        img={'👌'}></Card>
       </section>
     </div>
   );
