@@ -49,10 +49,29 @@ p#subtitle {
     transform: rotate(360deg);
   }
 }
+/* ------------------------------ */
+body {
+  background-color: #0d1634;
+}
+.ellipse {
+  position: absolute;
+  width: 639px;
+  height: 639px;
+  left: 1419px;
+  top: -353px;
 
+  background: linear-gradient(
+    130.6deg,
+    #05f598 11.45%,
+    #04e1f7 58.43%,
+    #2a7bf1 105.41%
+  );
+  opacity: 0.6;
+  filter: blur(100px);
+}
 /* ------------------------------ */
 
-.button {
+.lm_button {
   /* button */
   color: white;
 
@@ -100,7 +119,11 @@ p#subtitle {
   left: 0px;
   top: 0px;
 
-  background: linear-gradient(126deg, rgba(38, 129, 235, 0.4) 12.7%, rgba(25, 45, 106, 0.4) 83.5%);
+  background: linear-gradient(
+    126deg,
+    rgba(38, 129, 235, 0.4) 12.7%,
+    rgba(25, 45, 106, 0.4) 83.5%
+  );
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
 
@@ -114,7 +137,7 @@ p#subtitle {
   margin: 0px 95px;
 }
 
-.Card {
+.LMCard {
   /* Auto layout */
 
   display: flex;
@@ -128,21 +151,7 @@ p#subtitle {
   left: 328px;
   top: 366px;
 }
-body {
-  background-color: #0d1634;
-}
-.ellipse {
-  position: absolute;
-  width: 639px;
-  height: 639px;
-  left: 1419px;
-  top: -353px;
-
-  background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
-  opacity: 0.6;
-  filter: blur(100px);
-}
-.img {
+.lm_img {
   /* icon */
   font-size: 40px;
 
@@ -172,7 +181,7 @@ body {
   flex-grow: 0;
   margin: 22px 0px;
 }
-.content {
+.lm_content {
   /* Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions. */
 
   position: static;
@@ -181,7 +190,7 @@ body {
   left: 0px;
   top: 82px;
 
-  font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -196,34 +205,186 @@ body {
   flex-grow: 0;
   margin: 22px 0px;
 }
-.lm1 {
-  /* Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions. */
+/* -------------------------- */
+.ProcessCard {
+  /* card */
+
+  border: 1px solid;
+
+  border-image-source: radial-gradient(
+        61.01% 61.01% at 96.95% 100%,
+        rgba(255, 255, 255, 0.41) 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        53.67% 86.38% at 0% 9.17%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  position: absolute;
+  width: 1347px;
+  height: 143px;
+  left: 305px;
+  top: 273px;
+
+  background: linear-gradient(
+    126deg,
+    rgba(38, 129, 235, 0.1) 12.7%,
+    rgba(25, 45, 106, 0.1) 83.5%
+  );
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+.p_content {
+  /* Step 1 | Mapping week 1 The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project Registration From (PRF), the team will have the rough idea on what the client wants. */
 
   position: static;
-  width: 276px;
-  height: 144px;
-  left: 0px;
-  top: 82px;
+  width: 1299px;
+  height: 95px;
+  left: 24px;
+  top: 24px;
 
-  font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 150%;
+  /* or 36px */
 
   color: #ffffff;
 
   /* Inside auto layout */
 
   flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 22px 0px;
+  order: 0;
+  flex-grow: 1;
+  margin: 0px 10px;
 }
+/* --------------------- */
+.PricingCard{
+ /* rectangle glass */
 
+
+position: absolute;
+width: 401.21px;
+height: 553.31px;
+left: 190.17px;
+top: 277.02px;
+
+background: linear-gradient(126deg, rgba(1, 118, 255, 0.4) 45.52%, rgba(25, 45, 106, 0.4) 83.5%);
+backdrop-filter: blur(40px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 16px;
+}
+.PriceCard{
+  /* Frame 24 */
+
+
+position: absolute;
+width: 447.01px;
+height: 553.31px;
+left: 190.17px;
+top: 277.02px;
+
+}
+.pri_card{
+/* Android/IOS */
+
+
+position: absolute;
+width: 333.96px;
+height: 73.52px;
+left: 213.94px;
+top: 312.95px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.pri_card1{
+/* $ 400 */
+
+
+position: absolute;
+width: 309.31px;
+height: 49.01px;
+left: 327.86px;
+top: 402.77px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 43px;
+
+color: #FFFFFF;
+
+}
+.pri_card2{
+/* Price may vary depending on the features and complexity of the system. */
+
+
+position: absolute;
+width: 301px;
+height: 73px;
+left: 231px;
+top: 502px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFCFC;
+
+mix-blend-mode: normal;
+}
+.pri_card3{
+/* Examples: Social Media Apps GPS */
+
+
+position: absolute;
+width: 301.15px;
+height: 35.03px;
+left: 230.78px;
+top: 630.02px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFCFC;
+
+mix-blend-mode: normal;
+}
+/* -------------------------- */
 .navbar {
   position: sticky;
-  font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
   top: 0;
   width: 100%;
   background-color: #04e3f738;
@@ -248,7 +409,12 @@ body {
   left: 156px;
   top: 161px;
 
-  background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
+  background: linear-gradient(
+    130.6deg,
+    #05f598 11.45%,
+    #04e1f7 58.43%,
+    #2a7bf1 105.41%
+  );
   opacity: 0.6;
   filter: blur(100px);
 }
@@ -281,7 +447,7 @@ body {
   /* left: 177px; */
   /* top: 203px; */
 
-  font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
@@ -298,7 +464,7 @@ body {
   /* left: 995px; */
   /* top: 203px; */
 
-  font-family: 'SF Pro Display';
+  font-family: "SF Pro Display";
   font-style: normal;
   text-align: left;
   font-weight: 400;
