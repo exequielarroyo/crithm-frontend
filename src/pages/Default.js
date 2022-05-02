@@ -1,6 +1,5 @@
 import React from "react";
 import LMCard from "../components/LMCard";
-import Button from "../components/Button";
 import ProCard from "../components/ProCard";
 import PriceCard from "../components/PriceCard";
 
