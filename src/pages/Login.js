@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { AuthContext } from '../helpers/Protected';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
+import useAuth from '../hooks/useAuth';
 
 const Login = () => {
-  const { auth, setAuth } = useContext(AuthContext);
+  const { auth, setAuth } = useAuth();
 
   const userRef = useRef();
   const errorRef = useRef();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('awdawdwad');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     userRef.current.focus();

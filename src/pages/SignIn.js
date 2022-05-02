@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { AuthContext } from '../helpers/Protected';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const SignIn = () => {
   const initialValues = {
@@ -10,7 +10,7 @@ const SignIn = () => {
     password: '',
   };
 
-  const { setAuth } = useContext(AuthContext);
+  const { setAuth } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
