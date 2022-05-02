@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Protected, { AuthProvider } from '../helpers/Protected';
+import { AuthProvider, Protected } from '../helpers/Protected';
 // pages
 import Home from '../pages/Home';
 import Default from '../pages/Default';

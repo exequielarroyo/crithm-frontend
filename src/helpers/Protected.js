@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   return <AuthContext.Provider value={{ auth, setAuth }}>{children}</AuthContext.Provider>;
 };
 
-export default function Protected({ children, roles }) {
+export function Protected({ children, roles }) {
   const { auth } = useContext(AuthContext);
   const location = useLocation();
 
