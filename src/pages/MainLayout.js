@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
   return (
@@ -23,14 +23,19 @@ const MainLayout = () => {
             <div className='collapse navbar-collapse navv' id='navbarNav'>
               <ul className='navbar-nav'>
                 <li className='nav-item'>
-                  <a className='nav-link active' aria-current='page' href='/'>
+                  <Link className='nav-link active' to='/'>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='/'>
+                  <Link className='nav-link' to={'/dashboard'}>
                     Creative Software
-                  </a>
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to={'/defaults'}>
+                    Defaults
+                  </Link>
                 </li>
                 <li className='nav-item'>
                   <a className='nav-link' href='/'>

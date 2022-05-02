@@ -22,28 +22,19 @@ const Router = () => {
           <Routes>
             <Route path='/' element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route
-                path='defaults'
-                element={
-                  <Protected>
-                    <Default />
-                  </Protected>
-                }
-              />
+              <Route element={<Protected />}>
+                <Route path='defaults' element={<Default />} />
+              </Route>
               <Route path='about' element={<About />} />
             </Route>
 
             <Route path='signup' element={<SignUp />} />
             <Route path='signin' element={<Login />} />
 
-            <Route
-              path='dashboard'
-              element={
-                <Protected>
-                  <DashboardLayout />
-                </Protected>
-              }>
-              <Route path='project' element={<Project />} />
+            <Route element={<Protected />}>
+              <Route path='dashboard' element={<DashboardLayout />}>
+                <Route index element={<Project />} />
+              </Route>
             </Route>
 
             <Route path='*' element={<NotFound />} />

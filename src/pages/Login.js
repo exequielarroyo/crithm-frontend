@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { auth, setAuth } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   const userRef = useRef();
   const errorRef = useRef();
@@ -24,8 +28,12 @@ const Login = () => {
     e.preventDefault();
 
     axios.post(`${process.env.REACT_APP_URL}/auth`, { email, password }).then((res) => {
-      if (!res.data.error) setAuth(res.data);
-      else {
+      if (!res.data.error) {
+        setAuth(res.data);
+        setEmail('');
+        setPassword('');
+        navigate(from, { replace: true });
+      } else {
         setErrorMessage(res.data.error);
       }
     });
@@ -33,37 +41,33 @@ const Login = () => {
 
   return (
     <>
-      {auth ? (
-        <p>You are now logged in </p>
-      ) : (
-        <section>
-          <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
-            {errorMessage}
-          </p>
-          <form onSubmit={handleSubmit}>
-            <input
-              ref={userRef}
-              type='email'
-              id='email'
-              value={email}
-              autoComplete='off'
-              required
-              placeholder='sample@email.com'
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type='password'
-              id='password'
-              value={password}
-              autoComplete='off'
-              required
-              placeholder='password'
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type='submit'>Sign in</button>
-          </form>
-        </section>
-      )}
+      <section>
+        <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
+          {errorMessage}
+        </p>
+        <form onSubmit={handleSubmit}>
+          <input
+            ref={userRef}
+            type='email'
+            id='email'
+            value={email}
+            autoComplete='off'
+            required
+            placeholder='sample@email.com'
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type='password'
+            id='password'
+            value={password}
+            autoComplete='off'
+            required
+            placeholder='password'
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type='submit'>Sign in</button>
+        </form>
+      </section>
     </>
   );
 };
