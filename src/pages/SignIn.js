@@ -21,10 +21,11 @@ const SignIn = () => {
   // });
 
   const handleLogin = () => {
-    console.log(process.env);
     axios.post(`${process.env.REACT_APP_URL}/auth`, { email, password }).then((res) => {
-      setAuth(res.data);
-      navigate('/defaults', { replace: true });
+      if (!res.data.error) {
+        setAuth(res.data);
+        navigate('/dashboard/home', { replace: true });
+      }
     });
   };
 
@@ -32,13 +33,13 @@ const SignIn = () => {
     <div>
       <Formik initialValues={initialValues} onSubmit={handleLogin}>
         <Form>
-          <label>Username: </label>
+          <label>Email: </label>
           <ErrorMessage name='username' component='span' />
-          <Field id='inputCreatePost' name='username' placeholder='Username' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Field name='email' type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
 
           <label>Password: </label>
           <ErrorMessage name='password' component='span' />
-          <Field id='inputCreatePost' name='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Field name='password' type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
           <button type='submit'>Login</button>
         </Form>
       </Formik>

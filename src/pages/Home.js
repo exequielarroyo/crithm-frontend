@@ -1,24 +1,16 @@
 import React from 'react';
-import LMCard from '../components/LMCard';
 
 const Home = () => {
   return (
     <div className='App'>
-      <header className='App-header'>
+      <section className='App-header'>
         <img src={'/assets/images/logo.png'} className='App-logo' alt='logo' />
         <div className='content'>
           <p>Crithm is a small company.</p>
           <p id='subtitle'>This website is on development.</p>
         </div>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
+      </section>
+
       <section>
         <div className='slogan-container'>
           <div className='slogan'>Better designs and functions ready for the future</div>
@@ -27,13 +19,6 @@ const Home = () => {
             untangling complicated issues that arise frequently along their digital transformation journey.
           </div>
         </div>
-
-        <LMCard
-        content={
-          'Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions.'
-        }
-        button={'Learn More'}
-        img={'👌'}></LMCard>
       </section>
     </div>
   );

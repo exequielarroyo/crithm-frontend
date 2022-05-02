@@ -9,7 +9,10 @@ import NotFound from '../pages/NotFound';
 import About from '../pages/About';
 import MainLayout from '../pages/MainLayout';
 import SignUp from '../pages/SignUp';
-import SignIn from '../pages/SignIn';
+// import SignIn from '../pages/SignIn';
+import DashboardLayout from '../pages/DashboardLayout';
+import Project from '../pages/Project';
+import Login from '../pages/Login';
 
 const Router = () => {
   return (
@@ -29,8 +32,20 @@ const Router = () => {
               />
               <Route path='about' element={<About />} />
             </Route>
+
             <Route path='signup' element={<SignUp />} />
-            <Route path='signin' element={<SignIn />} />
+            <Route path='signin' element={<Login />} />
+
+            <Route
+              path='dashboard'
+              element={
+                <Protected>
+                  <DashboardLayout />
+                </Protected>
+              }>
+              <Route path='project' element={<Project />} />
+            </Route>
+
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
