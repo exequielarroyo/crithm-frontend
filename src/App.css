@@ -218,11 +218,8 @@ body {
   align-items: center;
   padding: 24px;
 
-  position: absolute;
   width: 1347px;
   height: 143px;
-  left: 305px;
-  top: 273px;
 
   background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
   backdrop-filter: blur(40px);
@@ -233,11 +230,8 @@ body {
 .p_content {
   /* Step 1 | Mapping week 1 The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project Registration From (PRF), the team will have the rough idea on what the client wants. */
 
-  position: static;
   width: 1299px;
   height: 95px;
-  left: 24px;
-  top: 24px;
 
   font-family: 'SF Pro Display';
   font-style: normal;
@@ -259,11 +253,8 @@ body {
 .PricingCard {
   /* rectangle glass */
 
-  position: absolute;
   width: 401.21px;
   height: 553.31px;
-  left: 190.17px;
-  top: 277.02px;
 
   background: linear-gradient(126deg, rgba(1, 118, 255, 0.4) 45.52%, rgba(25, 45, 106, 0.4) 83.5%);
   backdrop-filter: blur(40px);
@@ -274,7 +265,6 @@ body {
 .PriceCard {
   /* Frame 24 */
 
-  position: absolute;
   width: 447.01px;
   height: 553.31px;
   left: 190.17px;
@@ -286,8 +276,6 @@ body {
   position: absolute;
   width: 333.96px;
   height: 73.52px;
-  left: 213.94px;
-  top: 312.95px;
 
   font-family: 'SF Pro Display';
   font-style: normal;
@@ -304,8 +292,6 @@ body {
   position: absolute;
   width: 309.31px;
   height: 49.01px;
-  left: 327.86px;
-  top: 402.77px;
 
   font-family: 'SF Pro Display';
   font-style: normal;
@@ -321,8 +307,6 @@ body {
   position: absolute;
   width: 301px;
   height: 73px;
-  left: 231px;
-  top: 502px;
 
   font-family: 'SF Pro Display';
   font-style: normal;
@@ -341,8 +325,6 @@ body {
   position: absolute;
   width: 301.15px;
   height: 35.03px;
-  left: 230.78px;
-  top: 630.02px;
 
   font-family: 'SF Pro Display';
   font-style: normal;
