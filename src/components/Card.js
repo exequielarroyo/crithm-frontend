@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 const Card = ({ title, description }) => {
   return (
     <div className='card'>
       {!title ? (
         <div className='icon'>
-          <FontAwesomeIcon icon='fa-solid fa-plus' size='6x' />
+          <FontAwesomeIcon icon={faPlus} size='6x' />
         </div>
       ) : (
         <div className='inside-card'>
