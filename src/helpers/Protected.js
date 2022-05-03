@@ -13,9 +13,14 @@ export function Protected({ roles = [1] }) {
   const { auth } = useContext(AuthContext);
   const location = useLocation();
 
+  let role = [auth?.role];
+  if (auth?.role) {
+    role.push(1);
+  }
+
   return (
     <div>
-      {roles.includes(auth?.role) ? (
+      {role.find((r) => roles.includes(r)) ? (
         <Outlet />
       ) : auth ? (
         <Navigate to='/unauthorized' state={{ from: location }} replace />

@@ -1,9 +1,20 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+  const navigate = useNavigate();
+  // const location = useLocation();
+
+  // const from = location.state?.from?.pathname || '/';
+
+  // useEffect(() => {
+  //   console.log(from);
+  //   console.log(location.state);
+  // }, []);
+
   const handleSignup = (e) => {
     e.preventDefault();
     console.log('registered');
+    navigate('/dashboard', { replace: true });
   };
 
   return (
