@@ -9,9 +9,19 @@ export const AuthProvider = ({ children }) => {
   return <AuthContext.Provider value={{ auth, setAuth }}>{children}</AuthContext.Provider>;
 };
 
-export function Protected({ roles }) {
+export function Protected({ roles = [1] }) {
   const { auth } = useContext(AuthContext);
   const location = useLocation();
 
-  return <div>{auth ? <Outlet /> : <Navigate to={'/signin'} state={{ from: location }} replace />}</div>;
+  return (
+    <div>
+      {roles.includes(auth?.role) ? (
+        <Outlet />
+      ) : auth ? (
+        <Navigate to='/unauthorized' state={{ from: location }} replace />
+      ) : (
+        <Navigate to={'/signin'} state={{ from: location }} replace />
+      )}
+    </div>
+  );
 }

@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
 
 const Signup = () => {
-  return (
-    <div>Signup</div>
-  )
-}
+  const handleSignup = (e) => {
+    e.preventDefault();
+    console.log('registered');
+  };
 
-export default Signup
+  return (
+    <div>
+      <form onSubmit={handleSignup}>
+        <input
+          type='password'
+          id='password'
+          // value={password}
+          autoComplete='off'
+          required
+          placeholder='password'
+          // onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type='submit'>Sign up</button>
+      </form>
+    </div>
+  );
+};
+
+export default Signup;

@@ -13,6 +13,7 @@ import SignUp from '../pages/SignUp';
 import DashboardLayout from '../pages/DashboardLayout';
 import Project from '../pages/Project';
 import Login from '../pages/Login';
+import Unauthorized from '../pages/Unauthorized';
 
 const Router = () => {
   return (
@@ -22,9 +23,15 @@ const Router = () => {
           <Routes>
             <Route path='/' element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route element={<Protected />}>
+              
+              <Route element={<Protected roles={[2]} />}>
                 <Route path='defaults' element={<Default />} />
               </Route>
+              
+              <Route element={<Protected />}>
+                <Route path='unauthorized' element={<Unauthorized />} />
+              </Route>
+
               <Route path='about' element={<About />} />
             </Route>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { setAuth } = useAuth();
@@ -67,6 +67,10 @@ const Login = () => {
           />
           <button type='submit'>Sign in</button>
         </form>
+
+        <Link to={'/signup'} className='nav-link'>
+          Sign up
+        </Link>
       </section>
     </>
   );
