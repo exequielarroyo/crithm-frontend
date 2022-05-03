@@ -29,7 +29,7 @@ p#subtitle {
 } */
 
 .App-header {
-  background: #0d1634;
+  /* background: #0d1634; */
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@ p#subtitle {
 body {
   background-color: #0d1634;
 }
+
 .ellipse {
   position: absolute;
   width: 639px;
@@ -385,6 +386,8 @@ body {
   background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
   opacity: 0.6;
   filter: blur(100px);
+
+  z-index: -1;
 }
 
 .ellipse4 {
@@ -400,6 +403,8 @@ body {
   opacity: 0.6;
   filter: blur(100px);
   transform: rotate(-130.1deg);
+  z-index: -1;
+
 }
 
 .slogan-container {
