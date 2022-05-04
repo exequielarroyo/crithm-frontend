@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const { setAuth } = useAuth();
+  const { setAuth, persist, setPersist } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
@@ -39,6 +39,14 @@ const Login = () => {
     });
   }
 
+  useEffect(() => {
+    localStorage.setItem('persist', persist);
+  }, [persist]);
+
+  function togglePersist() {
+    setPersist((prev) => !prev);
+  }
+
   return (
     <>
       <section>
@@ -67,7 +75,8 @@ const Login = () => {
           />
           <button type='submit'>Sign in</button>
         </form>
-
+        <input type={'checkbox'} id='persist' onChange={togglePersist} checked={persist} />
+        <label htmlFor='persist'>Trust this device</label>
         <Link to={'/signup'} className='nav-link'>
           Sign up
         </Link>

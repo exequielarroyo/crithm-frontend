@@ -5,7 +5,7 @@ const useLogout = () => {
   const { setAuth } = useAuth();
 
   const logout = async () => {
-    setAuth({});
+    setAuth(null);
     try {
       const res = await axios.get(`${process.env.REACT_APP_URL}/logout`, { withCredentials: true });
 

@@ -3,12 +3,14 @@ import Card from '../components/Card';
 import './Project.css';
 import useAxiosPrivate from '../hooks/useAxiosPrivate';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useLogout from '../hooks/useLogout';
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const axiosPrivate = useAxiosPrivate();
   const location = useLocation();
   const navigate = useNavigate();
+  const logout = useLogout();
 
   useEffect(() => {
     let isMounted = true;
@@ -32,6 +34,11 @@ const Project = () => {
       // controller.abort();
     };
   }, []);
+
+  async function handleSignout() {
+    await logout();
+    navigate('/signin');
+  }
 
   return (
     <div className='project'>
@@ -65,6 +72,7 @@ const Project = () => {
         /> */}
         <Card />
       </div>
+      <button onClick={handleSignout}>Sign out</button>
 
       {/* <div className='ellipse3'></div>
       <div className='ellipse4'></div> */}
