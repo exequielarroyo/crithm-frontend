@@ -5,9 +5,9 @@ const useRefreshToken = () => {
   const { setAuth } = useAuth();
 
   const refresh = async () => {
-    axios.get('/refresh', { withCredentials: true }).then((res) => {
+    axios.get(`${process.env.REACT_APP_URL}/refresh`, { withCredentials: true }).then((res) => {
       setAuth((prev) => {
-        return { ...prev, accessToken: res.data.accessToken };
+        return { ...prev, role: res.data.role, accessToken: res.data.accessToken };
       });
       return res.data.accessToken;
     });

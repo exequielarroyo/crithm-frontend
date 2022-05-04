@@ -27,7 +27,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    axios.post(`${process.env.REACT_APP_URL}/auth`, { email, password }).then((res) => {
+    axios.post(`${process.env.REACT_APP_URL}/auth`, { email, password }, { withCredentials: true }).then((res) => {
       if (!res.data.error) {
         setAuth(res.data);
         setEmail('');

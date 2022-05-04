@@ -14,6 +14,7 @@ import DashboardLayout from '../pages/DashboardLayout';
 import Project from '../pages/Project';
 import Login from '../pages/Login';
 import Unauthorized from '../pages/Unauthorized';
+import PersistLogin from '../pages/PersistLogin';
 
 const Router = () => {
   return (
@@ -36,11 +37,13 @@ const Router = () => {
             <Route path='signup' element={<SignUp />} />
             <Route path='signin' element={<Login />} />
 
-            <Route element={<Protected />}>
-              <Route path='dashboard' element={<DashboardLayout />}>
-                <Route index element={<Project />} />
+            {/* <Route element={<PersistLogin />}> */}
+              <Route element={<Protected />}>
+                <Route path='dashboard' element={<DashboardLayout />}>
+                  <Route index element={<Project />} />
+                </Route>
               </Route>
-            </Route>
+            {/* </Route> */}
 
             <Route path='*' element={<NotFound />} />
           </Routes>
