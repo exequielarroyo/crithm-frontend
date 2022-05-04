@@ -37,13 +37,13 @@ const Router = () => {
             <Route path='signup' element={<SignUp />} />
             <Route path='signin' element={<Login />} />
 
-            {/* <Route element={<PersistLogin />}> */}
+            <Route element={<PersistLogin />}>
               <Route element={<Protected />}>
                 <Route path='dashboard' element={<DashboardLayout />}>
                   <Route index element={<Project />} />
                 </Route>
               </Route>
-            {/* </Route> */}
+            </Route>
 
             <Route path='*' element={<NotFound />} />
           </Routes>

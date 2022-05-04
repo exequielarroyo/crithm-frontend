@@ -2,32 +2,34 @@ import { useEffect, useState } from 'react';
 import Card from '../components/Card';
 import './Project.css';
 import useAxiosPrivate from '../hooks/useAxiosPrivate';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const axiosPrivate = useAxiosPrivate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let isMounted = true;
     const controller = new AbortController();
 
     const getProjects = async () => {
-      axiosPrivate
-        .get(`${process.env.REACT_APP_URL}/project`, { signal: controller.signal })
-        .then((res) => {
-          console.log(res.data);
-          isMounted && setProjects(res.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      try {
+        const res = await axiosPrivate.get(`/project`, { signal: controller.signal });
+        console.log(res.data);
+        isMounted && setProjects(res.data);
+      } catch (error) {
+        console.error(error);
+        navigate('/signin', { state: { from: location }, replace: true });
+      }
     };
 
     getProjects();
 
     return () => {
       isMounted = false;
-      controller.abort();
+      // controller.abort();
     };
   }, []);
 
@@ -36,7 +38,7 @@ const Project = () => {
       <div className='header'>
         <h1>Add Project</h1>
         <div>
-          <button >Create Project</button>
+          <button>Create Project</button>
         </div>
       </div>
       <div className='project-grid'>
