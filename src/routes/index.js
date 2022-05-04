@@ -24,9 +24,11 @@ const Router = () => {
           <Routes>
             <Route path='/' element={<MainLayout />}>
               <Route index element={<Home />} />
-
-              <Route element={<Protected roles={[2]} />}>
-                <Route path='defaults' element={<Default />} />
+              
+              <Route element={<PersistLogin />}>
+                <Route element={<Protected roles={[2]} />}>
+                  <Route path='defaults' element={<Default />} />
+                </Route>
               </Route>
 
               <Route path='unauthorized' element={<Unauthorized />} />
