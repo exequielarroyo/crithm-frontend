@@ -17,6 +17,7 @@ import Unauthorized from "../pages/Unauthorized";
 import PersistLogin from "../pages/PersistLogin";
 import Payment from "../pages/Payment";
 import Register from "../pages/Register";
+import Profile from "../pages/Profile";
 
 const Router = () => {
   return (
@@ -42,6 +43,7 @@ const Router = () => {
             <Route path="signup" element={<SignUp />} />
             <Route path="signin" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="profile" element={<Profile />} />
 
              
 
