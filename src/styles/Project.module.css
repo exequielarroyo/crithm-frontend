@@ -54,7 +54,7 @@ h1 {
 
 @media only screen and (max-width: 1000px) {
   /* For tablets: */
-  .project-grid {
+  .projectGrid {
     color: #04e1f7;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 64px;
@@ -62,7 +62,7 @@ h1 {
 }
 @media only screen and (max-width: 768px) {
   /* For tablets: */
-  .project-grid {
+  .projectGrid {
     color: #04e1f7;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 32px;
@@ -71,7 +71,7 @@ h1 {
 
 @media only screen and (max-width: 480px) {
   /* For mobile phones: */
-  .project-grid {
+  .projectGrid {
     color: #05f598;
     grid-template-columns: repeat(1, 1fr);
     padding: 0 16px;

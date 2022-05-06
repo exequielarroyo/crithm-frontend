@@ -1,8 +1,10 @@
 import React from 'react';
+import style from '../App.module.css';
+
 
 const Home = () => {
   return (
-    <div className='App'>
+    <div className={style.App}>
       <section className='App-header'>
         <img src={'/assets/images/logo.png'} className='App-logo' alt='logo' />
         <div className='content'>

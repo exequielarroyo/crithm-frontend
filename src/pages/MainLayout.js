@@ -73,8 +73,8 @@ const MainLayout = () => {
         </nav>
       </header>
       <main>
-        <div className='ellipse3'></div>
-        <div className='ellipse4'></div>
+        {/* <div className='ellipse3'></div>
+        <div className='ellipse4'></div> */}
         <Outlet />
       </main>
       <footer className='footer'>footer</footer>

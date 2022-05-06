@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Card from '../components/Card';
-import style from '../styles/Project.module.css';
-import useAxiosPrivate from '../hooks/useAxiosPrivate';
+import Card from '../../components/Card';
+import style from '../../styles/Project.module.css';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 import { useLocation, useNavigate } from 'react-router-dom';
-import useLogout from '../hooks/useLogout';
+import useLogout from '../../hooks/useLogout';
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
