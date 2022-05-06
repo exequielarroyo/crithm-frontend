@@ -337,6 +337,154 @@ body {
 
   mix-blend-mode: normal;
 }
+/* ---------------------------------- */
+.WhyusCard{
+  box-sizing: border-box;
+
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  
+  position: static;
+  width: 361px;
+  height: 272px;
+  left: 0px;
+  top: 0px;
+  
+  background: rgba(20, 20, 20, 0.3);
+  border: 1px solid rgba(102, 102, 102, 0.17);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 222px;
+}
+.WCard{
+ 
+
+position: static;
+width: 102px;
+height: 24px;
+left: 20px;
+top: 228px;
+
+
+}
+
+.W_content_job{
+  /* Software Developer */
+
+
+position: static;
+width: 268px;
+height: 38px;
+left: 0px;
+top: 0px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 8px 0px;
+}
+.W_content{
+ /* Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing. */
+
+
+position: static;
+width: 268px;
+height: 120px;
+left: 0px;
+top: 46px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #ADADAD;
+
+mix-blend-mode: normal;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 8px 0px;
+}
+.W_circle{
+  /* picture */
+
+  display:inline-block ;
+  vertical-align: middle;
+position: static;
+width: 21px;
+height: 21px;
+left: 21px;
+top: 1.5px;
+
+background: #4292F0;
+border-radius: 25px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.W_name{
+  /* Albalate */
+
+
+  display: inline-block;
+  vertical-align: middle;
+width: 68px;
+height: 24px;
+left: 34px;
+top: 0px;
+
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 13px;
+}
 /* -------------------------- */
 .navbar {
   position: sticky;
