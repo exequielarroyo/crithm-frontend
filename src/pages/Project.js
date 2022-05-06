@@ -37,7 +37,7 @@ const Project = () => {
 
   async function handleSignout() {
     await logout();
-    navigate('/signin');
+    navigate('/');
   }
 
   return (
