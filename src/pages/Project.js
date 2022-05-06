@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import './Project.css';
+import style from '../styles/Project.module.css';
 import useAxiosPrivate from '../hooks/useAxiosPrivate';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useLogout from '../hooks/useLogout';
@@ -41,14 +41,14 @@ const Project = () => {
   }
 
   return (
-    <div className='project'>
-      <div className='header'>
+    <div className={style.project}>
+      <div className={style.header}>
         <h1>Add Project</h1>
         <div>
           <button>Create Project</button>
         </div>
       </div>
-      <div className='project-grid'>
+      <div className={style.projectGrid}>
         {projects.map((p) => (
           <div key={p.id}>
             <Card title={p.name} description={p.description} />

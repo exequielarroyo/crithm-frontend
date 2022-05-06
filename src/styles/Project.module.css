@@ -1,6 +1,6 @@
 .project {
   color: white;
-  font-family: 'Sf Pro Display';
+  font-family: 'Sf Pro Display', sans-serif;
   max-width: 1000px;
   margin: auto;
   padding-top: 32px;
@@ -20,7 +20,7 @@
   border-radius: 8px;
 }
 
-.inside-card {
+.insideCard {
   padding: 20px;
   /* padding: 20px 60px 20px 20px; */
 }
@@ -37,7 +37,7 @@
   place-content: center;
 }
 
-.project-grid {
+.projectGrid {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(4, 1fr);
