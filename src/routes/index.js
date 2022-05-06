@@ -16,6 +16,7 @@ import Login from "../pages/Login";
 import Unauthorized from "../pages/Unauthorized";
 import PersistLogin from "../pages/PersistLogin";
 import Payment from "../pages/Payment";
+import Register from "../pages/Register";
 
 const Router = () => {
   return (
@@ -28,6 +29,7 @@ const Router = () => {
 
               <Route element={<PersistLogin />}>
                 <Route element={<Protected roles={[2]} />}>
+                  
                   <Route path="defaults" element={<Default />} />
                 </Route>
               </Route>
@@ -39,6 +41,9 @@ const Router = () => {
 
             <Route path="signup" element={<SignUp />} />
             <Route path="signin" element={<Login />} />
+            <Route path="register" element={<Register />} />
+
+             
 
             <Route element={<PersistLogin />}>
               <Route element={<Protected />}>
