@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Navigate, Outlet } from 'react-router-dom';
 import style from '../styles/App.module.css';
 
 const MainLayout = () => {
   return (
     <>
-      {/* <header>
+      <header>
         <nav className='navbar navbar-expand-lg navbar-dark'>
           <div className='container'>
             <a className='navbar-brand' href='/'>
@@ -24,55 +24,63 @@ const MainLayout = () => {
             <div className='collapse navbar-collapse navv' id='navbarNav'>
               <ul className='navbar-nav'>
                 <li className='nav-item'>
-                  <Link className='nav-link active' to='/'>
+                  {/* <Link className='nav-link active' to='/'> */}
+                  <a className='nav-link' href='/#home'>
                     Home
-                  </Link>
+                  </a>
+                  {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                  <Link className='nav-link' to={'/dashboard'}>
+                  {/* <Link className='nav-link' to={'/dashboard'}> */}
+                  <a className='nav-link' href='/#creative-software'>
                     Creative Software
-                  </Link>
+                  </a>
+                  {/* </Link> */}
+                </li>
+
+                <li className='nav-item'>
+                  <a className='nav-link ' href='/#articles'>
+                    Articles
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/#process'>
+                    Process
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/#pricing'>
+                    Pricing
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/#why-us'>
+                    Why us?
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/#join'>
+                    Join
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  {/* <Link className='nav-link' to={'/#terms'}> */}
+                  {/* <Navigate to={`/#terms`}>Terms</Navigate> */}
+                  <a className='nav-link' href='/#terms'>
+                    Terms
+                  </a>
+                  {/* </Link> */}
                 </li>
                 <li className='nav-item'>
                   <Link className='nav-link' to={'/defaults'}>
                     Defaults
                   </Link>
                 </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/'>
-                    Process
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link ' href='/'>
-                    Articles
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/'>
-                    Pricing
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/'>
-                    Why us?
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/'>
-                    Join
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/'>
-                    Terms
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
         </nav>
-      </header> */}
+      </header>
       <main>
         {/* <div className='ellipse3'></div>
         <div className='ellipse4'></div> */}
