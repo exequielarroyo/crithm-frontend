@@ -30,8 +30,10 @@
 .img {
   position: absolute;
   display: flex;
+  gap: 100px;
   justify-content: space-between;
   top: 0;
+  left: -120px;
   z-index: -1;
 }
 
