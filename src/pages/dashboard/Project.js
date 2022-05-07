@@ -45,7 +45,7 @@ const Project = () => {
       <div className={style.header}>
         <h1>Add Project</h1>
         <div>
-          <button>Create Project</button>
+          <button onClick={()=> {navigate('/register')}}>Create Project</button>
         </div>
       </div>
       <div className={style.projectGrid}>

@@ -2,6 +2,10 @@ import React from "react";
 import "./Register.css";
 
 function Register() {
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+  }
+
   return (
     <div className="SignUpcontainer">
       <ellipse className="ellipse"></ellipse>
@@ -14,7 +18,7 @@ function Register() {
         <img src={"/assets/images/logo.png"} className="app_logo" alt="logo" />
       </nav>
       
-      <form>
+      <form onSubmit={(e)=>{handleSubmit(e)}}>
         <div class ="card" className="register">  
         <div>
        
@@ -60,7 +64,7 @@ function Register() {
           </div>
 
           
-          <button className="sbutton">Submit</button>
+          <button className="sbutton" type="submit">Submit</button>
         </div>
         </div> 
       </form>

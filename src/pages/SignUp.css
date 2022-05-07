@@ -18,20 +18,7 @@
     font-size: larger;
 }
   
-button {
-    color: white;
-    border-color: white;
-    background-color: transparent;
-    border-radius: 8px;
-    width: 150px;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    margin-left: 70px;
-    margin-top: 25px;
-    transition: 0.2s;
-  
-  }
+
   .button:hover {
     background: rgb(3, 0, 54);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);

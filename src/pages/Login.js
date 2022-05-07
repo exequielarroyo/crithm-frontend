@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import style from '../styles/Login.module.css';
 
 const Login = () => {
   const { setAuth, persist, setPersist } = useAuth();
@@ -53,7 +54,7 @@ const Login = () => {
         <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
           {errorMessage}
         </p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={style.form}>
           <input
             ref={userRef}
             type='email'
@@ -74,12 +75,16 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type='submit'>Sign in</button>
+          <div className={style.trust}>
+            <input type={'checkbox'} id='persist' onChange={togglePersist} checked={persist} />
+            <label htmlFor='persist'>Trust this device</label>
+          </div>
+          <div>
+            <p>
+              Don't have an account? <Link to={'/signup'}>Sign up</Link>
+            </p>
+          </div>
         </form>
-        <input type={'checkbox'} id='persist' onChange={togglePersist} checked={persist} />
-        <label htmlFor='persist'>Trust this device</label>
-        <Link to={'/signup'} className='nav-link'>
-          Sign up
-        </Link>
       </section>
     </>
   );
