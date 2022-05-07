@@ -4,6 +4,32 @@
   padding: 0;
 }
 
+/* header {
+  max-width: 1000px;
+  width: 100vw;
+  margin: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  padding: 2px 10px;
+} */
+
+nav{
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 input,
 select {
   color: white;
@@ -33,3 +59,6 @@ button {
   border-radius: 4px;
   padding: 4px 16px;
 }
+
+
+
