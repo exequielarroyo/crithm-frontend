@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import style from '../styles/App.module.css';
 
 const MainLayout = () => {
   return (
     <>
-      <header>
+      {/* <header>
         <nav className='navbar navbar-expand-lg navbar-dark'>
           <div className='container'>
             <a className='navbar-brand' href='/'>
@@ -71,13 +72,13 @@ const MainLayout = () => {
             </div>
           </div>
         </nav>
-      </header>
+      </header> */}
       <main>
         {/* <div className='ellipse3'></div>
         <div className='ellipse4'></div> */}
         <Outlet />
       </main>
-      <footer className='footer'>footer</footer>
+      {/* <footer className='footer'>footer</footer> */}
     </>
   );
 };

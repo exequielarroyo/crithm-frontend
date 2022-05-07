@@ -13,3 +13,7 @@ code {
   font-family: 'SF Pro Display';
   src: url('./fonts/SFPRODISPLAYREGULAR.OTF');
 }
+@font-face {
+  font-family: 'korataki';
+  src: url('./fonts/korataki.otf');
+}

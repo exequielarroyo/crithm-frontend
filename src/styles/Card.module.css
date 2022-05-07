@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+
+  position: static;
+  width: 250px;
+  height: 350px;
+
+  background: linear-gradient(126deg, rgba(38, 129, 235, 0.4) 12.7%, rgba(25, 45, 106, 0.4) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.card .img {
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  padding: 0 0 0 2px;
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: static;
+  width: 40px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.card .content {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.card .button {
+  color: white;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+
+  width: 200px;
+  height: 30px;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}

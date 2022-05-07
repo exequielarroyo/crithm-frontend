@@ -4,33 +4,39 @@
   margin: 0;
 }
 
-.App {
-  text-align: center;
+.home {
+  font-family: 'SF Pro Display', sans-serif;
+  color: white;
 }
 
-.App-logo {
+.logo {
   height: 15vmin;
   pointer-events: none;
 }
 .content {
   margin-top: 16px;
+  position: relative;
 }
-.content p {
+.content h1 {
   padding: 0 0 0 0;
   margin: 0;
+  font-family: 'korataki';
+  font-size: 4rem;
 }
-p#subtitle {
+.content p {
   font-size: 0.9rem;
 }
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
-.App-header {
-  /* background: #0d1634; */
-  min-height: 50vh;
+.img {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: -1;
+}
+
+section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,14 +49,49 @@ p#subtitle {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  position: fixed;
 }
+
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+} */
+
+/* ------------------------------ */
+
+.page2container {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page2container p {
+  font-size: 1rem;
+}
+
+.page2container p.part1.one {
+  flex: 1 1 300px;
+  font-size: 1.5rem;
+}
+.page2container p.part1.two {
+  flex: 5 5 400px;
+}
+.bgcolor{
+  background-color: #0b729b;
+  width: 100%;
+}
+
+/* ------------------------------ */
+
+.page3container{
+  
+}
+
 /* ------------------------------ */
 body {
   background-color: #0d1634;
@@ -338,152 +379,141 @@ body {
   mix-blend-mode: normal;
 }
 /* ---------------------------------- */
-.WhyusCard{
+.WhyusCard {
   box-sizing: border-box;
 
   /* Auto layout */
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  
+
   position: static;
   width: 361px;
   height: 272px;
   left: 0px;
   top: 0px;
-  
+
   background: rgba(20, 20, 20, 0.3);
   border: 1px solid rgba(102, 102, 102, 0.17);
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
-  
+
   border-radius: 8px;
-  
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 0px 222px;
 }
-.WCard{
- 
-
-position: static;
-width: 102px;
-height: 24px;
-left: 20px;
-top: 228px;
-
-
+.WCard {
+  position: static;
+  width: 102px;
+  height: 24px;
+  left: 20px;
+  top: 228px;
 }
 
-.W_content_job{
+.W_content_job {
   /* Software Developer */
 
+  position: static;
+  width: 268px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
 
-position: static;
-width: 268px;
-height: 38px;
-left: 0px;
-top: 0px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
 
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 38px;
+  color: #ffffff;
 
-color: #FFFFFF;
+  /* Inside auto layout */
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 8px 0px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
 }
-.W_content{
- /* Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing. */
+.W_content {
+  /* Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing. */
 
+  position: static;
+  width: 268px;
+  height: 120px;
+  left: 0px;
+  top: 46px;
 
-position: static;
-width: 268px;
-height: 120px;
-left: 0px;
-top: 46px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
+  color: #adadad;
 
-color: #ADADAD;
+  mix-blend-mode: normal;
 
-mix-blend-mode: normal;
+  /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 8px 0px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
 }
-.W_circle{
+.W_circle {
   /* picture */
-
-  display:inline-block ;
-  vertical-align: middle;
-position: static;
-width: 21px;
-height: 21px;
-left: 21px;
-top: 1.5px;
-
-background: #4292F0;
-border-radius: 25px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-
-}
-.W_name{
-  /* Albalate */
-
 
   display: inline-block;
   vertical-align: middle;
-width: 68px;
-height: 24px;
-left: 34px;
-top: 0px;
+  position: static;
+  width: 21px;
+  height: 21px;
+  left: 21px;
+  top: 1.5px;
 
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-/* identical to box height */
+  background: #4292f0;
+  border-radius: 25px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 
+  /* Inside auto layout */
 
-color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.W_name {
+  /* Albalate */
 
+  display: inline-block;
+  vertical-align: middle;
+  width: 68px;
+  height: 24px;
+  left: 34px;
+  top: 0px;
 
-/* Inside auto layout */
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
 
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 13px;
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 13px;
 }
 /* -------------------------- */
 .navbar {
@@ -534,7 +564,6 @@ margin: 0px 13px;
   filter: blur(100px);
   transform: rotate(-130.1deg);
   z-index: -1;
-
 }
 
 .slogan-container {
@@ -589,6 +618,9 @@ footer {
   color: white;
 }
 
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+}
 @media only screen and (max-width: 768px) {
   /* For tablets: */
   footer {
@@ -600,5 +632,8 @@ footer {
   /* For mobile phones: */
   footer {
     color: #05f598;
+  }
+  .content h1 {
+    font-size: 2rem;
   }
 }
