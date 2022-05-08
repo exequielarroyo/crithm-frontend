@@ -89,8 +89,9 @@ header {
 
 /* ------------------------------ */
 
-.page3container > p {
+.page3container > h3 {
   text-align: center;
+  margin: 20px 0;
 }
 
 .page3container .cards {
@@ -635,7 +636,7 @@ footer {
   section {
     height: auto;
   }
- 
+
   .page2container {
     flex-direction: column;
     padding: 30px;
@@ -648,8 +649,9 @@ footer {
   .page2container p.part1.two {
     flex: 5 5 100px;
   }
-  .page3container .cards{
+  .page3container .cards {
     flex-direction: column;
+    align-items: center;
   }
   footer {
     color: #04e1f7;
@@ -658,10 +660,10 @@ footer {
 
 @media only screen and (max-width: 480px) {
   /* For mobile phones: */
-  .img{
+  .img {
     flex-direction: column;
   }
-  .img img{
+  .img img {
     height: 80px;
   }
   footer {

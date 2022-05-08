@@ -1,5 +1,6 @@
 import React from 'react';
 import LMCard from '../components/LMCard';
+import ProcessCard from '../components/ProcessCard';
 import style from '../styles/App.module.css';
 
 const Home = () => {
@@ -38,7 +39,7 @@ const Home = () => {
 
       <section id='articles'>
         <div className={style.page3container}>
-          <p>Get to know Crithm, all what can you expect and learn</p>
+          <h3>Get to know Crithm, all what can you expect and learn</h3>
           <div className={style.cards}>
             <LMCard
               lm_content={
@@ -63,7 +64,21 @@ const Home = () => {
         </div>
       </section>
 
-      <section id='process'>Process</section>
+      <section id='process'>
+        <ProcessCard title={'Step 1 | Mapping week 1'}>
+          The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project
+          Registration From (PRF), the team will have the rough idea on what the client wants.
+        </ProcessCard>
+        <ProcessCard title={'Step 2 | Development week 2'}>
+          Start of development process. The dev team will start the project. Depending on the plan subscription, the team will begin the development of
+          front-end and back-end then include all the necessary features from the PRF.
+        </ProcessCard>
+        <ProcessCard title={'Step 3 | Demonstration week 3'}>
+          Show a live demo of the software or project. The demo will not the finished product as per it will be only to present for the client to see and
+          understand the flow of the project. Once the client is satisfied with the demonstration work flow, the dev team will now proceed to the lunching of
+          the project. If the client is not satisfied, they have the authority to decide if they want to cancel or revise the project.
+        </ProcessCard>
+      </section>
       <section id='pricing'>Pricing</section>
       <section id='why-us'>Why us?</section>
       <section id='join'>Join</section>

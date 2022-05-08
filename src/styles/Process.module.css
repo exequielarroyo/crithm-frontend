@@ -1,0 +1,24 @@
+.card {
+  /* card */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  width: 747px;
+
+  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.card p {
+  margin-bottom: 4px;
+}
