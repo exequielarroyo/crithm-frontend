@@ -51,6 +51,7 @@ const Login = () => {
   return (
     <>
       <section>
+        <h1 style={{ fontFamily: 'korataki', fontSize: '64px' }}>CRITHM</h1>
         <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
           {errorMessage}
         </p>
