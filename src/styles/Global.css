@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-image: url('../../public/assets/images/background.png');
+  background-position-y: -1000px;
+  background-position-x: -1000px;
+}
+
 /* header {
   max-width: 1000px;
   width: 100vw;
