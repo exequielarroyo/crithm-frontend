@@ -541,37 +541,6 @@ body {
   justify-content: center;
 }
 
-.ellipse3 {
-  /* Ellipse 10 */
-
-  position: absolute;
-  width: 345px;
-  height: 345px;
-  left: 156px;
-  top: 161px;
-
-  background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
-  opacity: 0.6;
-  filter: blur(100px);
-
-  z-index: -1;
-}
-
-.ellipse4 {
-  /* Ellipse 8 */
-
-  position: absolute;
-  width: 342px;
-  height: 342px;
-  left: 1304.3px;
-  top: 700.89px;
-
-  background: linear-gradient(224.66deg, #0b9b99 12.72%, #192d6a 88.06%);
-  opacity: 0.6;
-  filter: blur(100px);
-  transform: rotate(-130.1deg);
-  z-index: -1;
-}
 
 .slogan-container {
   display: flex;
