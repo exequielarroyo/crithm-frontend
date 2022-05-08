@@ -12,6 +12,7 @@ body {
   background-image: url('../../public/assets/images/background.png');
   background-position-y: -1000px;
   background-position-x: -1000px;
+  background-color: #0d1634;
 }
 
 /* header {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Navigate, Outlet } from 'react-router-dom';
-import '../styles/Global.css'
 import style from '../styles/App.module.css';
 
 const MainLayout = () => {
