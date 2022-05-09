@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import "./SignUp.css";
+import style from '../styles/SignUp.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
@@ -72,13 +72,14 @@ function SignUp() {
       </nav>
       
       <form onSubmit= {handleSubmit}>
-        <div class ="card" className="uiform">  
+        <div class ="card" className={style.uiform}>  
         <div>
        
         <h1>Sign Up Now!</h1>
+        <h2 className={style.subHead}> Please fill up the informations below! </h2>
         <div className="field">
             <label>Fullname</label>
-            <input
+            <input className={style.input}
               type="text"
               name="fullname"
               placeholder="Full name"
@@ -86,12 +87,12 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <p className ="text">{formErrors.fullname}</p>
+          <p className ={style.text}>{formErrors.fullname}</p>
 
           <div className="field">
             
             <label>Occupation</label>
-            <input
+            <input className={style.input}
               type="text"
               name="occupation"
               placeholder="Occupation"
@@ -99,12 +100,12 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <p className ="text">{formErrors.occupation}</p>
+          <p className ={style.text}>{formErrors.occupation}</p>
           
           
           <div className="field">
             <label>Username</label>
-            <input
+            <input className={style.input}
               type="text"
               name="username"
               placeholder="Username"
@@ -112,12 +113,12 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <p className ="text">{formErrors.username}</p>
+          <p className ={style.text}>{formErrors.username}</p>
           
           
           <div className="field">
             <label>Email</label>
-            <input
+            <input className={style.input}
               type="text"
               name="email"
               placeholder="Email"
@@ -125,11 +126,11 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <p className="text">{formErrors.email}</p>
+          <p className={style.text}>{formErrors.email}</p>
 
           <div className="field">
             <label>Password</label>
-            <input
+            <input className={style.input}
               type="password"
               name="password"
               placeholder="Password"
@@ -137,8 +138,8 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <p className="text">{formErrors.password}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <p className={style.text}>{formErrors.password}</p>
+          <button className= {style.buttonSub}>Submit</button>
         </div>
         </div> 
       </form>
