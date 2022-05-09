@@ -1,11 +1,17 @@
 .form {
   color: white;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-family: 'Sf Pro Display', sans-serif;
 }
 
-.inputbox {
+.upperinputbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lowerinputbox {
   display: flex;
   flex-direction: column;
 }
@@ -36,8 +42,8 @@
   margin-right: 20px;
   margin-bottom: 10px;
 }
-.creditcard {
-  width: 40%;
+.cashtransfer {
+  width: 42%;
   height: 600px;
   border-radius: 15px;
   margin-top: 40px;
@@ -49,27 +55,7 @@
   justify-content: center;
   transition: 0.5s;
 }
-.creditcard:hover {
-  background: rgba(0, 0, 0, 0.3);
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  width: 50%;
-}
-.gcash {
-  width: 40%;
-  height: 600px;
-  border-radius: 15px;
-  margin-top: 40px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s;
-}
-.gcash:hover {
+.cashtransfer:hover {
   background: rgba(0, 0, 0, 0.3);
   border-top: 2px solid rgba(255, 255, 255, 0.5);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -77,33 +63,7 @@
   width: 50%;
 }
 
-.expdate {
-  display: flex;
-}
-
-.submit__btn {
-  color: white;
-  border-color: white;
-  background-color: transparent;
-  border-radius: 8px;
-  width: 150px;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  margin-left: 70px;
-  margin-top: 25px;
-  transition: 0.2s;
-}
-.submit__btn:hover {
-  background: rgb(3, 0, 54);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-.gcashLabel {
-  margin-top: 10px;
-}
 .qrcode {
-  position: relative;
   width: 200px;
   height: 200px;
   left: 20%;
@@ -117,71 +77,58 @@
   filter: blur(0px);
 }
 
-/*----- ELLIPSE -----*/
-.ellipsis {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: 900px;
-  top: 300px;
-  filter: blur(100px);
-  background: #5f02bd;
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.5;
+.submit__btn {
+  max-width: 100px;
+  margin-top: 10px;
 }
-.ellipsis1 {
-  position: absolute;
-  width: 639px;
-  height: 639px;
-  left: -100px;
-  top: -200px;
-  background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
-  filter: blur(200px);
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: -1;
-}
-.ellipsis2 {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 750px;
-  top: 130px;
-  background: linear-gradient(186.5deg, #0b729b 13.11%, #2a7bf1 64.09%);
-  filter: blur(70px);
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-/*-----------------*/
 
 @media only screen and (max-width: 1000px) {
   /* For pc: */
-
+  .form {
+    justify-content: space-around;
+  }
+  .cashtransfer {
+    max-width: 47%;
+    min-width: 47%;
+  }
+  .cashtransfer:hover {
+    max-width: 100%;
+  }
+  .h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .lowerinputbox {
+    position: relative;
+    align-items: center;
+  }
+  .uploads {
+    max-width: 90%;
+  }
+  .submit__btn {
+    position: relative;
+  }
 }
 @media only screen and (max-width: 768px) {
   /* For tablets: */
   .form {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .creditcard {
-    width: 80%;
+  .cashtransfer {
+    max-width: 90%;
+    min-width: 90%;
+
   }
-  .creditcard:hover {
-    width: 80%;
+  .cashtransfer:hover {
+    width: 90%;
   }
-  .gcash {
-    width: 80%;
-  }
-  .gcash:hover {
-    width: 80%;
+  .uploads {
+    max-width: 80%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   /* For mobile phones: */
-
 }
