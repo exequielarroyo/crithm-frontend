@@ -61,10 +61,6 @@ function SignUp() {
 
   return (
     <div className="SignUpcontainer">
-      <ellipse className="ellipse"></ellipse>
-      <ellipse className="ellipse1"></ellipse>
-      <ellipse className="ellipse2"></ellipse>
-      <ellipse className="ellipse3"></ellipse>
       
       <nav className="nav_bar">
         <h1>Sign Up Page</h1>
