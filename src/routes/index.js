@@ -17,6 +17,7 @@ import PersistLogin from '../helpers/PersistLogin';
 import Payment from '../pages/Payment';
 import Register from '../pages/Register';
 import Profile from '../pages/Profile';
+import Loading from '../pages/Loading';
 
 const Loadable = (Component) => (props) => {
   return (
@@ -24,7 +25,7 @@ const Loadable = (Component) => (props) => {
       fallback={
         // To be replaced with loading
         // <Loading />
-        'loading...'
+        <Loading/>
       }>
       <Component {...props} />
     </Suspense>
