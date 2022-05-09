@@ -51,41 +51,43 @@ const Login = () => {
   return (
     <>
       <section>
-        <h1 style={{ fontFamily: 'korataki' }}>CRITHM</h1>
-        <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
-          {errorMessage}
-        </p>
-        <form onSubmit={handleSubmit} className={style.form}>
-          <input
-            ref={userRef}
-            type='email'
-            id='email'
-            value={email}
-            autoComplete='off'
-            required
-            placeholder='sample@email.com'
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type='password'
-            id='password'
-            value={password}
-            autoComplete='off'
-            required
-            placeholder='password'
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type='submit'>Sign in</button>
-          <div className={style.trust}>
-            <input type={'checkbox'} id='persist' onChange={togglePersist} checked={persist} />
-            <label htmlFor='persist'>Trust this device</label>
-          </div>
-          <div>
-            <p>
-              Don't have an account? <Link to={'/signup'}>Sign up</Link>
-            </p>
-          </div>
-        </form>
+        <div className={style.container}>
+          <h1 style={{ fontFamily: 'korataki' }}>CRITHM</h1>
+          <p ref={errorRef} className={errorMessage ? 'on' : 'off'}>
+            {errorMessage}
+          </p>
+          <form onSubmit={handleSubmit} className={style.form}>
+            <input
+              ref={userRef}
+              type='email'
+              id='email'
+              value={email}
+              autoComplete='off'
+              required
+              placeholder='sample@email.com'
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type='password'
+              id='password'
+              value={password}
+              autoComplete='off'
+              required
+              placeholder='password'
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type='submit'>Sign in</button>
+            <div className={style.trust}>
+              <input type={'checkbox'} id='persist' onChange={togglePersist} checked={persist} />
+              <label htmlFor='persist'>Trust this device</label>
+            </div>
+            <div>
+              <p>
+                Don't have an account? <Link to={'/signup'}>Sign up</Link>
+              </p>
+            </div>
+          </form>
+        </div>
       </section>
     </>
   );
