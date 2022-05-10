@@ -5,6 +5,14 @@
   justify-content: space-evenly;
   font-family: 'Sf Pro Display', sans-serif;
 }
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.dateinputbox {
+  margin-top: 10px;
+}
 
 .upperinputbox {
   display: flex;
