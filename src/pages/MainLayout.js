@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, Navigate, Outlet } from 'react-router-dom';
-import style from '../styles/App.module.css';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const MainLayout = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className='container-fluid mx-auto'>
@@ -72,7 +72,12 @@ const MainLayout = () => {
               </ul>
             </div>
             <div>
-              <button>Sign up</button>
+              <button
+                onClick={() => {
+                  navigate('/signup');
+                }}>
+                Sign up
+              </button>
             </div>
           </div>
         </nav>
