@@ -84,8 +84,10 @@ const Home = () => {
       <section id="pricing">Pricing</section>
       <section id="why-us">
         <div className={style.page6container}>
-          <h3> Why Us?</h3>
-          <p>This is some of the reasons why you should work with us.</p>
+          <div className={style.upper}>
+            <h3> Why Us?</h3>
+            <p>This is some of the reasons why you should work with us.</p>
+          </div>
           <div className={style.wcardstyle}>
             <WCard
               W_content_job={"Software Developer"}

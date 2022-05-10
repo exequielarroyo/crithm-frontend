@@ -497,7 +497,7 @@ body {
   background: rgba(20, 20, 20, 0.3);
 }
 .wcardstyle {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 .W_content_job {
@@ -521,8 +521,8 @@ body {
   bottom: 0px;
   padding-left: 30px;
 }
-
 /* -------------------------- */
+
 .navbar {
   position: sticky;
   font-family: 'SF Pro Display';
@@ -624,6 +624,28 @@ footer {
   footer {
     color: #04e1f7;
   }
+  .upper {
+    text-align: center;
+  }
+  .wcardstyle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .WhyusCard {
+    margin: 5px;
+    height: 300px;
+  }
+  .W_content_job {
+    font-size: 20px;
+  }
+  .W_content {
+    font-size: 15px;
+  }
+  .W_name {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 30px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -640,4 +662,15 @@ footer {
   .content h1 {
     font-size: 2rem;
   }
+  .wcardstyle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .upper {
+    text-align: center;
+  }
+  .WhyusCard {
+    margin: 20px;
+    height: 250px;
+  }
+
 }
