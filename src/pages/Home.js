@@ -1,24 +1,25 @@
-import React from 'react';
-import LMCard from '../components/LMCard';
-import ProcessCard from '../components/ProcessCard';
-import style from '../styles/App.module.css';
-import JoinCard from '../components/JoinCard';
+import React from "react";
+import LMCard from "../components/LMCard";
+import ProcessCard from "../components/ProcessCard";
+import style from "../styles/App.module.css";
+import WCard from "../components/WCard";
+import JoinCard from "../components/JoinCard";
 
 const Home = () => {
   return (
     <div className={style.home}>
-      <section id='home'>
-        <img src={'/assets/images/logo.png'} className={style.logo} alt='logo' />
+      <section id="home">
+        <img src={"/assets/images/logo.png"} className={style.logo} alt="logo" />
         <div className={style.content}>
           <h1>CRITHM</h1>
           <div className={style.img}>
-            <img src='/assets/images/ring.png' alt='' />
-            <img src='/assets/images/curve-line.png' alt='' />
+            <img src="/assets/images/ring.png" alt="" />
+            <img src="/assets/images/curve-line.png" alt="" />
           </div>
         </div>
       </section>
 
-      <section id='creative-software'>
+      <section id="creative-software">
         <div className={style.page2container}>
           <p className={`${style.part1} ${style.one}`}>Better designs and functions ready for the future</p>
           <p className={`${style.part1} ${style.two}`}>
@@ -33,84 +34,122 @@ const Home = () => {
               enterprise, allowing our customers to maximize their return of investment and expand their workforce's capabilities. We have been a visionary and
               dependable software engineering partner for world-class brands since the year 2022.
             </p>
-            <img src='/assets/images/logo.png' alt='awd' />
+            <img src="/assets/images/logo.png" alt="awd" />
           </div>
         </div>
       </section>
 
-      <section id='articles'>
+      <section id="articles">
         <div className={style.page3container}>
           <h3>Get to know Crithm, all what can you expect and learn</h3>
           <div className={style.cards}>
             <LMCard
               lm_content={
-                'Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions.'
+                "Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions."
               }
               lm_img={`👌`}
-              lm_button={'Learn more'}
+              lm_button={"Learn more"}
             />
             <LMCard
-              lm_content={'The service that we provide are a software solution where different types of industry softwares can be utilize.'}
+              lm_content={"The service that we provide are a software solution where different types of industry softwares can be utilize."}
               lm_img={`🏬`}
-              lm_button={'Learn more'}
+              lm_button={"Learn more"}
             />
             <LMCard
               lm_content={
-                'We are versatile for the reason that we can satisfy our clients on their desired system, this includes: \nItem/Product Inventory \nMessaging platform \nEducational system \nSimple Information System'
+                "We are versatile for the reason that we can satisfy our clients on their desired system, this includes: \nItem/Product Inventory \nMessaging platform \nEducational system \nSimple Information System"
               }
               lm_img={`🤑`}
-              lm_button={'Learn more'}
+              lm_button={"Learn more"}
             />
           </div>
         </div>
       </section>
 
-      <section id='process'>
-        <ProcessCard title={'Step 1 | Mapping week 1'}>
+      <section id="process">
+        <ProcessCard title={"Step 1 | Mapping week 1"}>
           The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project
           Registration From (PRF), the team will have the rough idea on what the client wants.
         </ProcessCard>
-        <ProcessCard title={'Step 2 | Development week 2'}>
+        <ProcessCard title={"Step 2 | Development week 2"}>
           Start of development process. The dev team will start the project. Depending on the plan subscription, the team will begin the development of
           front-end and back-end then include all the necessary features from the PRF.
         </ProcessCard>
-        <ProcessCard title={'Step 3 | Demonstration week 3'}>
+        <ProcessCard title={"Step 3 | Demonstration week 3"}>
           Show a live demo of the software or project. The demo will not the finished product as per it will be only to present for the client to see and
           understand the flow of the project. Once the client is satisfied with the demonstration work flow, the dev team will now proceed to the lunching of
           the project. If the client is not satisfied, they have the authority to decide if they want to cancel or revise the project.
         </ProcessCard>
       </section>
-      <section id='pricing'>Pricing</section>
-      <section id='why-us'>Why us?</section>
-      <section id='join'>
-      <div className={style.joinContainer}>
-      <div className={style.content}>
-          <h1>CRITHM</h1>
-          <div className={style.img}>
-            <img src='/assets/images/ring.png' alt='' />
-            <img src='/assets/images/curve-line.png' alt='' />
+      <section id="pricing">Pricing</section>
+      <section id="why-us">
+        <div className={style.page6container}>
+          <h3> Why Us?</h3>
+          <p>This is some of the reasons why you should work with us.</p>
+          <div className={style.wcardstyle}>
+            <WCard
+              W_content_job={"Software Developer"}
+              W_content={"Because we've been there and done it. When you choose us, you'll feel the benefit of 15 years' experience of writing and editing."}
+              W_circle={""}
+              W_name={"Albalate"}
+            />
+            <WCard
+              W_content_job={"Software Engineer"}
+              W_content={"Because we're chosen by professionals. We're the 'go-to developers' for dozens of service marketing agencies."}
+              W_circle={""}
+              W_name={"Arroyo"}
+            />
+            <WCard
+              W_content_job={"Team Leader"}
+              W_content={"Because we know digital. With working knowledge of online, SEO and social media, we can make your dream app come true."}
+              W_circle={""}
+              W_name={"Bagabagon"}
+            />
+            <WCard
+              W_content_job={"UX/UI Designer"}
+              W_content={
+                "Because we'll understand your brand. Before we even start coding, we think about your satisfaction and value suggestion, so every word builds your brand."
+              }
+              W_circle={""}
+              W_name={"Bagalso"}
+            />
+            <WCard
+              W_content_job={"Product Manager"}
+              W_content={"Because we're easy to work with. We take the work seriously, but not ourselves. We're not prickly, precious or pretentious."}
+              W_circle={""}
+              W_name={"Esteban"}
+            />
+            <WCard
+              W_content_job={"Founder & CEO"}
+              W_content={"Because we focus on results. For us, it’s all about what adds value for you. Above all, we want our works satisfy you."}
+              W_circle={""}
+              W_name={"Gonzales"}
+            />
           </div>
         </div>
-      </div>
-      <JoinCard title = {"Mission"} >
-      
-          Exceed customer expectations and deliver excellent software
-          solutions that transforms data into information and boost the 
-          capabilities of their workforce.
-      
+      </section>
+      <section id="join">
+        <div className={style.joinContainer}>
+          <div className={style.content}>
+            <h1>CRITHM</h1>
+            <div className={style.img}>
+              <img src="/assets/images/ring.png" alt="" />
+              <img src="/assets/images/curve-line.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <JoinCard title={"Mission"}>
+          Exceed customer expectations and deliver excellent software solutions that transforms data into information and boost the capabilities of their
+          workforce.
         </JoinCard>
         <JoinCard title={"Vision"}>
-         
-          Our vision is to deliver imaginative and trustworthy software
-          engineering for further innovation and constructive research to
-          improve software quality. We value work that is accurate and of the 
-          highest quality. In various industries, we wish to be renowned as a 
-          dependable, innovtive, and user-friendly software service provider.
-         
+          Our vision is to deliver imaginative and trustworthy software engineering for further innovation and constructive research to improve software
+          quality. We value work that is accurate and of the highest quality. In various industries, we wish to be renowned as a dependable, innovtive, and
+          user-friendly software service provider.
         </JoinCard>
-        <button className= {style.buttonReg}>Register</button>
+        <button className={style.buttonReg}>Register</button>
       </section>
-      <section id='terms'>
+      <section id="terms">
         <textarea
           readOnly
           className={style.termsContainer}

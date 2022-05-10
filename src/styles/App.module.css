@@ -404,6 +404,7 @@ body {
 
   mix-blend-mode: normal;
 }
+
 /*----Join Section---*/
 
 .JoinCard1 {
@@ -473,143 +474,54 @@ body {
   border-radius: 5px;
 }
 
-/* ---------------------------------- */
+/*---- Why Us Section ----*/
+.page6container {
+  height: 80vh;
+  max-width: 1000px;
+  margin: auto;
+}
 .WhyusCard {
-  box-sizing: border-box;
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  font-family: "SF Pro Display";
   padding: 20px;
+  justify-content: space-between;
+  margin: 10px;
+  height: 250px;
 
-  position: static;
-  width: 361px;
-  height: 272px;
-  left: 0px;
-  top: 0px;
-
-  background: rgba(20, 20, 20, 0.3);
+  background: rgba(20, 20, 20, 0.2);
   border: 1px solid rgba(102, 102, 102, 0.17);
   backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
 
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 222px;
+  border-radius: 10px;
 }
-.WCard {
-  position: static;
-  width: 102px;
-  height: 24px;
-  left: 20px;
-  top: 228px;
+.WhyusCard:hover {
+  background: rgba(20, 20, 20, 0.3);
 }
-
+.wcardstyle {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .W_content_job {
-  /* Software Developer */
-
-  position: static;
-  width: 268px;
-  height: 38px;
-  left: 0px;
-  top: 0px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-
-  color: #ffffff;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 8px 0px;
+  font-size: 25px;
 }
 .W_content {
-  /* Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing. */
-
-  position: static;
-  width: 268px;
-  height: 120px;
-  left: 0px;
-  top: 46px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-
-  color: #adadad;
-
-  mix-blend-mode: normal;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 8px 0px;
+  font-size: 15px;
 }
 .W_circle {
-  /* picture */
-
-  display: inline-block;
-  vertical-align: middle;
-  position: static;
+  position: absolute;
+  bottom: 20px;
   width: 21px;
   height: 21px;
-  left: 21px;
-  top: 1.5px;
-
-  background: #4292f0;
-  border-radius: 25px;
+  border-radius: 50%;
+  background: #4292F0;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 .W_name {
-  /* Albalate */
-
-  display: inline-block;
-  vertical-align: middle;
-  width: 68px;
-  height: 24px;
-  left: 34px;
-  top: 0px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  /* identical to box height */
-
-  color: #ffffff;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0px 13px;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 30px;
 }
+
 /* -------------------------- */
 .navbar {
   position: sticky;
@@ -685,9 +597,6 @@ footer {
   /* For tablets: */
   .page2container {
     padding: 50px;
-  }
-  .joinContainer{
-    
   }
 }
 @media only screen and (max-width: 768px) {
