@@ -38,10 +38,10 @@ const Payment = () => {
             </div>
             <div className={style.inputbox}>
               <label>cvv</label>
-              <input type="text" />
+              <input type="text" maxlength="4" />
             </div>
             <div className={style.dateinputbox}>
-              <label>expiration mm</label>
+              <label className={style.datelabel}>Expiration date</label>
               <select name="" id="" class="month-input">
                 <option value="month" selected disabled>
                   mm
@@ -59,9 +59,6 @@ const Payment = () => {
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-            </div>
-            <div class={style.dateinputbox}>
-              <label>expiration yy</label>
               <select name="" id="" class="year-input">
                 <option value="year" selected disabled>
                   yyyy
