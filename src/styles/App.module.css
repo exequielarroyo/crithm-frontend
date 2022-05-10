@@ -104,6 +104,21 @@ header {
 }
 
 /* ------------------------------ */
+
+.termsContainer {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 90%;
+  height: 70%;
+
+  background: linear-gradient(126deg, rgba(255, 255, 255, 0.1) 12.7%, rgba(255, 255, 255, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+}
+
+/* ------------------------------ */
 body {
   background-color: #0d1634;
 }
@@ -613,7 +628,6 @@ body {
   /* display: flex; */
   justify-content: center;
 }
-
 
 .slogan-container {
   display: flex;
