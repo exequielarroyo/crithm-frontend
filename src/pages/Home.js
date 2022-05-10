@@ -2,6 +2,7 @@ import React from 'react';
 import LMCard from '../components/LMCard';
 import ProcessCard from '../components/ProcessCard';
 import style from '../styles/App.module.css';
+import JoinCard from '../components/JoinCard';
 
 const Home = () => {
   return (
@@ -81,7 +82,34 @@ const Home = () => {
       </section>
       <section id='pricing'>Pricing</section>
       <section id='why-us'>Why us?</section>
-      <section id='join'>Join</section>
+      <section id='join'>
+      <div className={style.joinContainer}>
+      <div className={style.content}>
+          <h1>CRITHM</h1>
+          <div className={style.img}>
+            <img src='/assets/images/ring.png' alt='' />
+            <img src='/assets/images/curve-line.png' alt='' />
+          </div>
+        </div>
+      </div>
+      <JoinCard title = {"Mission"} >
+      
+          Exceed customer expectations and deliver excellent software
+          solutions that transforms data into information and boost the 
+          capabilities of their workforce.
+      
+        </JoinCard>
+        <JoinCard title={"Vision"}>
+         
+          Our vision is to deliver imaginative and trustworthy software
+          engineering for further innovation and constructive research to
+          improve software quality. We value work that is accurate and of the 
+          highest quality. In various industries, we wish to be renowned as a 
+          dependable, innovtive, and user-friendly software service provider.
+         
+        </JoinCard>
+        <button className= {style.buttonReg}>Register</button>
+      </section>
       <section id='terms'>Terms</section>
     </div>
   );
