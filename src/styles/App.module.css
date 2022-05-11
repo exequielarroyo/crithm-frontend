@@ -317,94 +317,40 @@ body {
   margin: 0px 10px;
 }
 /* --------------------- */
-.PricingCard {
-  /* rectangle glass */
-
-  width: 401.21px;
-  height: 553.31px;
-
-  background: linear-gradient(126deg, rgba(1, 118, 255, 0.4) 45.52%, rgba(25, 45, 106, 0.4) 83.5%);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 16px;
+.PricingContainer{
+  display: flex;
+  gap: 50px;
 }
-.PriceCard {
-  /* Frame 24 */
-
-  width: 447.01px;
-  height: 553.31px;
-  left: 190.17px;
-  top: 277.02px;
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 100px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
-.pri_card {
-  /* Android/IOS */
-
-  position: absolute;
-  width: 333.96px;
-  height: 73.52px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-
-  color: #ffffff;
+.nav_bar h1 {
+  margin-left: 30px;
+  margin-top: 15px;
 }
-.pri_card1 {
-  /* $ 400 */
-
-  position: absolute;
-  width: 309.31px;
-  height: 49.01px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 43px;
-
-  color: #ffffff;
+.nav_bar .app_logo {
+  width: 110.61px;
+  height: 63.77px;
+  left: 1619px;
+  top: 145.81px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
-.pri_card2 {
-  /* Price may vary depending on the features and complexity of the system. */
-
-  position: absolute;
-  width: 301px;
-  height: 73px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-
-  color: #fffcfc;
-
-  mix-blend-mode: normal;
+.nav{
+  width: 90%;
+  margin-bottom: 50px;
 }
-.pri_card3 {
-  /* Examples: Social Media Apps GPS */
-
-  position: absolute;
-  width: 301.15px;
-  height: 35.03px;
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-
-  color: #fffcfc;
-
-  mix-blend-mode: normal;
-}
-
 /*----Join Section---*/
 
 .JoinCard1 {

@@ -1,0 +1,90 @@
+.PricingCard {
+  /* rectangle glass */
+  padding: 20px ;
+  width: 350px;
+  height: 500px;
+
+  background: linear-gradient(
+    126deg,
+    rgba(1, 118, 255, 0.4) 45.52%,
+    rgba(25, 45, 106, 0.4) 83.5%
+  );
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+
+.PriceCard {
+  /* Frame 24 */
+
+  width: 447.01px;
+  height: 553.31px;
+
+  
+}
+.pri_card {
+  /* Android/IOS */
+  margin-bottom: 50px;
+  position: flex;
+ 
+
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.pri_card1 {
+  /* $ 400 */
+  text-align: center;
+  position: flex;
+  margin-bottom: 50px;
+
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #ffffff;
+}
+.pri_card2 {
+  /* Price may vary depending on the features and complexity of the system. */
+  text-align: center;
+  position: flex;
+  margin-bottom: 50px;
+
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #fffcfc;
+
+  mix-blend-mode: normal;
+}
+.pri_card3 {
+  /* Examples: Social Media Apps GPS */
+  text-align: center;
+  position: flex;
+  margin-bottom: 20px;
+  width: 301.15px;
+  height: 35.03px;
+
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #fffcfc;
+
+  mix-blend-mode: normal;
+}
