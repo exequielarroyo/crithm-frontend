@@ -62,9 +62,9 @@ function SignUp() {
   return (
     <div className="SignUpcontainer">
       
-      <nav className="nav_bar">
+      <nav className={style.nav_bar}>
         <h1>Sign Up Page</h1>
-        <img src={"/assets/images/logo.png"} className="app_logo" alt="logo" />
+        <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
       </nav>
       
       <form onSubmit= {handleSubmit}>

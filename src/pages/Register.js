@@ -1,5 +1,5 @@
 import React from "react";
-import "./Register.css";
+import style from '../styles/Register.module.css';
 
 function Register() {
   const handleSubmit = (e)=>{
@@ -8,18 +8,13 @@ function Register() {
 
   return (
     <div className="SignUpcontainer">
-      <ellipse className="ellipse"></ellipse>
-      <ellipse className="ellipse1"></ellipse>
-      <ellipse className="ellipse2"></ellipse>
-      <ellipse className="ellipse3"></ellipse>
-      
-      <nav className="nav_bar">
+      <nav className={style.nav_bar}>
         <h1>Project Registration Form</h1>
-        <img src={"/assets/images/logo.png"} className="app_logo" alt="logo" />
+        <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
       </nav>
       
       <form onSubmit={(e)=>{handleSubmit(e)}}>
-        <div class ="card" className="register">  
+        <div class ="card" className={style.register}>  
         <div>
        
         <h1>Registration Form</h1>
