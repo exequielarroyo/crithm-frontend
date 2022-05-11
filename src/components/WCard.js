@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/App.module.css";
 
-const WCard = ({ W_content_job, W_content, W_div, W_name, W_circle }) => {
+const WCard = ({ W_content_job, W_content, W_name, W_circle }) => {
   return (
     <div className={style.WhyusCard}>
       <div>

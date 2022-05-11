@@ -266,33 +266,122 @@ body {
   flex-grow: 0;
   margin: 22px 0px;
 }
-/* -------------------------- */
-.ProcessCard {
-  /* card */
 
-  border: 1px solid;
-
-  border-image-source: radial-gradient(61.01% 61.01% at 96.95% 100%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    radial-gradient(53.67% 86.38% at 0% 9.17%, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-  /* Auto layout */
-
+/* ---------- Proccess Section ----------- */
+.page4container {
+  max-width: 80%;
+  height: 80vh;
+}
+.process_middle {
+  margin-left: 35px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  position: absolute;
   align-items: center;
-  padding: 24px;
-
-  width: 1347px;
-  height: 143px;
-
-  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 16px;
+  z-index: 1;
+}
+.process_bottom {
+  margin-left: 50px;
+  margin-top: 20px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+}
+.process_ellipse {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00FB98;
+  margin-left: 25px;
+}
+.process_ellipse6 {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00FB98;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.process_ellipse2 {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse3 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse4 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  margin-top: 20px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse5 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  margin-top: 20px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_line1 {
+  display: flex;
+  height: 23px;
+  margin-left: 42px;
+  margin-top: -30px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line2 {
+  display: flex;
+  height: 129px;
+  margin-left: 42px;
+  margin-top: 20px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line3 {
+  display: flex;
+  height: 129px;
+  margin-left: 42px;
+  margin-top: 40px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line4 {
+  display: flex;
+  height: 300px;
+  margin-left: 42px;
+  margin-top: 40px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_text{
+  margin-left: 10px;
+  height: 10px;
+}
+.process_card_content {
+  margin-top: 70px;
 }
 .p_content {
   /* Step 1 | Mapping week 1 The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project Registration From (PRF), the team will have the rough idea on what the client wants. */
@@ -316,7 +405,9 @@ body {
   flex-grow: 1;
   margin: 0px 10px;
 }
-/* --------------------- */
+
+
+/* --------- Pricing Section ------------ */
 .PricingContainer{
   display: flex;
   gap: 50px;
@@ -351,8 +442,9 @@ body {
   width: 90%;
   margin-bottom: 50px;
 }
-/*----Join Section---*/
 
+
+/*----Join Section---*/
 .JoinCard1 {
   border: 1px solid;
 
@@ -420,7 +512,7 @@ body {
   border-radius: 5px;
 }
 
-/*---- Why Us Section ----*/
+/*------- Why Us Section -------*/
 .page6container {
   height: 80vh;
   max-width: 1000px;
