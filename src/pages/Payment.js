@@ -1,9 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "../styles/Payment.module.css";
 
 const Payment = () => {
+  const initialValues = { firstname: "", lastname: "", cardnumber: "", cvv: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  // ---- CARD ---- //
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+    console.log(formValues);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.firstname) {
+      errors.firstname = "Required field!";
+    }
+    if (!values.lastname) {
+      errors.lastname = "Required field!";
+    }
+    if (!values.cardnumber) {
+      errors.cardnumber = "Required field!";
+    }
+    if (!values.cvv) {
+      errors.cvv = "Required field!";
+    }
+
+    return errors;
+  };
+
+  // ---- GCASH ---- //
+
   const uploadImage = (async) => {
-    console.log("image uploaded");
+    var fileInput = document.getElementById("file");
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpeg|\.jpg|\.png)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+      alert("Upload a file! (.jpeg/.jpg/.png)");
+      fileInput.value = "";
+      return false;
+    } else {
+      if (fileInput.files && fileInput.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("imagePreview").innerHTML = '<img src>="' + e.target.result + '" />';
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+      }
+    }
   };
 
   return (
@@ -15,35 +74,40 @@ const Payment = () => {
           <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
         </nav>
       </div>
-      <form className={style.form}>
+      <form className={style.form} onSubmit={handleSubmit}>
         {/* ---- CREDIT CARD ---- */}
         <div class="card" className={style.cashtransfer}>
           <div className={style.bank}>
             <h1 className={style.h1}>Bank Transfer</h1>
             <div className={style.inputbox}>
               <label>First Name</label>
-              <input type="text" />
+              <input name="firstname" type="text" value={formValues.firstname} onChange={handleChange} />
+              <p>{formErrors.firstname}</p>
             </div>
             <div className={style.inputbox}>
               <label>Last Name</label>
-              <input type="text" />
+              <input name="lastname" type="text" value={formValues.lastname} onChange={handleChange} />
+              <p>{formErrors.lastname}</p>
             </div>
             <div className={style.inputbox}>
               <label>Middle Name</label>
               <input type="text" />
+              <p></p>
             </div>
             <div className={style.inputbox}>
               <label>Card #</label>
-              <input type="text" maxlength="16" />
+              <input name="cardnumber" type="text" maxlength="16" value={formValues.cardnumber} onChange={handleChange} />
+              <p>{formErrors.cardnumber}</p>
             </div>
             <div className={style.inputbox}>
               <label>cvv</label>
-              <input type="text" maxlength="4" />
+              <input name="cvv" type="text" maxlength="4" value={formValues.cvv} onChange={handleChange} />
+              <p>{formErrors.cvv}</p>
             </div>
             <div className={style.dateinputbox}>
               <label className={style.datelabel}>Expiration date</label>
-              <select name="" id="" class="month-input">
-                <option value="month" selected disabled>
+              <select class="month-input">
+                <option selected disabled>
                   mm
                 </option>
                 <option value="01">01</option>
@@ -59,8 +123,8 @@ const Payment = () => {
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <select name="" id="" class="year-input">
-                <option value="year" selected disabled>
+              <select class="year-input">
+                <option selected disabled>
                   yyyy
                 </option>
                 <option value="2021">2021</option>
@@ -75,7 +139,7 @@ const Payment = () => {
                 <option value="2030">2030</option>
               </select>
             </div>
-            <input className={style.submit__btn} type="submit" value="submit" />
+            <input className={style.submit__btn} type="submit" name="submit" value="Submit" />
           </div>
         </div>
         {/* ---- GCASH ---- */}
@@ -88,8 +152,8 @@ const Payment = () => {
             </div>
             <div className={style.lowerinputbox}>
               <label className={style.label}>Upload Reciept</label>
-              <input className={style.uploads} type="file" name="file" onChange={uploadImage} />
-              <input className={style.submit__btn} type="submit" value="submit" />
+              <input className={style.uploads} type="file" onChange={uploadImage} />
+              <input className={style.submit__btn} type="submit" name="submit" value="Submit" />
             </div>
           </div>
         </div>
