@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import Card from '../../components/Card';
-import style from '../../styles/Project.module.css';
-import useAxiosPrivate from '../../hooks/useAxiosPrivate';
-import { useLocation, useNavigate } from 'react-router-dom';
-import useLogout from '../../hooks/useLogout';
+import { useEffect, useState } from "react";
+import Card from "../../components/Card";
+import style from "../../styles/Project.module.css";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import { useLocation, useNavigate } from "react-router-dom";
+import useLogout from "../../hooks/useLogout";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
@@ -18,12 +18,14 @@ const Project = () => {
 
     const getProjects = async () => {
       try {
-        const res = await axiosPrivate.get(`/project`, { signal: controller.signal });
+        const res = await axiosPrivate.get(`/project`, {
+          signal: controller.signal,
+        });
         console.log(res.data);
         isMounted && setProjects(res.data);
       } catch (error) {
         console.error(error);
-        navigate('/signin', { state: { from: location }, replace: true });
+        navigate("/signin", { state: { from: location }, replace: true });
       }
     };
 
@@ -37,7 +39,7 @@ const Project = () => {
 
   async function handleSignout() {
     await logout();
-    navigate('/');
+    navigate("/");
   }
 
   return (
@@ -45,7 +47,13 @@ const Project = () => {
       <div className={style.header}>
         <h1>Add Project</h1>
         <div>
-          <button onClick={()=> {navigate('/register')}}>Create Project</button>
+          <button
+            onClick={() => {
+              navigate("/register");
+            }}>
+            Create Project
+          </button>
+          <button onClick={handleSignout}>Sign out</button>
         </div>
       </div>
       <div className={style.projectGrid}>
@@ -72,7 +80,6 @@ const Project = () => {
         /> */}
         <Card />
       </div>
-      <button onClick={handleSignout}>Sign out</button>
 
       {/* <div className='ellipse3'></div>
       <div className='ellipse4'></div> */}
