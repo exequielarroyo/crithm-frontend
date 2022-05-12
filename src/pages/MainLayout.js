@@ -75,8 +75,8 @@ const MainLayout = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to={"/about"}>
-                    About
+                  <Link className="nav-link" to={"/team"}>
+                    Team
                   </Link>
                 </li>
               </ul>
