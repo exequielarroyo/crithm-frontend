@@ -27,9 +27,13 @@ function SignUp() {
     
     
     axiosDefault
-    .post('/auth/register',{...formValues})
-    .then((res) =>{
-      navigate('/dashboard',{replace: true})
+    .post("/auth/register", { ...formValues })
+    .then((res) => {
+      if (res.data.error) {
+
+      } else {
+        navigate("/dashboard", { replace: true });
+      }
     })
     .catch((error) => {
       console.log(error)
