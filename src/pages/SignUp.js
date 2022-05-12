@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import React from "react";
 import style from '../styles/SignUp.module.css';
 import { useNavigate, Link } from 'react-router-dom';
-import{ axiosDefault } from '../api/axios';
+import{ axiosDefault, axiosPrivate } from '../api/axios';
+import useAuth from "../hooks/useAuth";
+import axios from "axios";
 
 
 
@@ -11,6 +13,7 @@ function SignUp() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const { setAuth }= useAuth();
   
 
   const handleChange = (e) => {
@@ -21,23 +24,41 @@ function SignUp() {
   
   const navigate = useNavigate();
   
+  const login = async (email, password)=>{
+    console.log(email, password)
+    try {
+      const res = await axiosPrivate
+      .post(
+        "/auth",
+        { email, password },
+        { withCredentials: true },
+      )
+      if (!res.data.error) {
+        setAuth(res.data);
+        navigate("/dashboard", { replace: true });
+      } else {
+        console.log(res.data.error);
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     
-    axiosDefault
-    .post("/auth/register", { ...formValues })
-    .then((res) => {
+    try {
+      const res  = await axiosDefault.post("/auth/register", { ...formValues });
+      console.log(res.data)
       if (res.data.error) {
-
+        console.log(res.data.error)
       } else {
-        navigate("/dashboard", { replace: true });
+        login(res.data.email, formValues.password);
       }
-    })
-    .catch((error) => {
+    } catch (error) {
       console.log(error)
-    }) 
+    }
     setFormErrors(validate(formValues));
     setIsSubmit(true);
     
@@ -45,9 +66,9 @@ function SignUp() {
   
  
   useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
+    // console.log(formErrors);
+    if (Object.keys(formErrors).length === 0) {
+      // console.log(formValues);
     }
   }, [formErrors]);
   const validate = (values) => {
