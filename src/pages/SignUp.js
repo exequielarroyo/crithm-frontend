@@ -1,33 +1,59 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import style from '../styles/SignUp.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import{ axiosDefault } from '../api/axios';
+//import axios from "axios";
+
 
 function SignUp() {
-  const initialValues = { fullname:"", username: "", email: "", password: "" ,occupation:""};
+  const initialValues = { firstName:"", lastName: "", address: "", company: "", number: "",  email: "", password: "" ,occupation:""};
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [errorMessage, setResponseError] = useState('');
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
+  // axios.get('destination').then(res => {
+  //   navigate('/dashboard', {replace: true})
+  // }).catch(error)
   const navigate = useNavigate();
-  const handleSignup = (e) => {
-    e.preventDefault();
-    console.log('registered');
-    navigate ('/dashboard', { replace: true });
-  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    
+    axiosDefault
+    .post('/auth/register',{...formValues})
+    .then((res) =>{
+      navigate('/dashboard',{replace: true})
+    })
+    .catch((error) => {
+      console.log(error)
+    }) 
     setFormErrors(validate(formValues));
+    // try{
+    //     const response = await axios.get('destination');
+    //     if(response.data){
+    //       navigate('/dashboard', {replace: true})
+    //     } else if(response.data.error){
+    //       setResponseError(response.data.error)
+
+    //     }
+    // }catch(error){
+    //   console.log(error);
+    // }
     setIsSubmit(true);
     
   };
-
+  
+ 
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -37,11 +63,16 @@ function SignUp() {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.username) {
-      errors.username = "Username is required!";
+    
+    if (!values.firstName) {
+      errors.firstName = "Firstname is required!";
     }
-    if (!values.fullname) {
-      errors.fullname = "Full name is required!";
+    if (!values.lastName) {
+      errors.lastName = "Lastname is required!";
+    }
+    
+    if (!values.address) {
+      errors.address = "Address is required!";
     }
     if (!values.occupation) {
       errors.occupation = "Occupation is required!";
@@ -61,29 +92,77 @@ function SignUp() {
 
   return (
     <div className="SignUpcontainer">
-      
-      <nav className={style.nav_bar}>
-        <h1>Sign Up Page</h1>
+      <div className={style.logoContainer}>
+      <div className={style.joinContainer}>
+          <div className={style.content}>
+            <h1>CRITHM</h1>
+            <div className={style.img}>
+              <img src="/assets/images/ring.png" alt="" />
+              <img src="/assets/images/curve-line.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <nav className={style.nav_bar}>
+        <h1 style = {{ fontFamily: 'korataki' }}>Sign Up Page</h1>
         <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
-      </nav>
+      </nav> */}
       
-      <form onSubmit= {handleSubmit}>
+      <form  onSubmit= {handleSubmit}>
         <div class ="card" className={style.uiform}>  
         <div>
+        
        
         <h1>Sign Up Now!</h1>
-        <h2 className={style.subHead}> Please fill up the informations below! </h2>
+        <h2 className={style.subHead}>please fill up all the informations below!</h2>
+        <h2 className={style.subHead}> {errorMessage} </h2>
         <div className="field">
-            <label>Fullname</label>
+            <label>Firstname</label>
             <input className={style.input}
               type="text"
-              name="fullname"
-              placeholder="Full name"
-              value={formValues.fullname}
+              name="firstName"
+              placeholder="First name"
+              value={formValues.firstName}
               onChange={handleChange}
             />
           </div>
-          <p className ={style.text}>{formErrors.fullname}</p>
+          <p className ={style.text}>{formErrors.firstName}</p>
+
+          <div className="field">
+            <label>Lastname</label>
+            <input className={style.input}
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              value={formValues.lastName}
+              onChange={handleChange}
+            />
+          </div>
+          <p className ={style.text}>{formErrors.lastName}</p>
+
+          <div className="field">
+            <label>Company (optional)</label>
+            <input className={style.input}
+              type="text"
+              name="company"
+              placeholder="Company"
+              value={formValues.company}
+              onChange={handleChange}
+            />
+          </div>
+          <p className ={style.text}>{formErrors.company}</p>
+
+          <div className="field">
+            <label>Number (optional)</label>
+            <input className={style.input}
+              type="text"
+              name="number"
+              placeholder="Number"
+              value={formValues.number}
+              onChange={handleChange}
+            />
+          </div>
+          <p className ={style.text}>{formErrors.number}</p>
 
           <div className="field">
             
@@ -100,16 +179,16 @@ function SignUp() {
           
           
           <div className="field">
-            <label>Username</label>
+            <label>Address</label>
             <input className={style.input}
               type="text"
-              name="username"
-              placeholder="Username"
-              value={formValues.username}
+              name="address"
+              placeholder="Address"
+              value={formValues.address}
               onChange={handleChange}
             />
           </div>
-          <p className ={style.text}>{formErrors.username}</p>
+          <p className ={style.text}>{formErrors.address}</p>
           
           
           <div className="field">
@@ -135,11 +214,13 @@ function SignUp() {
             />
           </div>
           <p className={style.text}>{formErrors.password}</p>
-          <button className= {style.buttonSub}>Submit</button>
+          <button type = 'submit' className= {style.buttonSub}>Submit</button>
+          <div className={style.subHead}>Already have an account? <Link to="/signin">Login</Link></div> 
         </div>
         </div> 
       </form>
     </div>
+    //onClick={() => {navigate('/dashboard')}}
     
   );
 }
