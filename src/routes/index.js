@@ -57,6 +57,7 @@ const Router = () => {
               <Route path='unauthorized' element={<Unauthorized />} />
 
               <Route path='about' element={<About />} />
+              <Route path='contact' element={<Contact />} />
             </Route>
 
             <Route path='signup' element={<SignUp />} />
@@ -65,7 +66,6 @@ const Router = () => {
             <Route element={<PersistLogin />}>
               <Route path='register' element={<Register />} />
               <Route path='profile' element={<Profile />} />
-              <Route path='contact-us' element={<Contact />} />
               <Route element={<Protected />}>
                 <Route path='dashboard' element={<DashboardLayout />}>
                   <Route index element={<Project />} />
