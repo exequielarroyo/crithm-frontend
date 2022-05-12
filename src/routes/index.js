@@ -36,7 +36,7 @@ const Profile = Loadable(lazy(() => import('../pages/Profile')));
 const Register = Loadable(lazy(() => import('../pages/Register')));
 const Payment = Loadable(lazy(() => import('../pages/Payment')));
 const SignUp = Loadable(lazy(() => import('../pages/SignUp')));
-const About = Loadable(lazy(() => import('../pages/About')));
+const Team = Loadable(lazy(() => import('../pages/Team')));
 const Project = Loadable(lazy(() => import('../pages/dashboard/Project')));
 
 const Router = () => {
@@ -56,7 +56,8 @@ const Router = () => {
 
               <Route path='unauthorized' element={<Unauthorized />} />
 
-              <Route path='about' element={<About />} />
+              <Route path='team' element={<Team />} />
+              <Route path='contact' element={<Contact />} />
             </Route>
 
             <Route path='signup' element={<SignUp />} />
@@ -65,7 +66,6 @@ const Router = () => {
             <Route element={<PersistLogin />}>
               <Route path='register' element={<Register />} />
               <Route path='profile' element={<Profile />} />
-              <Route path='contact-us' element={<Contact />} />
               <Route element={<Protected />}>
                 <Route path='dashboard' element={<DashboardLayout />}>
                   <Route index element={<Project />} />

@@ -106,6 +106,8 @@ header {
 /* ------------------------------ */
 
 .termsContainer {
+  border-radius: 16px;
+  padding: 20px;
   box-sizing: border-box;
 
   position: absolute;
