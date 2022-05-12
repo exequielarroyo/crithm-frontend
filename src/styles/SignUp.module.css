@@ -130,35 +130,6 @@
   z-index: -1
 }
 
-.nav_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    height: 100px;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 20px;
-    border-radius: 15px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
-    border-top: 2px solid  rgba(255, 255, 255, 0.2);
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.nav_bar h1 {
-    margin-left: 30px;  
-    margin-top: 15px;
-}
-
-.nav_bar .app_logo {
-    width: 110.61px;
-    height: 63.77px;
-    left: 1619px;
-    top: 145.81px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
 @media only screen and (max-width: 1000px) {
   /* For pc: */
   .uiform {
@@ -166,10 +137,6 @@
    min-width: 47%;
   }
   
-  .nav_bar {
-    display: flex;
-    justify-content: center;
-  }
   .input {
     position: relative;
     align-items: center;
@@ -177,9 +144,7 @@
   .buttonSub{
     position: relative;
   }
-  .logoContainer{
-    
-  }
+  
 }
 @media only screen and (max-width: 768px) {
   /* For tablets: */

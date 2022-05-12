@@ -3,7 +3,7 @@ import React from "react";
 import style from '../styles/SignUp.module.css';
 import { useNavigate, Link } from 'react-router-dom';
 import{ axiosDefault } from '../api/axios';
-//import axios from "axios";
+
 
 
 function SignUp() {
@@ -11,7 +11,6 @@ function SignUp() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [errorMessage, setResponseError] = useState('');
   
 
   const handleChange = (e) => {
@@ -19,9 +18,7 @@ function SignUp() {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  // axios.get('destination').then(res => {
-  //   navigate('/dashboard', {replace: true})
-  // }).catch(error)
+  
   const navigate = useNavigate();
   
 
@@ -38,17 +35,6 @@ function SignUp() {
       console.log(error)
     }) 
     setFormErrors(validate(formValues));
-    // try{
-    //     const response = await axios.get('destination');
-    //     if(response.data){
-    //       navigate('/dashboard', {replace: true})
-    //     } else if(response.data.error){
-    //       setResponseError(response.data.error)
-
-    //     }
-    // }catch(error){
-    //   console.log(error);
-    // }
     setIsSubmit(true);
     
   };
@@ -103,10 +89,6 @@ function SignUp() {
           </div>
         </div>
       </div>
-      {/* <nav className={style.nav_bar}>
-        <h1 style = {{ fontFamily: 'korataki' }}>Sign Up Page</h1>
-        <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
-      </nav> */}
       
       <form  onSubmit= {handleSubmit}>
         <div class ="card" className={style.uiform}>  
@@ -115,7 +97,6 @@ function SignUp() {
        
         <h1>Sign Up Now!</h1>
         <h2 className={style.subHead}>please fill up all the informations below!</h2>
-        <h2 className={style.subHead}> {errorMessage} </h2>
         <div className="field">
             <label>Firstname</label>
             <input className={style.input}
