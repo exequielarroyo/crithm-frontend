@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef();
-  const [formState, setFormState] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,8 +16,8 @@ const Contact = () => {
         "Mx8aJusmaDIrtdC2s",
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        (res) => {
+          alert('Email sent')
         },
         (error) => {
           console.log(error.text);
@@ -40,6 +39,9 @@ const Contact = () => {
             </div>
             <div>
               <input type="email" name="email" required placeholder="Email" />
+            </div>
+            <div>
+              <input type="text" name="subject" required placeholder="Subject" />
             </div>
             <div>
               <textarea
