@@ -48,20 +48,6 @@ const Login = () => {
 
   function handleGoogleSignIn(e) {
     window.open("http://localhost:3002/auth/google", "_self");
-    // axios
-    //   .get(`${process.env.REACT_APP_URL}/auth/google`, {
-    //     withCredentials: true,
-    //   })
-    //   .then((res) => {
-    //     if (!res.data.error) {
-    //       setAuth(res.data);
-    //       setEmail("");
-    //       setPassword("");
-    //       navigate(from, { replace: true });
-    //     } else {
-    //       setErrorMessage(res.data.error);
-    //     }
-    //   });
   }
 
   useEffect(() => {
@@ -116,7 +102,7 @@ const Login = () => {
               </p>
             </div>
           </form>
-          {/* <button onClick={handleGoogleSignIn}>Google</button> */}
+          <button onClick={handleGoogleSignIn}>Google</button>
         </div>
       </section>
     </>
