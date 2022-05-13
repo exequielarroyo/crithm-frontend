@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "../styles/Payment.module.css";
+import style from "../../styles/Payment.module.css";
 
 const CreditCard = () => {
   const initialValues = { firstname: "", lastname: "", cardnumber: "", cvv: "" };
@@ -27,7 +27,6 @@ const CreditCard = () => {
   }, [formErrors]);
   const validate = (values) => {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.firstname) {
       errors.firstname = "Required field!";
     }
@@ -52,7 +51,22 @@ const CreditCard = () => {
           <img src={"/assets/images/creditcard_logo.png"} className={style.card_logo} alt="Cards logo" />
         </nav>
       </div>
-      <form className={style.form} onSubmit={handleSubmit}>
+      <div className={style.Billing}>
+        <div className={style.billing_title}>
+          <h5 className={style.billing_upper_label}>Billing</h5>
+        </div>
+        <div className={style.billing_body}>
+          <label>Type of system</label>
+          <label>$0.00</label>
+          <label>Features</label>
+          <label>$0.00</label>
+          <label>VAT %</label>
+          <label>0%</label>
+          <h4>Total</h4>
+          <h4>$0.00</h4>
+        </div>
+      </div>
+      <form className={style.credit_form} onSubmit={handleSubmit}>
         {/* ---- CREDIT CARD ---- */}
         <div class="card" className={style.cashtransfer}>
           <div className={style.bank}>

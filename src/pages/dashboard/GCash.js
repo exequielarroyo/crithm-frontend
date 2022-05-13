@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/Payment.module.css";
+import style from "../../styles/Payment.module.css";
 
 const GCash = () => {
   const uploadImage = (async) => {
@@ -29,7 +29,7 @@ const GCash = () => {
           <img src={"/assets/images/gcash_logo.png"} className={style.gcash_logo} alt="GCash logo" />
         </nav>
       </div>
-      <form className={style.form}>
+      <form className={style.gcash_form}>
         {/* ---- GCASH ---- */}
         <div class="card" className={style.cashtransfer}>
           <div className={style.gcash}>

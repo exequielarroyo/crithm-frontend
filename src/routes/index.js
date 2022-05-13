@@ -35,12 +35,12 @@ const Home = Loadable(lazy(() => import("../pages/Home")));
 const Contact = Loadable(lazy(() => import("../pages/Contact")));
 const Profile = Loadable(lazy(() => import("../pages/Profile")));
 const Register = Loadable(lazy(() => import("../pages/Register")));
-const Payment = Loadable(lazy(() => import("../pages/Payment")));
+const Payment = Loadable(lazy(() => import("../pages/dashboard/Payment")));
 const SignUp = Loadable(lazy(() => import("../pages/SignUp")));
 const Team = Loadable(lazy(() => import("../pages/Team")));
 const Project = Loadable(lazy(() => import("../pages/dashboard/Project")));
-const CreditCard = Loadable(lazy(() => import("../pages/CreditCard")));
-const GCash = Loadable(lazy(() => import("../pages/GCash")));
+const CreditCard = Loadable(lazy(() => import("../pages/dashboard/CreditCard")));
+const GCash = Loadable(lazy(() => import("../pages/dashboard/GCash")));
 
 const Router = () => {
   return (
