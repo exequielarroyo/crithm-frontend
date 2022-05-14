@@ -73,12 +73,11 @@ const Router = () => {
                 <Route path="dashboard" element={<DashboardLayout />}>
                   <Route index element={<Project />} />
                 </Route>
+                <Route path="payment" element={<Payment />} />
+                <Route path="payment/credit" element={<CreditCard />} />
+                <Route path="payment/gcash" element={<GCash />} />
               </Route>
             </Route>
-
-            <Route path="payment" element={<Payment />} />
-            <Route path="payment/credit" element={<CreditCard />} />
-            <Route path="payment/gcash" element={<GCash />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
