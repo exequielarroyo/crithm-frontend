@@ -49,6 +49,9 @@ const Login = () => {
   function handleGoogleSignIn(e) {
     window.open("http://localhost:3002/auth/google", "_self");
   }
+  function handleFacebookSignIn(e) {
+    window.open("http://localhost:3002/auth/facebook", "_self");
+  }
 
   useEffect(() => {
     localStorage.setItem("persist", persist);
@@ -103,6 +106,7 @@ const Login = () => {
             </div>
           </form>
           <button onClick={handleGoogleSignIn}>Google</button>
+          <button onClick={handleFacebookSignIn}>Facebook</button>
         </div>
       </section>
     </>
