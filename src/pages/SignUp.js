@@ -20,6 +20,16 @@ function SignUp() {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+  function handleGoogleSignUp(e) {
+    window.open("http://localhost:3002/auth/google", "_self");
+  }
+  function handleFacebookSignUp(e) {
+    window.open("http://localhost:3002/auth/facebook", "_self");
+  }
+  function handleGithubSignUp(e) {
+    window.open("http://localhost:3002/auth/github", "_self");
+  }
+
 
   
   const navigate = useNavigate();
@@ -225,8 +235,11 @@ function SignUp() {
         </div>
         </div> 
       </form>
+          <button onClick={handleGoogleSignUp}>Google</button>
+          <button onClick={handleFacebookSignUp}>Facebook</button>
+          <button onClick={handleGithubSignUp}>Github</button>
     </div>
-    //onClick={() => {navigate('/dashboard')}}
+    
     
   );
 }
