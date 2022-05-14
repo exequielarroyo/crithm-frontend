@@ -50,7 +50,7 @@ const Router = () => {
               <Route element={<Protected />}>
                 <Route path="dashboard" element={<DashboardLayout />}>
                   <Route index element={<Project />} />
-                  <Route path="register" element={<Register />} />
+                  <Route path="register/:id" element={<Register />} />
                   <Route path="profile" element={<Profile />} />
 
                   <Route path="payment" element={<PaymentLayout />}>

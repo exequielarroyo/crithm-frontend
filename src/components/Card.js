@@ -4,11 +4,14 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import style from "../styles/Project.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ title, description }) => {
+const Card = ({ title, description, id }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/dashboard/register");
+    if (id === undefined) {
+      id = 'create';
+    }
+    navigate(`/dashboard/register/${id}`);
   };
 
   return (

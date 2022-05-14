@@ -52,7 +52,7 @@ const Project = () => {
       <div className={style.projectGrid}>
         {projects.map((p) => (
           <div key={p.id}>
-            <Card title={p.name} description={p.description} />
+            <Card title={p.name} description={p.description} id={p.id} />
           </div>
         ))}
         {/* <Card
