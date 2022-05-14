@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import style from '../styles/Register.module.css';
+import { useNavigate} from 'react-router-dom';
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
 
 function Register() {
-  const initialValues = { projectname: ""};
+  const initialValues = { name: "", description:""};
+  const axiosPrivate = useAxiosPrivate ()
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -12,8 +16,18 @@ function Register() {
     setFormValues({ ...formValues, [name]: value });
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e)=>{
     e.preventDefault()
+   axiosPrivate.post("/project",{...formValues})
+   .then ((res)=>{
+     navigate ("/payment",{replace:true})
+   })
+   .catch ((error)=> {
+     console.log (error)
+   }) 
+
     setFormErrors(validate(formValues));
     setIsSubmit(true);
   };
@@ -25,9 +39,12 @@ function Register() {
   }, [formErrors]);
   const validate = (values) => {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.projectname) {
-      errors.projectname = "Required field!";
+    if (!values.name) {
+      errors.name = "Required field!";
+    }
+
+    if (!values.description) {
+      errors.description = "Required field!";
     }
 
     return errors;
@@ -52,18 +69,33 @@ function Register() {
             <p className="subhead1">What is your project name or tittle?</p>
             <input
               type="text"
-              name="projectname"
+              name="name"
               placeholder="Project name"
-              value={formValues.projectname}
+              value={formValues.name}
               onChange={handleChange}
 
             />
           </div>
-          <p className ={style.text}>{formErrors.projectname}</p>
+          <p className ={style.text}>{formErrors.name}</p>
 
           <div className="field">
+            <label className={style.tittle1}> 2. Details </label>
+            <p className="subhead1">What is your project description?</p>
+            <input
+              type="text"
+              name="description"
+              placeholder="Description"
+              value={formValues.description}
+              onChange={handleChange}
+
+            />
+          </div>
+          <p className ={style.text}>{formErrors.description}</p>
+
+        
+          <div className="field">
             
-          <label className={style.tittle1}>2. Project Type </label>
+          <label className={style.tittle1}>3. Project Type </label>
             <p className={style.subhead1}> Select your project type, or use other for different type</p>
             <select>
                 <option value="project type" selected disabled>
