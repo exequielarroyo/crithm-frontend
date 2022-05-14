@@ -119,13 +119,13 @@
   margin-top: 20px;
 }
 
-p {
+/* p {
   color: red;
   font-size: 15px;
   position: absolute;
   margin-left: 310px;
   margin-top: 30px;
-}
+} */
 
 .gcash_credit_nav {
   display: flex;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "../../styles/Payment.module.css";
+import style from "../../../styles/Payment.module.css";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const Payment = () => {
             <button
               className={style.credit_btn}
               onClick={() => {
-                navigate("/payment/credit");
+                navigate("/dashboard/payment/credit");
               }}
             >
               Credit/Debit
@@ -67,7 +67,7 @@ const Payment = () => {
             <button
               className={style.gcash_btn}
               onClick={() => {
-                navigate("/payment/gcash");
+                navigate("/dashboard/payment/gcash");
               }}
             >
               GCash

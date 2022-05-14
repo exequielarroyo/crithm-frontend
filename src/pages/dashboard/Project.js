@@ -3,14 +3,12 @@ import Card from "../../components/Card";
 import style from "../../styles/Project.module.css";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useLocation, useNavigate } from "react-router-dom";
-import useLogout from "../../hooks/useLogout";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const axiosPrivate = useAxiosPrivate();
   const location = useLocation();
   const navigate = useNavigate();
-  const logout = useLogout();
 
   useEffect(() => {
     let isMounted = true;
@@ -37,11 +35,6 @@ const Project = () => {
     };
   }, []);
 
-  async function handleSignout() {
-    await logout();
-    navigate("/");
-  }
-
   return (
     <div className={style.project}>
       <div className={style.header}>
@@ -49,17 +42,17 @@ const Project = () => {
         <div>
           <button
             onClick={() => {
-              navigate("/register");
+              navigate("/dashboard/register");
             }}>
             Create Project
           </button>
-          <button onClick={handleSignout}>Sign out</button>
+          
         </div>
       </div>
       <div className={style.projectGrid}>
         {projects.map((p) => (
           <div key={p.id}>
-            <Card title={p.name} description={p.description} />
+            <Card title={p.name} description={p.description} id={p.id} />
           </div>
         ))}
         {/* <Card
