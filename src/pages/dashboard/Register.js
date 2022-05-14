@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import style from '../styles/Register.module.css';
+import style from '../../styles/Register.module.css';
 import { useNavigate} from 'react-router-dom';
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 
 function Register() {
@@ -22,7 +22,7 @@ function Register() {
     e.preventDefault()
    axiosPrivate.post("/project",{...formValues})
    .then ((res)=>{
-     navigate ("/payment",{replace:true})
+     navigate ("/dashboard/payment",{replace:true})
    })
    .catch ((error)=> {
      console.log (error)

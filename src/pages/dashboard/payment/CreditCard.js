@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import style from "../../styles/Payment.module.css";
+import style from "../../../styles/Payment.module.css";
 import { useNavigate, useParams } from "react-router-dom";
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
 
 const CreditCard = () => {
   const initialValues = { firstname: "", lastname: "", cardnumber: "", cvv: "" };

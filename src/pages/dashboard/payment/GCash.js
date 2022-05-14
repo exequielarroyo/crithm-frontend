@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../styles/Payment.module.css";
+import style from "../../../styles/Payment.module.css";
 
 const GCash = () => {
   const uploadImage = (async) => {

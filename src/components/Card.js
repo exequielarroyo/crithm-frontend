@@ -8,7 +8,7 @@ const Card = ({ title, description }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/register");
+    navigate("/dashboard/register");
   };
 
   return (
