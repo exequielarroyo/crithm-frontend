@@ -52,6 +52,9 @@ const Login = () => {
   function handleFacebookSignIn(e) {
     window.open("http://localhost:3002/auth/facebook", "_self");
   }
+  function handleGithubSignIn(e) {
+    window.open("http://localhost:3002/auth/github", "_self");
+  }
 
   useEffect(() => {
     localStorage.setItem("persist", persist);
@@ -107,6 +110,7 @@ const Login = () => {
           </form>
           <button onClick={handleGoogleSignIn}>Google</button>
           <button onClick={handleFacebookSignIn}>Facebook</button>
+          <button onClick={handleGithubSignIn}>Github</button>
         </div>
       </section>
     </>
