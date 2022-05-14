@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import style from "../../styles/Payment.module.css";
+import { useNavigate, useParams } from "react-router-dom";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 const CreditCard = () => {
   const initialValues = { firstname: "", lastname: "", cardnumber: "", cvv: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const axiosPrivate = useAxiosPrivate();
 
   // ---- CARD ---- //
   const handleChange = (e) => {
@@ -14,8 +20,18 @@ const CreditCard = () => {
     console.log(formValues);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const res = await axiosPrivate.put(`/project/1`, { isPaid: true });
+      if (res.data.name) {
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
     setFormErrors(validate(formValues));
     setIsSubmit(true);
   };
