@@ -47,13 +47,13 @@ const Login = () => {
   }
 
   function handleGoogleSignIn(e) {
-    window.open("http://localhost:3002/auth/google", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/google`, "_self");
   }
   function handleFacebookSignIn(e) {
-    window.open("http://localhost:3002/auth/facebook", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/facebook`, "_self");
   }
   function handleGithubSignIn(e) {
-    window.open("http://localhost:3002/auth/github", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/github`, "_self");
   }
 
   useEffect(() => {

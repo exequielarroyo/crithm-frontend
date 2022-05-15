@@ -42,7 +42,7 @@ const Project = () => {
         <div>
           <button
             onClick={() => {
-              navigate("/dashboard/register");
+              navigate(`/dashboard/register/create`);
             }}>
             Create Project
           </button>

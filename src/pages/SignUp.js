@@ -21,13 +21,13 @@ function SignUp() {
     setFormValues({ ...formValues, [name]: value });
   };
   function handleGoogleSignUp(e) {
-    window.open("http://localhost:3002/auth/google", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/google`, "_self");
   }
   function handleFacebookSignUp(e) {
-    window.open("http://localhost:3002/auth/facebook", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/facebook`, "_self");
   }
   function handleGithubSignUp(e) {
-    window.open("http://localhost:3002/auth/github", "_self");
+    window.open(`${process.env.REACT_APP_URL}/auth/github`, "_self");
   }
 
 
