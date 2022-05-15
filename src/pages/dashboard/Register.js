@@ -1,124 +1,113 @@
 import React, { useState, useEffect } from "react";
 import style from "../../styles/Register.module.css";
-import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import { useForm } from "react-hook-form";
 
 function Register() {
-  const initialValues = { name: "", description: "" };
-  const axiosPrivate = useAxiosPrivate();
+  const initialValues = { name: "", description: "" , TypeId: ''};
   const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    formState: { errors },
+  } = useForm();
+  const axiosPrivate = useAxiosPrivate();
+  const [types, setTypes] = useState([]);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    let types;
+    axiosPrivate
+      .get("/type")
+      .then((res) => {
+        types = res.data;
+        setTypes(types);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     if (id !== "create") {
+      let formValues;
       axiosPrivate.get(`/project/${id}`).then((res) => {
-        setFormValues(res.data);
+        formValues = res.data;
+        setFormValues(formValues);
+        setValue('name', formValues.name)
+        setValue('description', formValues.description)
+        setValue('TypeId', formValues.TypeId)
       });
     }
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-  };
-
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleForm = (data) => {
     axiosPrivate
-      .post("/project", { ...formValues })
+      .post("/project", { ...data })
       .then((res) => {
         const project = res.data;
+        console.log(project);
         if (id === "create") navigate(`/dashboard/register/${project.id ? project.id : id}/review`, { replace: true });
       })
       .catch((error) => {
         console.log(error);
       });
-
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
   };
-
-  const handleUpdate = () => {
-    console.log("update");
-    axiosPrivate
-      .put(`/project/${id}`, { ...formValues })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
+  const handleUpdate = (data) => {
+    if (data.TypeId) {
+      axiosPrivate
+        .put(`/project/${id}`, { ...data })
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
-  }, [formErrors]);
-  const validate = (values) => {
-    const errors = {};
-    if (!values.name) {
-      errors.name = "Required field!";
-    }
-
-    if (!values.description) {
-      errors.description = "Required field!";
-    }
-
-    return errors;
   };
 
   return (
     <div className="Registercontainer">
       <form
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}>
-        <div class="card" className={style.register}>
+        onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
+        <div className={style.register}>
           <div>
             <h1>Registration Form</h1>
             <div className="field">
               <label className={style.tittle1}> 1. Project Name</label>
               <p className="subhead1">What is your project name or tittle?</p>
-              <input type="text" name="name" placeholder="Project name" value={formValues.name} onChange={handleChange} />
+              <input {...register("name", { required: "Required" })} />
             </div>
-            <p className={style.text}>{formErrors.name}</p>
+            <p className={style.text}>{errors.name?.message}</p>
 
             <div className="field">
               <label className={style.tittle1}> 2. Details </label>
               <p className="subhead1">What is your project description?</p>
-              <input type="text" name="description" placeholder="Description" value={formValues.description} onChange={handleChange} />
+              <input {...register("description", { required: "Required" })} />
             </div>
-            <p className={style.text}>{formErrors.description}</p>
+            <p className={style.text}>{errors.description?.message}</p>
 
             <div className="field">
               <label className={style.tittle1}>3. Project Type </label>
               <p className={style.subhead1}> Select your project type, or use other for different type</p>
-              <select>
-                <option value="project type" selected disabled></option>
-                <option value="others">others</option>
-                <option value="Registration System">Registration System</option>
-                <option value="Point of Sale System">Point of Sale System</option>
-                <option value="Grading System">Grading System</option>
-                <option value="Hospital Management System">Hospital Management System</option>
+
+              <select {...register("TypeId", { required: "Choose project type" })}  >
+                <option value='' hidden>
+                  Project type
+                </option>
+                {types.map((t) => {
+                  return (
+                    <option value={t.id} key={t.id}>
+                      {t.name}
+                    </option>
+                  );
+                })}
               </select>
+              {errors.TypeId?.message}
             </div>
 
-            <div className="field">
-              <label className={style.tittle1}> 3. Platform</label>
-              <p className={style.subhead1}> Choose your platform. (This will determine the price of your project)</p>
-              <select>
-                <option value="project type" selected disabled></option>
-                <option value="Android/IOS">Android/IOS</option>
-                <option value="Website">Website</option>
-                <option value="Desktop App/Web">Desktop App/Web</option>
-              </select>
-            </div>
             {id !== "create" ? (
               <button className={style.sbutton} onClick={handleUpdate}>
                 Update
