@@ -53,7 +53,7 @@ const Profile = () => {
           </div>
           <span>{errors.lastName?.message}</span>
           <select {...register("gender", { required: "Choose gender" })}>
-            <option value="">Gender</option>
+            <option value="" hidden>Gender</option>
             <option value="female">female</option>
             <option value="male">male</option>
             <option value="other">other</option>
