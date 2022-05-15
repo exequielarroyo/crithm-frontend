@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "../../styles/Register.module.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 function Register() {
@@ -9,14 +9,12 @@ function Register() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [project, setProject] = useState();
 
   const { id } = useParams();
 
   useEffect(() => {
     if (id !== "create") {
       axiosPrivate.get(`/project/${id}`).then((res) => {
-        setProject(res.data);
         setFormValues(res.data);
       });
     }
@@ -34,7 +32,8 @@ function Register() {
     axiosPrivate
       .post("/project", { ...formValues })
       .then((res) => {
-        // navigate("/dashboard/payment");
+        const project = res.data;
+        if (id === "create") navigate(`/dashboard/register/${project.id ? project.id : id}/review`, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -45,13 +44,16 @@ function Register() {
   };
 
   const handleUpdate = () => {
-    console.log('update')
-    axiosPrivate.put(`/project/${id}`, {...formValues}).then(res=>{
-      console.log(res.data)
-    }).catch(error=>{
-      console.log(error)
-    })
-  }
+    console.log("update");
+    axiosPrivate
+      .put(`/project/${id}`, { ...formValues })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -73,11 +75,6 @@ function Register() {
 
   return (
     <div className="Registercontainer">
-      <nav className={style.nav_bar}>
-        <h1>Project Registration Form</h1>
-        <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
-      </nav>
-
       <form
         onSubmit={(e) => {
           handleSubmit(e);
@@ -122,9 +119,10 @@ function Register() {
                 <option value="Desktop App/Web">Desktop App/Web</option>
               </select>
             </div>
-
             {id !== "create" ? (
-              <button className={style.sbutton} onClick={handleUpdate}>Update</button>
+              <button className={style.sbutton} onClick={handleUpdate}>
+                Update
+              </button>
             ) : (
               <button className={style.sbutton} type="submit">
                 Submit
