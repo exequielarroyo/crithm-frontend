@@ -34,6 +34,7 @@ const GCash = Loadable(lazy(() => import("../pages/dashboard/payment/GCash")));
 const PaymentLayout = Loadable(lazy(() => import("../pages/dashboard/payment/Layout")));
 const Review = Loadable(lazy(() => import("../pages/dashboard/Review")));
 const RegisterLayout = Loadable(lazy(() => import("../pages/dashboard/RegisterLayout")));
+const Paypal = Loadable(lazy(() => import("../pages/dashboard/payment/Paypal")));
 
 const Router = () => {
   return (
@@ -62,6 +63,7 @@ const Router = () => {
                     <Route index element={<Payment />} />
                     <Route path="credit" element={<CreditCard />} />
                     <Route path="gcash" element={<GCash />} />
+                    <Route path="paypal" element={<Paypal />} />
                   </Route>
                 </Route>
               </Route>
