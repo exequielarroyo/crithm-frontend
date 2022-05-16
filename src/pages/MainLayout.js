@@ -5,6 +5,7 @@ import useAuth from "../hooks/useAuth";
 const MainLayout = () => {
   const navigate = useNavigate();
   const { auth } = useAuth();
+  document.title = 'Crithm';
 
   return (
     <>

@@ -6,6 +6,7 @@ import style from "../../styles/DashboardLayout.module.css";
 const DashboardLayout = () => {
   const logout = useLogout();
   const navigate = useNavigate();
+  document.title = "Crithm | dashboard";
 
   async function handleSignout() {
     await logout();
@@ -21,9 +22,17 @@ const DashboardLayout = () => {
   return (
     <>
       <div className={style.container}>
-        <button onClick={handleDashboard}>Dashboard</button>
-        <button onClick={handleProfile}>Profile</button>
-        <button onClick={handleSignout}>Sign out</button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}>
+          Home
+        </button>
+        <div>
+          <button onClick={handleDashboard}>Dashboard</button>
+          <button onClick={handleProfile}>Profile</button>
+          <button onClick={handleSignout}>Sign out</button>
+        </div>
       </div>
       <Outlet />
     </>
