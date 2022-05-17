@@ -9,6 +9,7 @@ const Project = () => {
   const axiosPrivate = useAxiosPrivate();
   const location = useLocation();
   const navigate = useNavigate();
+  const [isPaid, setIsPaid] = useState();
 
   useEffect(() => {
     let isMounted = true;
@@ -19,7 +20,6 @@ const Project = () => {
         const res = await axiosPrivate.get(`/project`, {
           signal: controller.signal,
         });
-        console.log(res.data);
         isMounted && setProjects(res.data);
       } catch (error) {
         console.error(error);
@@ -28,6 +28,15 @@ const Project = () => {
     };
 
     getProjects();
+
+    axiosPrivate
+      .get("auth")
+      .then((res) => {
+        setIsPaid(res.data.isPaid)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     return () => {
       isMounted = false;
@@ -46,13 +55,12 @@ const Project = () => {
             }}>
             Create Project
           </button>
-          
         </div>
       </div>
       <div className={style.projectGrid}>
         {projects.map((p) => (
           <div key={p.id}>
-            <Card title={p.name} description={p.description} id={p.id} />
+            <Card title={p.name} description={p.description} id={p.id} isPaid={isPaid} />
           </div>
         ))}
         {/* <Card

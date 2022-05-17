@@ -4,7 +4,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import style from "../styles/Project.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ title, description, id }) => {
+const Card = ({ title, description, id, isPaid }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -15,7 +15,8 @@ const Card = ({ title, description, id }) => {
   };
 
   return (
-    <div className={style.card} onClick={handleClick}>
+    <div className={style.card} onClick={isPaid ? handleClick: ()=>{navigate('/dashboard/payment')}}>
+    
       {!title ? (
         <div className={style.icon}>
           <FontAwesomeIcon icon={faPlus} size="6x" />
