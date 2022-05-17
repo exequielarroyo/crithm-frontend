@@ -32,7 +32,7 @@ const Project = () => {
     axiosPrivate
       .get("auth")
       .then((res) => {
-        setIsPaid(res.data.isPaid)
+        setIsPaid(res.data.isPaid);
       })
       .catch((err) => {
         console.log(err);
@@ -44,15 +44,19 @@ const Project = () => {
     };
   }, []);
 
+  const handleClick = () => {
+    navigate(`/dashboard/register/create`);
+  };
+
   return (
     <div className={style.project}>
       <div className={style.header}>
         <h1>Add Project</h1>
         <div>
           <button
-            onClick={() => {
-              navigate(`/dashboard/register/create`);
-            }}>
+            onClick={
+              isPaid === '1' ? handleClick: ()=>{navigate('/dashboard/payment')}
+            }>
             Create Project
           </button>
         </div>
@@ -63,27 +67,8 @@ const Project = () => {
             <Card title={p.name} description={p.description} id={p.id} isPaid={isPaid} />
           </div>
         ))}
-        {/* <Card
-          title={'Software Engineer'}
-          description={'Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing.'}
-        />
-        <Card
-          title={'Software Engineer'}
-          description={'Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing.'}
-        />
-        <Card
-          title={'Software Engineer'}
-          description={'Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing.'}
-        />
-        <Card
-          title={'Software Engineer'}
-          description={'Because we’ve been there and done it. When you choose us, you’ll feel the benefit of 15 years’ experience of writing and editing.'}
-        /> */}
-        <Card />
+        <Card isPaid={isPaid} />
       </div>
-
-      {/* <div className='ellipse3'></div>
-      <div className='ellipse4'></div> */}
     </div>
   );
 };
