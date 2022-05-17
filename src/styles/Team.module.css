@@ -1,19 +1,25 @@
 .about {
-  display: flex;
-
-  margin-left: 20px;
-  margin-right: 2opx;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  
+  padding: 20px;
   height: 100vh;
+}
+
+.padding.h3 {
+  padding: 20px 20px 0 20px;
+}
+.padding.p {
+  padding: 0 20px 20px 20px;
 }
 
 .container {
   width: auto;
-  height: 450px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: left;
   font-family: "Sf Pro Display", sans-serif;
   border-radius: 15px;
@@ -21,10 +27,50 @@
   border-top: 2px solid rgba(255, 255, 255, 0.3);
   border-left: 2px solid rgba(255, 255, 255, 0.3);
 }
+
+.image1{
+  background-image: url('../../public/assets/images/jazer.jpg');
+  background-size: cover;
+  background-position-y: -70px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image2{
+  background-image: url('../../public/assets/images/exequiel.jpg');
+  background-size: cover;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image3{
+  background-image: url('../../public/assets/images/neil.jpg');
+  background-size: cover;
+  background-position-y: -40px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image4{
+  background-image: url('../../public/assets/images/robert.png');
+  background-size: cover;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image6{
+  background-image: url('../../public/assets/images/steven.png');
+  background-size: cover;
+  background-position-y: -100px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image5{
+  background-image: url('../../public/assets/images/marvib.jpg');
+  background-size: cover;
+  background-position-y: -140px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+
 .container h3{
   width: 400px;
-
-  
 }
 .container p{
   width: 400px;
@@ -37,10 +83,13 @@
 .container img {
   height: 250px;
   width: 100%;
+  
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
+
 
 /* ------------------------------- */
 .nav_bar {
