@@ -11,44 +11,50 @@ const Payment = () => {
         {/* ---- NAV BAR ---- */}
         <div className={style.nav}>
           <nav className={style.nav_bar}>
-            <h1>Choose payment method</h1>
+            <h1>Choose a Plan</h1>
           </nav>
         </div>
         <div className={style.payment_body}>
-          <form className={style.payment_form}>
+          <form>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" className={style.radio} />
+                <input type="radio" name="radio" value="" className={style.radio} />
                 <div className={style.radio_content}>
-                  <h3 className={style.radio_title}>Android / IOS</h3>
+                  <h2>BASIC</h2>
                   <h1>
-                    $399<span className={style.span}>.99</span>
+                    ₱ 11,000<span className={style.span}>.00</span>
                   </h1>
-                  <h5>Price may vary depending on the features and complexity of the system.</h5>
+                  <h6>₱ 16,000.00</h6>
+                  <h5>1 Project</h5>
+                  <h5>2 Features</h5>
                 </div>
               </label>
             </div>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" className={style.radio} />
+                <input type="radio" name="radio" value="" className={style.radio} />
                 <div className={style.radio_content}>
-                  <h3 className={style.radio_title}>Web</h3>
+                  <h2>STANDARD</h2>
                   <h1>
-                    $599<span className={style.span}>.99</span>
+                    ₱ 27,000<span className={style.span}>.00</span>
                   </h1>
-                  <h5>Price may vary depending on the features and complexity of the system.</h5>
+                  <h6>₱ 32,000.00</h6>
+                  <h5>3 Project</h5>
+                  <h5>5 Features</h5>
                 </div>
               </label>
             </div>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" className={style.radio} />
+                <input type="radio" name="radio" value="" className={style.radio} />
                 <div className={style.radio_content}>
-                  <h3 className={style.radio_title}>Desktop App/Web</h3>
+                  <h2>PREMIUM</h2>
                   <h1>
-                    $799<span className={style.span}>.99</span>
+                    ₱ 82,000<span className={style.span}>.00</span>
                   </h1>
-                  <h5>Price may vary depending on the features and complexity of the system.</h5>
+                  <h6>₱ 87,000.00</h6>
+                  <h5>5 Project</h5>
+                  <h5>10 Features</h5>
                 </div>
               </label>
             </div>
@@ -57,20 +63,11 @@ const Payment = () => {
         <div className={style.payment_button}>
           <div>
             <button
-              className={style.credit_btn}
               onClick={() => {
-                navigate("/dashboard/payment/credit");
+                navigate("/dashboard/payment/paypal");
               }}
             >
-              Credit/Debit
-            </button>
-            <button
-              className={style.gcash_btn}
-              onClick={() => {
-                navigate("/dashboard/payment/gcash");
-              }}
-            >
-              GCash
+              Start Plan
             </button>
           </div>
         </div>
