@@ -22,12 +22,14 @@ const DashboardLayout = () => {
   return (
     <>
       <div className={style.container}>
-        <button
+        <img className={style.logo}
+          src="/assets/images/logo.png"
+          alt="logo"
+          height="24"
           onClick={() => {
             navigate("/");
-          }}>
-          Home
-        </button>
+          }}
+        />
         <div>
           <button onClick={handleDashboard}>Dashboard</button>
           <button onClick={handleProfile}>Profile</button>

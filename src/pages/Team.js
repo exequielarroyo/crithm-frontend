@@ -6,10 +6,9 @@ const About = () => {
     <>
       <div className={style.nav_team}>
         <nav className={style.nav_bar}>
-          <h1 className={style.nav_title}>OUR TEAM</h1>
+          <h1 className={style.nav_title}>Meet our Dev Team</h1>
           <p className={style.nav_content}>
-            We are a team of passionate and creative people who love to create
-            and build products.
+            Spanning far and wide, this small but mighty team is bringing developers new solutions to old problems. We're here to muddy the waters.
           </p>
         </nav>
       </div>
@@ -17,14 +16,57 @@ const About = () => {
       <div className={style.about}>
         <div className={style.container}>
           <div>
-            <img src={"/assets/images/11.jpg"} alt="jazer.jpg" />
-
-            <h3>Mher Jazer P. Albalate</h3>
+            <div className={style.image1} />
+            <h3 className={`${style.padding} ${style.h3}`}>Albalate, Mher Jazer</h3>
           </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          </p>
+        </div>
 
-          <p>
-            Software Developer of Crithm. A committed and humble person and a
-            person who looks for adventure and more challenging things.
+        <div className={style.container}>
+          <div>
+            <div className={style.image2} />
+            <h3 className={`${style.padding} ${style.h3}`}>Arroyo, Exequiel</h3>
+          </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          </p>
+        </div>
+        <div className={style.container}>
+          <div>
+            <div className={style.image3} />
+            <h3 className={`${style.padding} ${style.h3}`}>Bagabagon, Neil Jordan</h3>
+          </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          </p>
+        </div>
+        <div className={style.container}>
+          <div>
+            <div className={style.image4} />
+            <h3 className={`${style.padding} ${style.h3}`}>Bagalso, Robert</h3>
+          </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          </p>
+        </div>
+        <div className={style.container}>
+          <div>
+            <div className={style.image5} />
+            <h3 className={`${style.padding} ${style.h3}`}>Esteban, Marc Steven</h3>
+          </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          </p>
+        </div>
+        <div className={style.container}>
+          <div>
+            <div className={style.image6} />
+            <h3 className={`${style.padding} ${style.h3}`}>Gonzales, Marvin</h3>
+          </div>
+          <p className={`${style.padding} ${style.p}`}>
+            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
           </p>
         </div>
       </div>
