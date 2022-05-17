@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import style from "../../../styles/Paypal.module.css";
 
-const Paypal = ({ amount = 11000/50 }) => {
+const Paypal = ({ amount = 11000 }) => {
   const [{ options  }, dispatch] = usePayPalScriptReducer();
 
   // useEffect(() => {
@@ -25,7 +25,7 @@ const Paypal = ({ amount = 11000/50 }) => {
               purchase_units: [
                 {
                   amount: {
-                    currency_code: "USD",
+                    currency_code: "PHP",
                     value: amount,
                   },
                 },
@@ -39,7 +39,7 @@ const Paypal = ({ amount = 11000/50 }) => {
         onApprove={(data, actions) => {
           return actions.order.capture().then((details) => {
             const name = details.payer.name.given_name;
-            alert(`Transaction completed by ${name}`);
+            // code here
           });
         }}
       />}

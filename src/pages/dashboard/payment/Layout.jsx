@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
     {console.log(process.env.REACT_APP_PAYPAL_CLIENT_ID)}
-      <PayPalScriptProvider options={{ "client-id": `${process.env.REACT_APP_PAYPAL_CLIENT_ID}` }}>
+      <PayPalScriptProvider options={{ "client-id": `${process.env.REACT_APP_PAYPAL_CLIENT_ID}`, currency: "PHP", }}>
         <Outlet />
       </PayPalScriptProvider>
     </>
