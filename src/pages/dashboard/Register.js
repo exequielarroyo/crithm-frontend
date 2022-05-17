@@ -5,7 +5,7 @@ import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useForm } from "react-hook-form";
 
 function Register() {
-  const initialValues = { name: "", description: "" , TypeId: ''};
+  const initialValues = { name: "", description: "", TypeId: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const {
     register,
@@ -36,9 +36,9 @@ function Register() {
       axiosPrivate.get(`/project/${id}`).then((res) => {
         formValues = res.data;
         setFormValues(formValues);
-        setValue('name', formValues.name)
-        setValue('description', formValues.description)
-        setValue('TypeId', formValues.TypeId)
+        setValue("name", formValues.name);
+        setValue("description", formValues.description);
+        setValue("TypeId", formValues.TypeId);
       });
     }
   }, []);
@@ -70,15 +70,14 @@ function Register() {
 
   return (
     <div className="Registercontainer">
-      <form
-        onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
+      <form onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
         <div className={style.register}>
           <div>
             <h1>Registration Form</h1>
             <div className="field">
               <label className={style.tittle1}> 1. Project Name</label>
               <p className="subhead1">What is your project name or tittle?</p>
-              <input {...register("name", { required: "Required" })} />
+              <input {...register("name", { required: "Required", pattern: { value: /^[A-Za-z]+$/i, message: "Numbers only" } })} />
             </div>
             <p className={style.text}>{errors.name?.message}</p>
 
@@ -93,8 +92,8 @@ function Register() {
               <label className={style.tittle1}>3. Project Type </label>
               <p className={style.subhead1}> Select your project type, or use other for different type</p>
 
-              <select {...register("TypeId", { required: "Choose project type" })}  >
-                <option value='' hidden>
+              <select {...register("TypeId", { required: "Choose project type" })}>
+                <option value="" hidden>
                   Project type
                 </option>
                 {types.map((t) => {
@@ -105,7 +104,7 @@ function Register() {
                   );
                 })}
               </select>
-              {errors.TypeId?.message}
+            <p className={style.text}>{errors.TypeId?.message}</p>
             </div>
 
             {id !== "create" ? (
