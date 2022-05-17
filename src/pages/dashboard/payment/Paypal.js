@@ -45,7 +45,8 @@ const Paypal = ({ amount = 11000 }) => {
               return actions.order.capture().then(async (details) => {
                 try {
                   const res = await axiosPrivate.put(`/auth`, { isPaid: true });
-                  if (res.data.name) {
+                  if (res.data.firstName) {
+                    console.log(details)
                     navigate("/dashboard/payment/receipt");
                   }
                 } catch (error) {
