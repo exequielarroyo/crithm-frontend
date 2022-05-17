@@ -8,10 +8,7 @@ import Loading from "../pages/Loading";
 
 const Loadable = (Component) => (props) => {
   return (
-    <Suspense
-      fallback={
-        <Loading />
-      }>
+    <Suspense fallback={<Loading />}>
       <Component {...props} />
     </Suspense>
   );
@@ -35,6 +32,7 @@ const PaymentLayout = Loadable(lazy(() => import("../pages/dashboard/payment/Lay
 const Review = Loadable(lazy(() => import("../pages/dashboard/Review")));
 const RegisterLayout = Loadable(lazy(() => import("../pages/dashboard/RegisterLayout")));
 const Paypal = Loadable(lazy(() => import("../pages/dashboard/payment/Paypal")));
+const Receipt = Loadable(lazy(() => import("../pages/dashboard/payment/Receipt")));
 
 const Router = () => {
   return (
@@ -64,6 +62,7 @@ const Router = () => {
                     <Route path="credit" element={<CreditCard />} />
                     <Route path="gcash" element={<GCash />} />
                     <Route path="paypal" element={<Paypal />} />
+                    <Route path="receipt" element={<Receipt />} />
                   </Route>
                 </Route>
               </Route>
