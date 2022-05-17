@@ -77,7 +77,7 @@ function Register() {
             <div className="field">
               <label className={style.tittle1}> 1. Project Name</label>
               <p className="subhead1">What is your project name or tittle?</p>
-              <input {...register("name", { required: "Required", pattern: { value: /^[A-Za-z]+$/i, message: "Numbers only" } })} />
+              <input {...register("name", { required: "Required", pattern: { value: /^[A-Za-z]+$/i, message: "Letters only" } })} />
             </div>
             <p className={style.text}>{errors.name?.message}</p>
 
