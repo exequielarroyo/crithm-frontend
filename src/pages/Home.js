@@ -24,7 +24,7 @@ const Home = () => {
         <div className={style.page2container}>
           <p className={`${style.part1} ${style.one}`}>Better designs and functions ready for the future</p>
           <p className={`${style.part1} ${style.two}`}>
-            We are a Web Solutions and Digital Marketing company that specializes in developing cutting-edge software solutions. We assist corporate clients in
+            We are a Web Solutions company that specializes in developing cutting-edge software solutions. We assist corporate clients in
             untangling complicated issues that arise frequently along their digital transformation journey.
           </p>
         </div>
