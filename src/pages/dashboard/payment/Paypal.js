@@ -42,16 +42,16 @@ const Paypal = ({ amount = 11000 }) => {
                 });
             }}
             onApprove={(data, actions) => {
-              return actions.order.capture().then(async (details) => {
-                try {
-                  const res = await axiosPrivate.put(`/auth`, { isPaid: true });
-                  if (res.data.firstName) {
-                    console.log(details)
+              return actions.order.capture().then((details) => {
+                axiosPrivate
+                  .put(`/auth`, { isPaid: true })
+                  .then((res) => {
+                    console.log(details);
                     navigate("/dashboard/payment/receipt");
-                  }
-                } catch (error) {
-                  console.log(error);
-                }
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
 
                 const name = details.payer.name.given_name;
                 // alert(`Transaction completed by ${name}`);
