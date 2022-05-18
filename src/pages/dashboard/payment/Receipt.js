@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import style from "../../../styles/Payment.module.css";
 
 const Receipt = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={style.billing_container}>
       <div className={style.Billing}>
@@ -34,7 +37,16 @@ const Receipt = () => {
               <label className={style.total}>Total:</label>
               <label className={style.total}>₱ 00.00</label>
             </div>
-            <label className={style.lower}>Take a screen shot for proof of payment</label>
+            <div className={style.lower}>
+              <label>Take a screen shot for proof of payment</label>
+              <button
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
+                Done
+              </button>
+            </div>
           </div>
         </form>
       </div>
