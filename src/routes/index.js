@@ -33,6 +33,7 @@ const Review = Loadable(lazy(() => import("../pages/dashboard/Review")));
 const RegisterLayout = Loadable(lazy(() => import("../pages/dashboard/RegisterLayout")));
 const Paypal = Loadable(lazy(() => import("../pages/dashboard/payment/Paypal")));
 const Receipt = Loadable(lazy(() => import("../pages/dashboard/payment/Receipt")));
+const Terms = Loadable(lazy(() => import("../pages/Terms")));
 
 const Router = () => {
   return (
@@ -68,6 +69,7 @@ const Router = () => {
               </Route>
             </Route>
 
+            <Route path="terms" element={<Terms />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="signin" element={<Login />} />
             <Route path="*" element={<NotFound />} />
