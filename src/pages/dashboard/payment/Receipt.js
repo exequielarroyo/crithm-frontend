@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "../../../styles/Payment.module.css";
 
 const Receipt = () => {
@@ -23,7 +23,7 @@ const Receipt = () => {
               <line />
               <div>
                 <label>
-                  Contact us: <a href="mailto:crithm.cf@gmail.com">crithm.cf@gmail.com</a>
+                  Contact us: <Link to={"/Contact"}>crithm.cf@gmail.com</Link>
                 </label>
               </div>
             </div>

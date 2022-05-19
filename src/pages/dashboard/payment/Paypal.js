@@ -1,23 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import style from "../../../styles/Paypal.module.css";
 import { useNavigate } from "react-router-dom";
 import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
+import { useParams } from "react-router-dom";
 
-const Paypal = ({ amount = 11000 }) => {
+const Paypal = () => {
   const [{ options }, dispatch] = usePayPalScriptReducer();
   const navigate = useNavigate();
   const axiosPrivate = useAxiosPrivate();
+  const { id } = useParams();
+  const [amount, setAmount] = useState();
 
-  // useEffect(() => {
-  // dispatch({
-  //   type: "resetOptions",
-  //   value: {
-  //     ...options,
-  //     currency: "PHP",
-  //   },
-  // });
-  // }, []);
+  useEffect(() => {
+    axiosPrivate.get(`/plan/${id}`).then((res) => {
+      setAmount(res.data.price);
+    });
+  }, []);
 
   return (
     <div>

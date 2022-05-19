@@ -1,9 +1,16 @@
-import React, { Component } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import style from "../../../styles/Payment.module.css";
 
 const Payment = () => {
+  const [plans, setPlans] = useState();
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  const handleChange = (e) => {
+    setPlans(e.target.value);
+    console.log(e.target.value);
+  };
 
   return (
     <div className={style.payment}>
@@ -18,7 +25,7 @@ const Payment = () => {
           <form>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" value="" className={style.radio} />
+                <input type="radio" name="plan" value="1" className={style.radio} onChange={handleChange} />
                 <div className={style.radio_content}>
                   <h2>BASIC</h2>
                   <h1>
@@ -32,7 +39,7 @@ const Payment = () => {
             </div>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" value="" className={style.radio} />
+                <input type="radio" name="plan" value="2" className={style.radio} onChange={handleChange} />
                 <div className={style.radio_content}>
                   <h2>STANDARD</h2>
                   <h1>
@@ -46,7 +53,7 @@ const Payment = () => {
             </div>
             <div className={style.radios}>
               <label className={style.custom_radio}>
-                <input type="radio" name="radio" value="" className={style.radio} />
+                <input type="radio" name="plan" value="3" className={style.radio} onChange={handleChange} />
                 <div className={style.radio_content}>
                   <h2>PREMIUM</h2>
                   <h1>
@@ -64,7 +71,7 @@ const Payment = () => {
           <div>
             <button
               onClick={() => {
-                navigate("/dashboard/payment/paypal");
+                navigate(`/dashboard/payment/paypal/${plans}`);
               }}
             >
               Start Plan

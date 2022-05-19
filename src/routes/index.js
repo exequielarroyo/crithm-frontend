@@ -62,7 +62,7 @@ const Router = () => {
                     <Route index element={<Payment />} />
                     <Route path="credit" element={<CreditCard />} />
                     <Route path="gcash" element={<GCash />} />
-                    <Route path="paypal" element={<Paypal />} />
+                    <Route path="paypal/:id" element={<Paypal />} />
                     <Route path="receipt" element={<Receipt />} />
                   </Route>
                 </Route>
