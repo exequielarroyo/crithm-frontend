@@ -1,9 +1,16 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import style from "../../../styles/Payment.module.css";
 
-const Receipt = () => {
+const Receipt = (props) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [details, setDetails] = useState();
+
+  useEffect(()=>{
+    setDetails({total: location.state.purchase_units[0].amount.value});
+    console.log(location.state)
+  },[])
 
   return (
     <div className={style.billing_container}>
@@ -29,13 +36,13 @@ const Receipt = () => {
             </div>
             <div className={style.body}>
               <label className={style.plan}>Plan</label>
-              <label className={style.plan}>₱ 00.00</label>
+              <label className={style.plan}>₱ {parseInt(details.total)-(parseInt(details.total)*.10)}</label>
               <label>Sub Total</label>
-              <label>₱ 00.00</label>
+              <label>₱ {(parseInt(details.total)*.10)}</label>
               <label>VAT %</label>
               <label>10%</label>
               <label className={style.total}>Total:</label>
-              <label className={style.total}>₱ 00.00</label>
+              <label className={style.total}>₱ {details.total}</label>
             </div>
             <div className={style.lower}>
               <label>Take a screen shot for proof of payment</label>
