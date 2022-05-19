@@ -28,22 +28,16 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    axios
-      .post(
-        `${process.env.REACT_APP_URL}/auth`,
-        { email, password },
-        { withCredentials: true },
-      )
-      .then((res) => {
-        if (!res.data.error) {
-          setAuth(res.data);
-          setEmail("");
-          setPassword("");
-          navigate(from, { replace: true });
-        } else {
-          setErrorMessage(res.data.error);
-        }
-      });
+    axios.post(`${process.env.REACT_APP_URL}/auth`, { email, password }, { withCredentials: true }).then((res) => {
+      if (!res.data.error) {
+        setAuth(res.data);
+        setEmail("");
+        setPassword("");
+        navigate(from, { replace: true });
+      } else {
+        setErrorMessage(res.data.error);
+      }
+    });
   }
 
   function handleGoogleSignIn(e) {
@@ -115,10 +109,10 @@ const Login = () => {
               </p>
             </div>
           </form>
-          <div>
-            <button onClick={handleGoogleSignIn}>Google</button>
-            <button onClick={handleFacebookSignIn}>Facebook</button>
-            <button onClick={handleGithubSignIn}>Github</button>
+          <div className={style.social}>
+            <div className={style.google} onClick={handleGoogleSignIn} />
+            <div className={style.facebook} onClick={handleFacebookSignIn} />
+            <div className={style.github} onClick={handleGithubSignIn} />
           </div>
         </div>
       </section>
