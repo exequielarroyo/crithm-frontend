@@ -5,7 +5,7 @@ import style from "../../../styles/Payment.module.css";
 const Receipt = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [details, setDetails] = useState();
+  const [details, setDetails] = useState({});
 
   useEffect(()=>{
     setDetails({total: location.state.purchase_units[0].amount.value});
