@@ -10,7 +10,7 @@ const Paypal = () => {
   const navigate = useNavigate();
   const axiosPrivate = useAxiosPrivate();
   const { id } = useParams();
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
 
   useEffect(() => {
     axiosPrivate.get(`/plan/${id}`).then((res) => {
@@ -21,7 +21,7 @@ const Paypal = () => {
   return (
     <div>
       <div className={style.container}>
-        {
+        {amount && (
           <PayPalButtons
             createOrder={(data, actions) => {
               return actions.order
@@ -46,7 +46,7 @@ const Paypal = () => {
                   .put(`/auth`, { isPaid: true })
                   .then((res) => {
                     console.log(details);
-                    navigate("/dashboard/payment/receipt");
+                    navigate("/dashboard/payment/receipt", {state: details});
                   })
                   .catch((err) => {
                     console.log(err);
@@ -57,7 +57,7 @@ const Paypal = () => {
               });
             }}
           />
-        }
+        )}
       </div>
     </div>
   );
