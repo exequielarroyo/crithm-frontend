@@ -15,8 +15,7 @@ const Card = ({ title, description, id, isPaid }) => {
   };
 
   return (
-    <div className={style.card} onClick={isPaid === '1' ? handleClick: ()=>{navigate('/dashboard/payment')}}>
-    {console.log(isPaid)}
+    <div className={style.card} onClick={isPaid ? handleClick: ()=>{navigate('/dashboard/payment')}}>
       {!title ? (
         <div className={style.icon}>
           <FontAwesomeIcon icon={faPlus} size="6x" />

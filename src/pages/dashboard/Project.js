@@ -32,7 +32,7 @@ const Project = () => {
     axiosPrivate
       .get("/auth")
       .then((res) => {
-        setIsPaid(res.data.isPaid);
+        setIsPaid(res.data.isPaid === "1" ? true : false);
       })
       .catch((err) => {
         console.log(err);
@@ -55,7 +55,7 @@ const Project = () => {
         <div>
           <button
             onClick={
-              isPaid === '1' ? handleClick: ()=>{navigate('/dashboard/payment')}
+              isPaid ? handleClick: ()=>{navigate('/dashboard/payment')}
             }>
             Create Project
           </button>
