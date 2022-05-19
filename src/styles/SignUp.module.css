@@ -76,6 +76,28 @@
 .input{
   display: block;
 }
+.btnBox{
+    box-sizing:content-box;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    height:90px;
+    width: 680px;
+    background: linear-gradient(130deg, rgba(0, 0, 0, 0.3) 12.7%, rgba(2, 18, 68, 0.1) 83.5%);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.btnContainer{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .ellipse {
@@ -144,6 +166,10 @@
   .buttonSub{
     position: relative;
   }
+  .btnBox{
+    max-width: 47%;
+    min-width: 47%;
+  }
   
 }
 @media only screen and (max-width: 768px) {
@@ -151,6 +177,10 @@
   .uiform {
     max-width: 90%;
     min-width: 90%;
+  }
+  .btnBox{
+    max-width: 47%;
+    min-width: 47%;
   }
   
 }
