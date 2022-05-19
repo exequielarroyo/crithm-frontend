@@ -68,7 +68,7 @@ const Login = () => {
     <>
       <section>
         <div className={style.container}>
-          <h1 style={{ fontFamily: "korataki" }}>CRITHM</h1>
+          <h1 style={{ fontFamily: "korataki" }} onClick={()=>{navigate('/')}}>CRITHM</h1>
           <p ref={errorRef} className={errorMessage ? "on" : "off"}>
             {errorMessage}
           </p>
@@ -98,6 +98,7 @@ const Login = () => {
                 type={"checkbox"}
                 id="persist"
                 onChange={togglePersist}
+                defaultChecked={true}
                 checked={persist}
               />
               <label htmlFor="persist">Trust this device</label>

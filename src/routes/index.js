@@ -41,14 +41,14 @@ const Router = () => {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MainLayout />}>
-              <Route index element={<Home />} />
-              <Route path="unauthorized" element={<Unauthorized />} />
-              <Route path="team" element={<Team />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
-
             <Route element={<PersistLogin />}>
+              <Route path="/" element={<MainLayout />}>
+                <Route index element={<Home />} />
+                <Route path="unauthorized" element={<Unauthorized />} />
+                <Route path="team" element={<Team />} />
+                <Route path="contact" element={<Contact />} />
+              </Route>
+
               <Route element={<Protected />}>
                 <Route path="dashboard" element={<DashboardLayout />}>
                   <Route index element={<Project />} />
@@ -67,12 +67,12 @@ const Router = () => {
                   </Route>
                 </Route>
               </Route>
-            </Route>
 
-            <Route path="terms" element={<Terms />} />
-            <Route path="signup" element={<SignUp />} />
-            <Route path="signin" element={<Login />} />
-            <Route path="*" element={<NotFound />} />
+              <Route path="terms" element={<Terms />} />
+              <Route path="signup" element={<SignUp />} />
+              <Route path="signin" element={<Login />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
