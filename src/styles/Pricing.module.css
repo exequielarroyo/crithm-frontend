@@ -1,8 +1,9 @@
-.PricingCard {
+.pricingcard {
   /* rectangle glass */
-  padding: 20px ;
+  padding-top: 50px;
   width: 350px;
   height: 500px;
+  text-align: center;
 
   background: linear-gradient(
     126deg,
@@ -14,77 +15,28 @@
 
   border-radius: 16px;
 }
-
-.PriceCard {
-  /* Frame 24 */
-
-  width: 447.01px;
-  height: 553.31px;
-
-  
+.plan{
+  font-weight: bold;
 }
-.pri_card {
-  /* Android/IOS */
-  margin-bottom: 50px;
-  position: flex;
- 
-
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-
-  color: #ffffff;
+.srp_price{
+  margin-top: 70px;
+  font-style: italic;
 }
-.pri_card1 {
-  /* $ 400 */
-  text-align: center;
-  position: flex;
-  margin-bottom: 50px;
-
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 43px;
-
-  color: #ffffff;
-}
-.pri_card2 {
-  /* Price may vary depending on the features and complexity of the system. */
-  text-align: center;
-  position: flex;
-  margin-bottom: 50px;
-
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
+.span{
   font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-
-  color: #fffcfc;
-
-  mix-blend-mode: normal;
 }
-.pri_card3 {
-  /* Examples: Social Media Apps GPS */
-  text-align: center;
-  position: flex;
-  margin-bottom: 20px;
-  width: 301.15px;
-  height: 35.03px;
+.price{
+  margin-bottom: 15%;
+  margin-left: 100px;
+  text-decoration: line-through rgba(255, 255, 255, 0.5);
+  color: rgb(148, 148, 148);
+}
 
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
 
-  color: #fffcfc;
-
-  mix-blend-mode: normal;
+.pricingcard:hover {
+  background: linear-gradient(
+    150deg,
+    rgba(11, 102, 206, 0.767) 30%,
+    rgba(23, 60, 173, 0.2) 60%
+  );
 }
