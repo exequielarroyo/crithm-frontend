@@ -30,7 +30,7 @@ const Project = () => {
     getProjects();
 
     axiosPrivate
-      .get("auth")
+      .get("/auth")
       .then((res) => {
         setIsPaid(res.data.isPaid);
       })
