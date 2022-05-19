@@ -4,13 +4,18 @@ import ProcessCard from "../components/ProcessCard";
 import style from "../styles/App.module.css";
 import WCard from "../components/WCard";
 import JoinCard from "../components/JoinCard";
-import PriceCard from "../components/PriceCard";
+
+import PricingCard from "../components/PricingCard";
 
 const Home = () => {
   return (
     <div className={style.home}>
       <section id="home">
-        <img src={"/assets/images/logo.png"} className={style.logo} alt="logo" />
+        <img
+          src={"/assets/images/logo.png"}
+          className={style.logo}
+          alt="logo"
+        />
         <div className={style.content}>
           <h1>CRITHM</h1>
           <div className={style.img}>
@@ -22,18 +27,25 @@ const Home = () => {
 
       <section id="creative-software">
         <div className={style.page2container}>
-          <p className={`${style.part1} ${style.one}`}>Better designs and functions ready for the future</p>
+          <p className={`${style.part1} ${style.one}`}>
+            Better designs and functions ready for the future
+          </p>
           <p className={`${style.part1} ${style.two}`}>
-            We are a Web Solutions company that specializes in developing cutting-edge software solutions. We assist corporate clients in
-            untangling complicated issues that arise frequently along their digital transformation journey.
+            We are a Web Solutions company that specializes in developing
+            cutting-edge software solutions. We assist corporate clients in
+            untangling complicated issues that arise frequently along their
+            digital transformation journey.
           </p>
         </div>
         <div className={style.bgcolor}>
           <div className={`${style.page2container} ${style.part2}`}>
             <p>
-              Crithm delivers technology driven computing solutions, experienced consulting, and efficient IT/CS support that are tailored to the demands of any
-              enterprise, allowing our customers to maximize their return of investment and expand their workforce's capabilities. We have been a visionary and
-              dependable software engineering partner for world-class brands since the year 2022.
+              Crithm delivers technology driven computing solutions, experienced
+              consulting, and efficient IT/CS support that are tailored to the
+              demands of any enterprise, allowing our customers to maximize
+              their return of investment and expand their workforce's
+              capabilities. We have been a visionary and dependable software
+              engineering partner for world-class brands since the year 2022.
             </p>
             <img src="/assets/images/logo.png" alt="awd" />
           </div>
@@ -52,7 +64,9 @@ const Home = () => {
               lm_button={"Learn more"}
             />
             <LMCard
-              lm_content={"The service that we provide are a software solution where different types of industry softwares can be utilize."}
+              lm_content={
+                "The service that we provide are a software solution where different types of industry softwares can be utilize."
+              }
               lm_img={`🏬`}
               lm_button={"Learn more"}
             />
@@ -71,11 +85,16 @@ const Home = () => {
         <div className={style.page4container}>
           <div className={style.process_upper}>
             <h3>The Process</h3>
-            <p>Your system will take 12 weeks to develop from concept to launch. The steps are listed below:</p>
+            <p>
+              Your system will take 12 weeks to develop from concept to launch.
+              The steps are listed below:
+            </p>
             <div className={style.process_middle}>
               <div className={style.process_ellipse2} />
               <div className={style.process_ellipse} />
-              <p className={style.process_text}>Client request a project to the dev team</p>
+              <p className={style.process_text}>
+                Client request a project to the dev team
+              </p>
             </div>
           </div>
           <div className={style.process_card_content}>
@@ -83,30 +102,39 @@ const Home = () => {
             <div className={style.process_line1} />
             <div className={style.process_line2} />
             <ProcessCard title={"Step 1 | Mapping week 1"}>
-              The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project
-              Registration From (PRF), the team will have the rough idea on what the client wants.
+              The development team maps the whole project. We already have some
+              concept on how to execute the whole system. As the client answer
+              the Project Registration From (PRF), the team will have the rough
+              idea on what the client wants.
             </ProcessCard>
             <div className={style.process_ellipse4} />
             <div className={style.process_line3} />
             <ProcessCard title={"Step 2 | Development week 2"}>
-              Start of development process. The dev team will start the project. Depending on the plan subscription, the team will begin the development of
-              front-end and back-end then include all the necessary features from the PRF.
+              Start of development process. The dev team will start the project.
+              Depending on the plan subscription, the team will begin the
+              development of front-end and back-end then include all the
+              necessary features from the PRF.
             </ProcessCard>
             <div className={style.process_ellipse5} />
             <div className={style.process_line4} />
             <ProcessCard title={"Step 3 | Demonstration week 3"}>
               <p>
-                Show a live demo of the software or project. The demo will not the finished product as per it will be only to present for the client to see and
-                understand the flow of the project.
+                Show a live demo of the software or project. The demo will not
+                the finished product as per it will be only to present for the
+                client to see and understand the flow of the project.
               </p>
               <p>
-                Once the client is satisfied with the demonstration work flow, the dev team will now proceed to the lunching of the project. If the client is
-                not satisfied, they have the authority to decide if they want to cancel or revise the project.{" "}
+                Once the client is satisfied with the demonstration work flow,
+                the dev team will now proceed to the lunching of the project. If
+                the client is not satisfied, they have the authority to decide
+                if they want to cancel or revise the project.{" "}
               </p>
             </ProcessCard>
             <div className={style.process_bottom}>
               <div className={style.process_ellipse} />
-              <p className={style.process_text}>Client has accept to continue the development</p>
+              <p className={style.process_text}>
+                Client has accept to continue the development
+              </p>
             </div>
           </div>
         </div>
@@ -116,29 +144,35 @@ const Home = () => {
         <div className={style.nav}>
           <nav className={style.nav_bar}>
             <h1>Pricing</h1>
-            <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
+            <img
+              src={"/assets/images/logo.png"}
+              className={style.app_logo}
+              alt="logo"
+            />
           </nav>
         </div>
-
         <div className={style.PricingContainer}>
-          <PriceCard
-            pri_card={"Android/IOS"}
-            pri_card1={"$ 400"}
-            pri_card2={"Price may vary depending on the features and complexity of the system."}
-            pri_card3={""}
-          />
-          <PriceCard
-            pri_card={"Android/IOS"}
-            pri_card1={"$ 400"}
-            pri_card2={"Price may vary depending on the features and complexity of the system."}
-            pri_card3={""}
-          />
-          <PriceCard
-            pri_card={"Android/IOS"}
-            pri_card1={"$ 400"}
-            pri_card2={"Price may vary depending on the features and complexity of the system."}
-            pri_card3={""}
-          />
+          <PricingCard
+            plan={"BASIC"}
+            srp_price={"₱ 11,000"}
+            price={"₱ 16,000.00"}
+            feature={"1 Project"}
+            features={"2 Features"}
+          ></PricingCard>
+          <PricingCard
+            plan={"STANDARD"}
+            srp_price={"₱ 27,000"}
+            price={"₱ 32,000"}
+            feature={"3 Project"}
+            features={"5 Features"}
+          ></PricingCard>
+          <PricingCard
+            plan={"PREMIUM"}
+            srp_price={"₱ 82,000"}
+            price={"₱ 87,000"}
+            feature={"5 Project"}
+            features={"10 Features"}
+          ></PricingCard>
         </div>
       </section>
 
@@ -151,19 +185,25 @@ const Home = () => {
           <div className={style.wcardstyle}>
             <WCard
               W_content_job={"Software Developer"}
-              W_content={"Because we've been there and done it. When you choose us, you'll feel the benefit of 15 years' experience of writing and editing."}
+              W_content={
+                "Because we've been there and done it. When you choose us, you'll feel the benefit of 15 years' experience of writing and editing."
+              }
               W_circle={""}
               W_name={"Albalate"}
             />
             <WCard
               W_content_job={"Software Engineer"}
-              W_content={"Because we're chosen by professionals. We're the 'go-to developers' for dozens of service marketing agencies."}
+              W_content={
+                "Because we're chosen by professionals. We're the 'go-to developers' for dozens of service marketing agencies."
+              }
               W_circle={""}
               W_name={"Arroyo"}
             />
             <WCard
               W_content_job={"Team Leader"}
-              W_content={"Because we know digital. With working knowledge of online, SEO and social media, we can make your dream app come true."}
+              W_content={
+                "Because we know digital. With working knowledge of online, SEO and social media, we can make your dream app come true."
+              }
               W_circle={""}
               W_name={"Bagabagon"}
             />
@@ -177,13 +217,17 @@ const Home = () => {
             />
             <WCard
               W_content_job={"Product Manager"}
-              W_content={"Because we're easy to work with. We take the work seriously, but not ourselves. We're not prickly, precious or pretentious."}
+              W_content={
+                "Because we're easy to work with. We take the work seriously, but not ourselves. We're not prickly, precious or pretentious."
+              }
               W_circle={""}
               W_name={"Esteban"}
             />
             <WCard
               W_content_job={"Founder & CEO"}
-              W_content={"Because we focus on results. For us, it’s all about what adds value for you. Above all, we want our works satisfy you."}
+              W_content={
+                "Because we focus on results. For us, it’s all about what adds value for you. Above all, we want our works satisfy you."
+              }
               W_circle={""}
               W_name={"Gonzales"}
             />
@@ -201,13 +245,16 @@ const Home = () => {
           </div>
         </div>
         <JoinCard title={"Mission"}>
-          Exceed customer expectations and deliver excellent software solutions that transforms data into information and boost the capabilities of their
-          workforce.
+          Exceed customer expectations and deliver excellent software solutions
+          that transforms data into information and boost the capabilities of
+          their workforce.
         </JoinCard>
         <JoinCard title={"Vision"}>
-          Our vision is to deliver imaginative and trustworthy software engineering for further innovation and constructive research to improve software
-          quality. We value work that is accurate and of the highest quality. In various industries, we wish to be renowned as a dependable, innovtive, and
-          user-friendly software service provider.
+          Our vision is to deliver imaginative and trustworthy software
+          engineering for further innovation and constructive research to
+          improve software quality. We value work that is accurate and of the
+          highest quality. In various industries, we wish to be renowned as a
+          dependable, innovtive, and user-friendly software service provider.
         </JoinCard>
         <button className={style.buttonReg}>Register</button>
       </section>
