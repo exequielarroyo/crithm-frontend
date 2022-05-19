@@ -34,6 +34,8 @@ const RegisterLayout = Loadable(lazy(() => import("../pages/dashboard/RegisterLa
 const Paypal = Loadable(lazy(() => import("../pages/dashboard/payment/Paypal")));
 const Receipt = Loadable(lazy(() => import("../pages/dashboard/payment/Receipt")));
 const Terms = Loadable(lazy(() => import("../pages/Terms")));
+const ForgotPassword = Loadable(lazy(() => import("../pages/ForgotPassword")));
+const ForgotRequest = Loadable(lazy(() => import("../pages/ForgotRequest")));
 
 const Router = () => {
   return (
@@ -68,6 +70,8 @@ const Router = () => {
                 </Route>
               </Route>
 
+              <Route path="password/forgot/request" element={<ForgotRequest />} />
+              <Route path="password/forgot/:id/:token" element={<ForgotPassword />} />
               <Route path="terms" element={<Terms />} />
               <Route path="signup" element={<SignUp />} />
               <Route path="signin" element={<Login />} />
