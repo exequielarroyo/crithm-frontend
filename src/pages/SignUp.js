@@ -37,6 +37,10 @@ function SignUp() {
     setPersist(true);
     window.open(`${process.env.REACT_APP_URL}/auth/github`, "_self");
   }
+
+  useEffect(() => {
+    localStorage.setItem("persist", persist);
+  }, [persist]);
   
   const navigate = useNavigate();
   
