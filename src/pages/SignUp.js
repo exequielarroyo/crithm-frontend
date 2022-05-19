@@ -13,24 +13,30 @@ function SignUp() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const { setAuth }= useAuth();
+  const { setAuth, persist, setPersist } = useAuth();
   
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+
+  function togglePersist() {
+    setPersist((prev) => !prev);
+  }
+
   function handleGoogleSignUp(e) {
+    togglePersist();
     window.open(`${process.env.REACT_APP_URL}/auth/google`, "_self");
   }
   function handleFacebookSignUp(e) {
+    togglePersist();
     window.open(`${process.env.REACT_APP_URL}/auth/facebook`, "_self");
   }
   function handleGithubSignUp(e) {
+    togglePersist();
     window.open(`${process.env.REACT_APP_URL}/auth/github`, "_self");
   }
-
-
   
   const navigate = useNavigate();
   
