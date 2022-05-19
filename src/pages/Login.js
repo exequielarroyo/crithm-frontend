@@ -47,12 +47,15 @@ const Login = () => {
   }
 
   function handleGoogleSignIn(e) {
+    togglePersist()
     window.open(`${process.env.REACT_APP_URL}/auth/google`, "_self");
   }
   function handleFacebookSignIn(e) {
+    togglePersist()
     window.open(`${process.env.REACT_APP_URL}/auth/facebook`, "_self");
   }
   function handleGithubSignIn(e) {
+    togglePersist()
     window.open(`${process.env.REACT_APP_URL}/auth/github`, "_self");
   }
 
