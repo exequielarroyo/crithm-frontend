@@ -3,6 +3,8 @@ import style from "../../styles/Register.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Register() {
   const initialValues = { name: "", description: "", TypeId: "" };
@@ -18,6 +20,8 @@ function Register() {
   const [types, setTypes] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const notify = (text) => toast(text);
 
   useEffect(() => {
     let types;
@@ -49,6 +53,7 @@ function Register() {
       .then((res) => {
         const project = res.data;
         console.log(project);
+        notify('Project created');
         if (id === "create") navigate(`/dashboard/register/${project.id ? project.id : id}/review`, { replace: true });
       })
       .catch((error) => {
@@ -61,6 +66,7 @@ function Register() {
         .put(`/project/${id}`, { ...data })
         .then((res) => {
           console.log(res.data);
+          notify('Project updated');
         })
         .catch((error) => {
           console.log(error);
@@ -70,6 +76,7 @@ function Register() {
 
   return (
     <div className="Registercontainer">
+    <ToastContainer theme="dark"/>
       <form onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
         <div className={style.register}>
           <div>

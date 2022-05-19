@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import style from "../../styles/Profile.module.css";
 import { useForm } from "react-hook-form";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = () => {
   const initialValues = { firstName: "", lastName: "", company: "", number:"", occupation:"", address:"", email:"" };
@@ -9,6 +11,8 @@ const Profile = () => {
   const [formError, setFormError] = useState();
   const axiosPrivate = useAxiosPrivate();
   const [User, setUser] = useState([]);
+
+  const notify = () => toast("Profile updated");
  
   const {
     register,
@@ -44,6 +48,7 @@ const Profile = () => {
     axiosPrivate
      .put("/auth", {...data}).then((res)=>{
        console.log(res.data)
+       notify();
      }).catch((error) => {
        console.log(error)
      })
@@ -67,10 +72,21 @@ const Profile = () => {
         </button>
         <input type='submit' />
       </form> */}
-     
 
+      <ToastContainer
+        theme="dark"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className={style.container}>
-        <form className={style.form} onSubmit = {handleSubmit(handleUpdate)}>
+        <form className={style.form} onSubmit={handleSubmit(handleUpdate)}>
           <div>
             <input
               {...register("firstName", { required: "First name is required", minLength: { value: 5, message: "Minimum is 5 characters" } })}
@@ -149,7 +165,7 @@ const Profile = () => {
                     </option>
                   );
                 })} */}
-          
+
           {/* <div><input placeholder='Company'/></div>
           <div><input placeholder='Occupation'/></div>
           <div><input placeholder='Phone number'/></div>
@@ -159,7 +175,6 @@ const Profile = () => {
           <button type="submit">Update</button>
         </form>
       </div>
-      
     </>
   );
 };
