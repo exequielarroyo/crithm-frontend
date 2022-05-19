@@ -32,7 +32,7 @@ const Project = () => {
     axiosPrivate
       .get("/auth")
       .then((res) => {
-        setIsPaid(res.data.isPaid === "1" ? true : false);
+        setIsPaid(res.data.isPaid ? true : false);
       })
       .catch((err) => {
         console.log(err);
