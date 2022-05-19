@@ -58,7 +58,6 @@ const Review = () => {
             </div>
           </div>
         <div>
-          <button onClick={handlePay}>Pay</button>
         </div>
       </div>
     </>
