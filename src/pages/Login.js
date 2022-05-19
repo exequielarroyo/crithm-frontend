@@ -68,7 +68,13 @@ const Login = () => {
     <>
       <section>
         <div className={style.container}>
-          <h1 style={{ fontFamily: "korataki" }} onClick={()=>{navigate('/')}}>CRITHM</h1>
+          <h1
+            style={{ fontFamily: "korataki" }}
+            onClick={() => {
+              navigate("/");
+            }}>
+            CRITHM
+          </h1>
           <p ref={errorRef} className={errorMessage ? "on" : "off"}>
             {errorMessage}
           </p>
@@ -92,26 +98,25 @@ const Login = () => {
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Sign in</button>
             <div className={style.trust}>
-              <input
-                type={"checkbox"}
-                id="persist"
-                onChange={togglePersist}
-                defaultChecked={true}
-                checked={persist}
-              />
+              <input type={"checkbox"} id="persist" onChange={togglePersist} defaultChecked={true} checked={persist} />
               <label htmlFor="persist">Trust this device</label>
             </div>
+            <button type="submit">Sign in</button>
+            <p>
+              <Link to={"/password/forgot/request"}>Forgot password?</Link>
+            </p>
             <div>
               <p>
                 Don't have an account? <Link to={"/signup"}>Sign up</Link>
               </p>
             </div>
           </form>
-          <button onClick={handleGoogleSignIn}>Google</button>
-          <button onClick={handleFacebookSignIn}>Facebook</button>
-          <button onClick={handleGithubSignIn}>Github</button>
+          <div>
+            <button onClick={handleGoogleSignIn}>Google</button>
+            <button onClick={handleFacebookSignIn}>Facebook</button>
+            <button onClick={handleGithubSignIn}>Github</button>
+          </div>
         </div>
       </section>
     </>
