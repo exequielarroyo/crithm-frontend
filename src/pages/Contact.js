@@ -18,7 +18,7 @@ const Contact = () => {
       )
       .then(
         (res) => {
-          toast('Sample')
+          toast('Email sent. Thanks for emailing us.')
         },
         (error) => {
           console.log(error.text);
