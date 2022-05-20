@@ -248,12 +248,15 @@ function SignUp() {
       <div className = {style.btnBox} >
         <h4> Sign up via social media sites!</h4>
       <div className={style.btnContainer}>
-          <button onClick={handleGoogleSignUp}>Google</button>
-          <button onClick={handleFacebookSignUp}>Facebook</button>
-          <button onClick={handleGithubSignUp}>Github</button>
+      <div className={style.social}>
+            <div className={style.google} onClick={handleGoogleSignUp} />
+            <div className={style.facebook} onClick={handleFacebookSignUp} />
+            <div className={style.github} onClick={handleGithubSignUp} />
+          </div>
+        </div>
         </div>
     </div>
-  </div>
+  
     
     
   );

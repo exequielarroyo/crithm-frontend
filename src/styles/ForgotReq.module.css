@@ -1,0 +1,99 @@
+.reqForm{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Sf Pro Display', sans-serif;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    width: 850px;
+    height: 300px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(130deg,  rgba(7, 36, 204, 0.3) 12.7%, rgba(2, 18, 112, 0.1) 83.5%);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    
+   
+}
+.bigCont{
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Sf Pro Display', sans-serif;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(130deg,  rgba(0, 0, 0, 0.3) 12.7%, rgba(0, 0, 0, 0.1) 83.5%);
+  border-top: 2px solid  rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid  rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  height: 370px;
+  width: 950px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 150px;
+}
+
+
+.img {
+    position: absolute;
+    display: flex;
+    gap: 400px;
+    justify-content: space-between;
+    top: 0;
+    left: -120px;
+    z-index: -1;
+    margin-bottom: 20px;
+  }
+  .logoContainer{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .content {
+    margin-top: 16px;
+    position: relative;
+  }
+  .content h1 {
+    padding: 0 0 0 0;
+    margin: 0;
+    font-family: 'korataki';
+    font-size: 3.5rem;
+  }
+  .content p {
+    font-size: 0.9rem;
+  }
+  
+  .reqContainer{
+    margin-bottom: 60px;
+  }
+  .note{
+      
+      font-family: 'Sf Pro Display', sans-serif;
+      margin-top: 5%;
+      font-size: 100%;
+      font-style: italic;
+  }
+  .header{
+      font-size: 200%;
+  }
+  .side_design {
+    width: 20%;
+    height: 60%;
+    float: right;
+    margin-top: -15px;
+    margin-right: -25px;
+    margin-bottom: 20px;
+}

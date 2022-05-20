@@ -85,7 +85,7 @@
     align-items: center;
     align-content: center;
     padding: 30px;
-    height:90px;
+    height:140px;
     width: 680px;
     background: linear-gradient(130deg, rgba(0, 0, 0, 0.3) 12.7%, rgba(2, 18, 68, 0.1) 83.5%);
     backdrop-filter: blur(40px);
@@ -97,6 +97,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
+}
+.social{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  transition: background-color .5s;
+}
+
+.social:hover{
+  background-color: #00fb9741;
+}
+
+.google{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/google-logo.png");
+  background-size: cover;
+  
+}
+.google:hover{
+  cursor: pointer;
+}
+.facebook{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/facebook-logo.png");
+  background-size: cover;
+  
+}
+.facebook:hover{
+  cursor: pointer;
+}
+.github{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/github-logo.png");
+  background-size: cover;
+  
+}
+.github:hover{
+  cursor: pointer;
 }
 
 
