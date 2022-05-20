@@ -66,30 +66,7 @@ header {
 
 /* ------------------------------ */
 
-.page2container {
-  display: flex;
-  height: 50vh;
-  align-items: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
 
-.page2container p {
-  font-size: 1rem;
-}
-
-.page2container p.part1.one {
-  flex: 1 1 300px;
-  font-size: 1.5rem;
-}
-.page2container p.part1.two {
-  flex: 5 5 400px;
-}
-.bgcolor {
-  background-color: #0b729b;
-  width: 100%;
-}
 
 /* ------------------------------ */
 
@@ -270,6 +247,10 @@ body {
 }
 
 /* ---------- Proccess Section ----------- */
+.process{
+  margin-bottom: 200px;
+}
+
 .page4container {
   max-width: 80%;
   height: 80vh;
@@ -446,75 +427,13 @@ body {
 }
 
 
-/*----Join Section---*/
-.JoinCard1 {
-  border: 1px solid;
 
-  border-image-source: radial-gradient(61.01% 61.01% at 96.95% 100%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    radial-gradient(53.67% 86.38% at 0% 9.17%, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding: 24px;
-
-  width: 700px;
-  height: 143px;
-
-  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 16px;
-}
-.JoinCard2 {
-  border: 1px solid;
-
-  border-image-source: radial-gradient(61.01% 61.01% at 96.95% 100%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    radial-gradient(53.67% 86.38% at 0% 9.17%, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding: 24px;
-  margin-top: 2%;
-  
-  width: 700px;
-  height: 143px;
-
-  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 16px;
-}
-
-
-.buttonReg{
-  margin-top: 5%;
-  
-  display: block;
-}
-
-.buttonReg:hover {
-  background: rgb(3, 0, 54);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
 
 /*------- Why Us Section -------*/
+.whyus{
+  margin-bottom: 200px;
+}
+
 .page6container {
   height: 80vh;
   max-width: 1000px;

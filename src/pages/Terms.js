@@ -6,7 +6,7 @@ const Terms = () => {
     <>
       <section className={style.terms}>
         <nav className={style.nav_bar}>
-          <h1>Project Registration Form</h1>
+          <h1>Terms and Conditions</h1>
           <img src={"/assets/images/logo.png"} className={style.app_logo} alt="logo" />
         </nav>
           <textarea

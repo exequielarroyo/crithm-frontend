@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 import useAuth from "../hooks/useAuth";
 
 const MainLayout = () => {
@@ -25,20 +26,15 @@ const MainLayout = () => {
               aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div
-              className="collapse navbar-collapse justify-content-center"
-              id="navbarSupportedContent">
+            <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
               <ul className="navbar-nav  mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link" href="/#home">
                     Home
                   </a>
+                  {/* <Link to={'/about'}>Home</Link> */}
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/#creative-software">
-                    Creative Software
-                  </a>
-                </li>
+                
 
                 <li className="nav-item">
                   <a className="nav-link " href="/#articles">
@@ -61,14 +57,7 @@ const MainLayout = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#join">
-                    Join
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/#terms">
-                    Terms
-                  </a>
+                  <Link className="nav-link" to={'/about'}>About us</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to={"/contact"}>
@@ -79,6 +68,9 @@ const MainLayout = () => {
                   <Link className="nav-link" to={"/team"}>
                     Team
                   </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/terms'}>Terms</Link>
                 </li>
               </ul>
             </div>
@@ -102,12 +94,11 @@ const MainLayout = () => {
           </div>
         </nav>
       </div>
-      <header>
-      </header>
+      <header></header>
       <main>
         <Outlet />
       </main>
-      {/* <footer className='footer'>footer</footer> */}
+      <Footer />
     </>
   );
 };

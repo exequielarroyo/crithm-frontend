@@ -36,6 +36,7 @@ const Receipt = Loadable(lazy(() => import("../pages/dashboard/payment/Receipt")
 const Terms = Loadable(lazy(() => import("../pages/Terms")));
 const ForgotPassword = Loadable(lazy(() => import("../pages/ForgotPassword")));
 const ForgotRequest = Loadable(lazy(() => import("../pages/ForgotRequest")));
+const AboutUs = Loadable(lazy(() => import("../pages/AboutUs")));
 
 const Router = () => {
   return (
@@ -49,6 +50,8 @@ const Router = () => {
                 <Route path="unauthorized" element={<Unauthorized />} />
                 <Route path="team" element={<Team />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="about" element={<AboutUs />} />
+                <Route path="terms" element={<Terms />} />
               </Route>
 
               <Route element={<Protected />}>
@@ -72,7 +75,6 @@ const Router = () => {
 
               <Route path="password/forgot/request" element={<ForgotRequest />} />
               <Route path="password/forgot/:id/:token" element={<ForgotPassword />} />
-              <Route path="terms" element={<Terms />} />
               <Route path="signup" element={<SignUp />} />
               <Route path="signin" element={<Login />} />
               <Route path="*" element={<NotFound />} />

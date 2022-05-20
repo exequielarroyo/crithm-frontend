@@ -6,6 +6,7 @@
   
   padding: 20px;
   height: 100vh;
+  margin-bottom: 300px;
 }
 
 .padding.h3 {
@@ -55,14 +56,14 @@
   border-radius: 15px 15px 0 0;
 }
 .image6{
-  background-image: url('../../public/assets/images/steven.png');
+  background-image: url('../../public/assets/images/marvib.jpg');
   background-size: cover;
   background-position-y: -100px;
   height: 250px;
   border-radius: 15px 15px 0 0;
 }
 .image5{
-  background-image: url('../../public/assets/images/marvib.jpg');
+  background-image: url('../../public/assets/images/steven.png');
   background-size: cover;
   background-position-y: -140px;
   height: 250px;
