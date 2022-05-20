@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Card from "../../components/Card";
 import style from "../../styles/Project.module.css";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
@@ -11,39 +11,39 @@ const Project = () => {
   const navigate = useNavigate();
   const [isPaid, setIsPaid] = useState();
 
-  useEffect(() => {
-    let isMounted = true;
-    const controller = new AbortController();
-
-    const getProjects = async () => {
-      try {
-        const res = await axiosPrivate.get(`/project`, {
-          signal: controller.signal,
-        });
-        isMounted && setProjects(res.data);
-      } catch (error) {
-        console.error(error);
-        navigate("/signin", { state: { from: location }, replace: true });
-      }
-    };
-
-    getProjects();
+  const getProjects = useCallback(async () => {
+    try {
+      const res = await axiosPrivate.get(`/project`, {
+        // signal: controller.signal,
+      });
+      setProjects(res.data);
+    } catch (error) {
+      console.error(error);
+      navigate("/signin", { state: { from: location }, replace: true });
+    }
 
     axiosPrivate
       .get("/auth")
       .then((res) => {
-        console.log(res.data.isPaid)
+        console.log(res.data.isPaid);
         setIsPaid(res.data.isPaid ? true : false);
       })
       .catch((err) => {
         console.log(err);
       });
+  }, [location, axiosPrivate, navigate]);
+
+  useEffect(() => {
+    // let isMounted = true;
+    // const controller = new AbortController();
+
+    getProjects();
 
     return () => {
-      isMounted = false;
+      // isMounted = false;
       // controller.abort();
     };
-  }, []);
+  }, [getProjects]);
 
   const handleClick = () => {
     navigate(`/dashboard/register/create`);
@@ -56,7 +56,11 @@ const Project = () => {
         <div>
           <button
             onClick={
-              isPaid ? handleClick: ()=>{navigate('/dashboard/payment')}
+              isPaid
+                ? handleClick
+                : () => {
+                    navigate("/dashboard/payment");
+                  }
             }>
             Create Project
           </button>
