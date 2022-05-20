@@ -3,10 +3,13 @@ import ReactDOM from "react-dom/client";
 import Router from "./routes";
 import "./styles/index.css";
 import "./styles/Global.css";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ToastContainer theme="dark"/>
     <Router></Router>
   </React.StrictMode>,
 );
