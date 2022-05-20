@@ -3,8 +3,8 @@ import style from "../../styles/Register.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
   const initialValues = { name: "", description: "", TypeId: "" };
@@ -53,7 +53,7 @@ function Register() {
       .then((res) => {
         const project = res.data;
         console.log(project);
-        notify('Project created');
+        notify("Project created");
         if (id === "create") navigate(`/dashboard/register/${project.id ? project.id : id}/review`, { replace: true });
       })
       .catch((error) => {
@@ -66,7 +66,7 @@ function Register() {
         .put(`/project/${id}`, { ...data })
         .then((res) => {
           console.log(res.data);
-          notify('Project updated');
+          notify("Project updated");
         })
         .catch((error) => {
           console.log(error);
@@ -76,32 +76,27 @@ function Register() {
 
   return (
     <div className="Registercontainer">
-    <ToastContainer theme="dark"/>
+      <ToastContainer theme="dark" />
       <form onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
         <div className={style.register}>
           <div>
-            <h1>Registration Form</h1>
-            <div className="field">
+            <h1>Project Registration Form</h1>
+            <p>First, we need to know a little bit more about your project</p>
+
+            <div className={style.field}>
               <label className={style.tittle1}> 1. Project Name</label>
-              <p className="subhead1">What is your project name or tittle?</p>
-              <input {...register("name", { required: "Required", pattern: { value: /^[A-Za-z]+$/i, message: "Letters only" } })} />
+              <p>What is your project name or title?</p>
+              <input {...register("name", { required: "Required" })} placeholder="Project name" />
+              <p className={style.text}>{errors.name?.message}</p>
             </div>
-            <p className={style.text}>{errors.name?.message}</p>
 
-            <div className="field">
-              <label className={style.tittle1}> 2. Details </label>
-              <p className="subhead1">What is your project description?</p>
-              <input {...register("description", { required: "Required" })} />
-            </div>
-            <p className={style.text}>{errors.description?.message}</p>
-
-            <div className="field">
+            <div className={style.field}>
               <label className={style.tittle1}>3. Project Type </label>
-              <p className={style.subhead1}> Select your project type, or use other for different type</p>
+              <p> Select your project type, or use other for different type</p>
 
               <select {...register("TypeId", { required: "Choose project type" })}>
                 <option value="" hidden>
-                  Project type
+                  Choose project type
                 </option>
                 {types.map((t) => {
                   return (
@@ -111,7 +106,18 @@ function Register() {
                   );
                 })}
               </select>
-            <p className={style.text}>{errors.TypeId?.message}</p>
+              <p className={style.text}>{errors.TypeId?.message}</p>
+            </div>
+
+            <div className={style.field}>
+              <label className={style.tittle1}> 2. Details </label>
+              <p>What is your project description?</p>
+              <textarea
+                className={style.textarea}
+                {...register("description", { required: "Required" })}
+                placeholder="Include all the details you want for your project."
+              />
+              <p className={style.text}>{errors.description?.message}</p>
             </div>
 
             {id !== "create" ? (
