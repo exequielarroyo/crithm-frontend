@@ -86,7 +86,7 @@ function Register() {
             <div className={style.field}>
               <label className={style.tittle1}> 1. Project Name</label>
               <p>What is your project name or title?</p>
-              <input {...register("name", { required: "Required" })} placeholder="Project name" />
+              <input className={style.input} {...register("name", { required: "Required" })} placeholder="Project name" />
               <p className={style.text}>{errors.name?.message}</p>
             </div>
 
@@ -94,7 +94,7 @@ function Register() {
               <label className={style.tittle1}>3. Project Type </label>
               <p> Select your project type, or use other for different type</p>
 
-              <select {...register("TypeId", { required: "Choose project type" })}>
+              <select className={style.input} {...register("TypeId", { required: "Choose project type" })}>
                 <option value="" hidden>
                   Choose project type
                 </option>

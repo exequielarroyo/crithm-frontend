@@ -1,9 +1,38 @@
-.container{
-  padding: 20px;
+.container {
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
 }
 
 .logo:hover {
   cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.profile_buttons {
+  position: absolute;
+  background-color: brown;
+  padding: 20px;
+  background: linear-gradient(126deg, rgba(255, 255, 255, 0.1) 12.7%, rgba(255, 255, 255, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  border-radius: 8px;
+}
+.open {
+  display: flex;
+  flex-direction: column;
+}
+.close {
+  visibility: hidden;
 }
