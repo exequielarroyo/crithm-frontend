@@ -57,6 +57,9 @@ const MainLayout = () => {
                   </a>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to={'/product'}>Product</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to={'/about'}>About us</Link>
                 </li>
                 <li className="nav-item">
