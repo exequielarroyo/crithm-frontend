@@ -7,24 +7,24 @@ export default function Footer() {
       <div className={style.container}>
         <div className={style.top}>
           <div className={style.logo}>
-            <img src="/assets/images/logo2.png" />
+            <img src="/assets/images/logo2.png" alt="logo"/>
           </div>
           <div className={style.links}>
-            <p>TITLE</p>
+            <p>MAIN MENU</p>
             <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Team</Link>
-            <Link to={"/"}>About us</Link>
-            <Link to={"/"}>Product</Link>
-            <Link to={"/"}>Contact</Link>
-            <Link to={"/"}>Terms</Link>
+            <Link to={"/product"}>Product</Link>
+            <Link to={"/about"}>About us</Link>
+            <Link to={"/contact"}>Contact</Link>
+            <Link to={"/team"}>Team</Link>
+            <Link to={"/terms"}>Terms</Link>
           </div>
           <div className={style.links}>
             <p>FOLLOW US</p>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/"}>Home</Link>
+            <a href="https://www.github.com"><i class="fab fa-github"/> Github</a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"/> LinkedIn</a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"/> Facebook</a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"/> Instagram</a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"/> Twitter</a>
           </div>
         </div>
         <hr className={style.line} />

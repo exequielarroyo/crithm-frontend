@@ -37,6 +37,7 @@ const Terms = Loadable(lazy(() => import("../pages/Terms")));
 const ForgotPassword = Loadable(lazy(() => import("../pages/ForgotPassword")));
 const ForgotRequest = Loadable(lazy(() => import("../pages/ForgotRequest")));
 const AboutUs = Loadable(lazy(() => import("../pages/AboutUs")));
+const Product = Loadable(lazy(() => import("../pages/Product")));
 
 const Router = () => {
   return (
@@ -52,6 +53,7 @@ const Router = () => {
                 <Route path="contact" element={<Contact />} />
                 <Route path="about" element={<AboutUs />} />
                 <Route path="terms" element={<Terms />} />
+                <Route path="product" element={<Product />} />
               </Route>
 
               <Route element={<Protected />}>

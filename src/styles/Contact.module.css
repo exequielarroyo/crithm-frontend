@@ -1,8 +1,11 @@
 .contact {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
+  gap: 50px;
+  padding: 80px;
 }
 
 .container {
@@ -29,7 +32,11 @@
 }
 
 .textarea {
-  height: 200px;
+  height: 150px;
+}
+
+.googleMap{
+  border-radius: 16px;
 }
 
 @media only screen and (max-width: 1000px) {
