@@ -33,7 +33,7 @@ const ForgotPassword = () => {
         </div>
       </div>
 
-      <form  onSubmit= {handleSubmit}>
+      <form  onSubmit= {handleSubmit(handlePassword)}>
         <div class ="card" className={style.uiform}>  
         <div>
         <h1>Change Password</h1>
