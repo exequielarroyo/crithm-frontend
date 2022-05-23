@@ -169,6 +169,7 @@ const Profile = () => {
                 minLength: { value: 5, message: "Minimum is 5 characters" },
                 pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i, message: "Invalid email format" },
               })}
+              disabled
               placeholder="Email"
             />
           </div>
