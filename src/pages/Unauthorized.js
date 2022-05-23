@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import style from '../styles/Unauthorized.module.css'
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Unauthorized = () => {
   const navigate = useNavigate();
@@ -8,8 +10,9 @@ const Unauthorized = () => {
     navigate(-1);
   }
   return (
-    <div>
-      Unauthorized
+    <div className={style.container}>
+      <p>Unauthorized try logging in again</p>
+      <Player src="/assets/lottie/unauthorized.json" style={{ height: "200px" }} loop autoplay />
       <button onClick={handleBack}>Back</button>
     </div>
   );
