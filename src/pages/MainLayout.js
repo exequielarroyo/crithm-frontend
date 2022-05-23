@@ -34,7 +34,6 @@ const MainLayout = () => {
                   </a>
                   {/* <Link to={'/about'}>Home</Link> */}
                 </li>
-                
 
                 <li className="nav-item">
                   <a className="nav-link " href="/#articles">
@@ -56,11 +55,16 @@ const MainLayout = () => {
                     Why us?
                   </a>
                 </li>
+                <div style={{margin: '0 16px', alignItems: "center", display: "flex", justifyContent: "center" }}>|</div>
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/product'}>Product</Link>
+                  <Link className="nav-link" to={"/product"}>
+                    Product
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/about'}>About us</Link>
+                  <Link className="nav-link" to={"/about"}>
+                    About us
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to={"/contact"}>
@@ -73,7 +77,9 @@ const MainLayout = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/terms'}>Terms</Link>
+                  <Link className="nav-link" to={"/terms"}>
+                    Terms
+                  </Link>
                 </li>
               </ul>
             </div>
