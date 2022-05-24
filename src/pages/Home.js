@@ -21,7 +21,7 @@ const Home = () => {
           {
             visibility: [0, 1],
             type: "seek",
-            frames: [0, 200],
+            frames: [0, 220],
           },
         ],
       });
