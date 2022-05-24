@@ -38,6 +38,7 @@ const ForgotPassword = Loadable(lazy(() => import("../pages/ForgotPassword")));
 const ForgotRequest = Loadable(lazy(() => import("../pages/ForgotRequest")));
 const AboutUs = Loadable(lazy(() => import("../pages/AboutUs")));
 const Product = Loadable(lazy(() => import("../pages/Product")));
+const Defaults = Loadable(lazy(() => import("../pages/Defaults")));
 
 const Router = () => {
   return (
@@ -75,6 +76,7 @@ const Router = () => {
                 </Route>
               </Route>
 
+              <Route path="Defaults" element={<Defaults />} />
               <Route path="password/forgot/request" element={<ForgotRequest />} />
               <Route path="password/forgot/:id/:token" element={<ForgotPassword />} />
               <Route path="signup" element={<SignUp />} />
