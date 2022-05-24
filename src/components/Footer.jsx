@@ -15,7 +15,7 @@ export default function Footer() {
             <Link to={"/product"}>Product</Link>
             <Link to={"/about"}>About us</Link>
             <Link to={"/contact"}>Contact</Link>
-            <Link to={"/team"}>Team</Link>
+            {/* <Link to={"/team"}>Team</Link> */}
             <Link to={"/terms"}>Terms</Link>
           </div>
           <div className={style.links}>

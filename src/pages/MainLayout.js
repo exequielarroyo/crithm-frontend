@@ -71,11 +71,11 @@ const MainLayout = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to={"/team"}>
                     Team
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link" to={"/terms"}>
                     Terms
