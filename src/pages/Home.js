@@ -27,6 +27,22 @@ const Home = () => {
       });
       create({
         mode: "scroll",
+        player: "#lottie3",
+        actions: [
+          {
+            visibility: [0, 1],
+            type: "seek",
+            frames: [0, 500],
+          },
+          // {
+          //   visibility: [1],
+          //   type: "stop",
+          //   frames: [500,600],
+          // },
+        ],
+      });
+      create({
+        mode: "scroll",
         player: "#lottie2",
         container: "#home",
         actions: [
@@ -69,6 +85,10 @@ const Home = () => {
       </section>
 
       <section id="articles">
+      <div style={{position: 'relative'}}>
+          <div style={{ display: "grid", height: "100%", width: '100%', placeItems: "center", position: 'absolute', top: '-300px', left: '0', opacity: '100%' }}>
+            <lottie-player id="lottie3" src="/assets/lottie/bloodhunt2.json" style={{  }} />
+          </div>
         <div className={style.page3container}>
           <h3>Get to know Crithm, all what can you expect and learn</h3>
           <div className={style.cards}>
@@ -92,6 +112,7 @@ const Home = () => {
               lm_button={"Learn more"}
             />
           </div>
+        </div>
         </div>
       </section>
 
@@ -142,7 +163,7 @@ const Home = () => {
 
       <section id="pricing">
         <div style={{position: 'relative'}}>
-          <div style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: 'absolute', top: '-500px', left: '0' }}>
+          <div style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: 'absolute', top: '-500px', left: '0', opacity: '50%' }}>
             <lottie-player id="lottie" src="/assets/lottie/bloodhunt.json" style={{ height: "1200px" }} />
           </div>
           <div className={style.PricingContainer}>
