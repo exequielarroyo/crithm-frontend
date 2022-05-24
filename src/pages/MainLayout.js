@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import useAuth from "../hooks/useAuth";
+import { useWindowSize } from "../hooks/useWindowSize";
+
+const data = {
+  ease: 0.1,
+  curr: 0,
+  prev: 0,
+  rounded: 0,
+}
 
 const MainLayout = () => {
   const navigate = useNavigate();
   const { auth } = useAuth();
   document.title = 'Crithm';
+  const containerRef = useRef(null);
+  const size = useWindowSize();
+  
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      containerRef.current?.getBoundingClientRect().height
+    }px`;
+  };
 
+  const smoothScroll = useCallback(() => {
+    data.curr = window.scrollY;
+    data.prev += (data.curr - data.prev) * data.ease;
+    data.rounded = Math.round(data.prev * 100) / 100;
+    containerRef.current.style.transform = `translateY(-${data.rounded}px)`;
+
+    requestAnimationFrame(() => smoothScroll());
+  }, []);
+  
+  useEffect(() => {
+    requestAnimationFrame(() => smoothScroll());
+  }, [smoothScroll]);
+
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
   return (
     <>
       <div className="container-fluid mx-auto">
@@ -71,11 +103,11 @@ const MainLayout = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to={"/team"}>
                     Team
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link" to={"/terms"}>
                     Terms
@@ -104,8 +136,10 @@ const MainLayout = () => {
         </nav>
       </div>
       <header></header>
-      <main>
+      <main >
+      <div className="container" ref={containerRef}>
         <Outlet />
+      </div>
       </main>
       <Footer />
     </>
