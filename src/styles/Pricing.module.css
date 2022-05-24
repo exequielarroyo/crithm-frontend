@@ -5,14 +5,15 @@
   height: 380px;
   text-align: center;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     126deg,
     rgba(1, 118, 255, 0.4) 45.52%,
     rgba(25, 45, 106, 0.4) 83.5%
-  );
-  backdrop-filter: blur(40px);
+  ); */
+  background-color: #2a7af169;
+  backdrop-filter: blur(10px);
   /* Note: backdrop-filter has minimal browser support */
-
+  transition: background-color .5s ease;
   border-radius: 16px;
 }
 .plan{
@@ -34,9 +35,10 @@
 
 
 .pricingcard:hover {
-  background: linear-gradient(
+  background-color: #04e1f769;
+  /* background: linear-gradient(
     150deg,
     rgba(11, 102, 206, 0.767) 30%,
     rgba(23, 60, 173, 0.2) 60%
-  );
+  ); */
 }

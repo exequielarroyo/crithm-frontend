@@ -10,51 +10,51 @@ import { create } from "@lottiefiles/lottie-interactivity";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 const Home = () => {
-  // const lottie = useRef();
+  const lottie = useRef();
 
-  // useEffect(() => {
-  //   lottie.current.addEventListener("load", function (e) {
-  //     create({
-  //       mode: "scroll",
-  //       player: "#lottie",
-  //       actions: [
-  //         {
-  //           visibility: [0, 1],
-  //           type: "seek",
-  //           frames: [0, 300],
-  //         },
-  //       ],
-  //     });
-  //     create({
-  //       mode: "scroll",
-  //       player: "#lottie2",
-  //       container: "#home",
-  //       actions: [
-  //         {
-  //           visibility: [0, 1],
-  //           type: "seek",
-  //           frames: [0, 600],
-  //         },
-  //       ],
-  //     });
+  useEffect(() => {
+    lottie.current.addEventListener("load", function (e) {
+      create({
+        mode: "scroll",
+        player: "#lottie",
+        actions: [
+          {
+            visibility: [0, 1],
+            type: "seek",
+            frames: [0, 200],
+          },
+        ],
+      });
+      create({
+        mode: "scroll",
+        player: "#lottie2",
+        container: "#home",
+        actions: [
+          {
+            visibility: [0, 1],
+            type: "seek",
+            frames: [0, 600],
+          },
+        ],
+      });
 
-  //     // create({
-  //     //   player: "#lottie3",
-  //     //   mode: "cursor",
-  //     //   actions: [
-  //     //     {
-  //     //       type: "toggle",
-  //     //     },
-  //     //   ],
-  //     // });
+      // create({
+      //   player: "#lottie3",
+      //   mode: "cursor",
+      //   actions: [
+      //     {
+      //       type: "toggle",
+      //     },
+      //   ],
+      // });
 
-  //   });
+    });
 
-  // });
+  });
   return (
     <div className={style.home} id="home">
-      <div style={{ display: "flex", height: "100vh", justifyContent: "center", alignItems: "center", position: "fixed" }}>
-        {/* <lottie-player ref={lottie} id="lottie2" src="/assets/lottie/system.json" style={{ height: "200px" }} /> */}
+      <div style={{ display: "flex", height: "100vh", width: '100%', justifyContent: "center", alignItems: "center", position: "fixed", opacity: '.1', zIndex: '-2' }}>
+        <lottie-player ref={lottie} id="lottie2" src="/assets/lottie/system.json" style={{ height: "1000px" }} />
         {/* <Player id="lottie3" src="/assets/lottie/crithm-loading.json" style={{ height: "200px" }} autoplay loop/> */}
       </div>
       <section id="home">
@@ -94,10 +94,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* <div style={{ display: "flex", height: "100vh", width: "100vw", justifyContent: "center", alignItems: "center" }}>
-        <lottie-player id="lottie" src="/assets/lottie/system.json" style={{ height: "600px" }} />
-      </div> */}
 
       <section className={style.process} id="process">
         <div className={style.page4container}>
@@ -145,10 +141,15 @@ const Home = () => {
       </section>
 
       <section id="pricing">
-        <div className={style.PricingContainer}>
-          <PricingCard plan={"BASIC"} srp_price={"₱ 11,000"} price={"₱ 16,000.00"} feature={"1 Project"} features={"2 Features"}></PricingCard>
-          <PricingCard plan={"STANDARD"} srp_price={"₱ 27,000"} price={"₱ 32,000"} feature={"3 Project"} features={"5 Features"}></PricingCard>
-          <PricingCard plan={"PREMIUM"} srp_price={"₱ 82,000"} price={"₱ 87,000"} feature={"5 Project"} features={"10 Features"}></PricingCard>
+        <div style={{position: 'relative'}}>
+          <div style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: 'absolute', top: '-500px', left: '0' }}>
+            <lottie-player id="lottie" src="/assets/lottie/bloodhunt.json" style={{ height: "1200px" }} />
+          </div>
+          <div className={style.PricingContainer}>
+            <PricingCard plan={"BASIC"} srp_price={"₱ 11,000"} price={"₱ 16,000.00"} feature={"1 Project"} features={"2 Features"}></PricingCard>
+            <PricingCard plan={"STANDARD"} srp_price={"₱ 27,000"} price={"₱ 32,000"} feature={"3 Project"} features={"5 Features"}></PricingCard>
+            <PricingCard plan={"PREMIUM"} srp_price={"₱ 82,000"} price={"₱ 87,000"} feature={"5 Project"} features={"10 Features"}></PricingCard>
+          </div>
         </div>
       </section>
 
