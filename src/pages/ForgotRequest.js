@@ -2,8 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import style from '../styles/ForgotReq.module.css';
 
 
@@ -27,18 +26,6 @@ const ForgotRequest = () => {
 
   return (
     <>
-      <ToastContainer
-        theme="dark"
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <div className={style.logoContainer}>
       <div className={style.reqContainer}>
           <div className={style.content}>

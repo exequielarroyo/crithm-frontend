@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "../../styles/Profile.module.css";
 import { useForm } from "react-hook-form";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const Profile = () => {
   const initialValues = { firstName: "", lastName: "", company: "", number:"", occupation:"", address:"", email:"" };
@@ -73,19 +72,6 @@ const Profile = () => {
         </button>
         <input type='submit' />
       </form> */}
-
-      <ToastContainer
-        theme="dark"
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <div className={style.nav_bar}>
       <div className={style.logoContainer}>
       <div className={style.profContainer}>

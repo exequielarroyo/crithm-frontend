@@ -3,8 +3,7 @@ import style from "../../styles/Register.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function Register() {
   const initialValues = { name: "", description: "", TypeId: "" };
@@ -76,7 +75,6 @@ function Register() {
 
   return (
     <div className="Registercontainer">
-      <ToastContainer theme="dark" />
       <form onSubmit={id === "create" ? handleSubmit(handleForm) : handleSubmit(handleUpdate)}>
         <div className={style.register}>
           <div>
