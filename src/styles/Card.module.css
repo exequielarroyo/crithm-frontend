@@ -74,12 +74,7 @@
   justify-content: center;
   align-items: center;
   font-size: medium;
-
-  height: 30px;
-
-  border: 1px solid #ffffff;
   box-sizing: border-box;
-  border-radius: 8px;
 
   /* Inside auto layout */
 

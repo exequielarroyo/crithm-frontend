@@ -96,14 +96,6 @@
   margin-top: 50px;
   display: block;
 }
-
-.buttonReg:hover {
-  background: rgb(3, 0, 54);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-
 /* logo */
 
 .logo {
