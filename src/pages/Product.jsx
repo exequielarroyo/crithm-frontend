@@ -24,9 +24,9 @@ export default function Product() {
         <div className={style.feature}>
           <img src="/assets/images/product2.jpeg" alt="sample service product" />
           <div>
-            <h1>See your project status live at your screen.</h1>
-            <p className={``}>This is a live feed of your project status. You can see the progress of your work in real time.</p>
-            <p className={style.p}>The live feed is an interactive screen that provides you with a visual representation of what you're working on. This allows you to view your project's progress in real-time, and make changes quickly without having to wait for feedback from others.</p>
+            <h1>See they process of your project.</h1>
+            <p className={``}>This is a list of step in making your project. You can see the progress of your work..</p>
+            <p className={style.p}>This will provides you with a visual representation of what developers are working on.</p>
           </div>
         </div>
         <div className={style.feature}>
