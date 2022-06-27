@@ -2,16 +2,21 @@ import React, { useRef, useState } from "react";
 import style from "../styles/Contact.module.css";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 const Contact = () => {
   const form = useRef();
+  const [email, setEmail] = useState();
+
+  const axiosPrivate = useAxiosPrivate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_tjxw6wp", "template_35j8w2d", form.current, "Mx8aJusmaDIrtdC2s").then(
+    emailjs.sendForm("service_n63aiyw", "template_35j8w2d", form.current, "Mx8aJusmaDIrtdC2s").then(
       (res) => {
         toast("Email sent. Thanks for emailing us.");
+        axiosPrivate.post("/password/receive", { email });
       },
       (error) => {
         console.log(error.text);
@@ -32,7 +37,15 @@ const Contact = () => {
               <input type="text" name="name" required placeholder="Name" />
             </div>
             <div>
-              <input type="email" name="email" required placeholder="Email" />
+              <input
+                type="email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                name="email"
+                required
+                placeholder="Email"
+              />
             </div>
             <div>
               <input type="text" name="subject" required placeholder="Subject" />
@@ -45,12 +58,12 @@ const Contact = () => {
         </div>
         <div>
           <div>
-          <i class="fa-solid fa-location-dot"/>
+            <i class="fa-solid fa-location-dot" />
             <p>796X+W3, Santa Cruz, Laguna</p>
           </div>
           <div>
             <i class="fa-solid fa-envelope" />
-            <p>crithm.cf@gmail.com</p>
+            <p>contact@crithm.cf</p>
           </div>
           <div>
             <i class="fa-solid fa-phone" />
