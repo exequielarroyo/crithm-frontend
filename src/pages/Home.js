@@ -63,13 +63,22 @@ const Home = () => {
       //     },
       //   ],
       // });
-
     });
-
   });
   return (
     <div className={style.home} id="home">
-      <div style={{ display: "flex", height: "100vh", width: '100%', justifyContent: "center", alignItems: "center", position: "fixed", opacity: '.1', zIndex: '-2' }}>
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "fixed",
+          opacity: ".1",
+          zIndex: "-2",
+        }}
+      >
         <lottie-player ref={lottie} id="lottie2" src="/assets/lottie/system.json" style={{ height: "1000px" }} />
         {/* <Player id="lottie3" src="/assets/lottie/crithm-loading.json" style={{ height: "200px" }} autoplay loop/> */}
       </div>
@@ -85,34 +94,33 @@ const Home = () => {
       </section>
 
       <section id="articles">
-      <div style={{position: 'relative'}}>
-          <div style={{ display: "grid", height: "100%", width: '100%', placeItems: "center", position: 'absolute', top: '-300px', left: '0', opacity: '100%' }}>
-            <lottie-player id="lottie3" src="/assets/lottie/bloodhunt2.json" style={{  }} />
+        <div style={{ position: "relative" }}>
+          <div
+            style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: "absolute", top: "-300px", left: "0", opacity: "100%" }}
+          >
+            <lottie-player id="lottie3" src="/assets/lottie/bloodhunt2.json" style={{}} />
           </div>
-        <div className={style.page3container}>
-          <h3>Get to know Crithm, all what can you expect and learn</h3>
-          <div className={style.cards}>
-            <LMCard
-              lm_content={
-                "Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions."
-              }
-              lm_img={`👌`}
-              lm_button={"Learn more"}
-            />
-            <LMCard
-              lm_content={"The service that we provide are a software solution where different types of industry softwares can be utilize."}
-              lm_img={`🏬`}
-              lm_button={"Learn more"}
-            />
-            <LMCard
-              lm_content={
-                "We are versatile for the reason that we can satisfy our clients on their desired system, this includes: \nItem/Product Inventory \nMessaging platform \nEducational system \nSimple Information System"
-              }
-              lm_img={`🤑`}
-              lm_button={"Learn more"}
-            />
+          <div className={style.page3container}>
+            <h3>Get to know Crithm, all what can you expect and learn</h3>
+            <div className={style.cards}>
+              <LMCard
+                lm_content={
+                  "Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions."
+                }
+                lm_img={`👌`}
+              />
+              <LMCard
+                lm_content={"The service that we provide are a software solution where different types of industry softwares can be utilize."}
+                lm_img={`🏬`}
+              />
+              <LMCard
+                lm_content={
+                  "We are versatile for the reason that we can satisfy our clients on their desired system, this includes: \nItem/Product Inventory \nMessaging platform \nEducational system \nSimple Information System"
+                }
+                lm_img={`🤑`}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -162,8 +170,8 @@ const Home = () => {
       </section>
 
       <section id="pricing">
-        <div style={{position: 'relative'}}>
-          <div style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: 'absolute', top: '-500px', left: '0', opacity: '50%' }}>
+        <div style={{ position: "relative" }}>
+          <div style={{ display: "grid", height: "100%", width: "100%", placeItems: "center", position: "absolute", top: "-500px", left: "0", opacity: "50%" }}>
             <lottie-player id="lottie" src="/assets/lottie/bloodhunt.json" style={{ height: "1200px" }} />
           </div>
           <div className={style.PricingContainer}>
