@@ -87,7 +87,7 @@ export default function AboutUs() {
             <h3 className={`${style.padding} ${style.h3}`}>Bagabagon, Neil Jordan</h3>
           </div>
           <p className={`${style.padding} ${style.p}`}>
-            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          Team Leader and UI Designer of Crithm. A simple and calm person who leads the team all throughout the development of a system. The one who says "Let's Go" and not "Go"
           </p>
         </div>
         <div className={style.profilecontainer}>
@@ -96,7 +96,7 @@ export default function AboutUs() {
             <h3 className={`${style.padding} ${style.h3}`}>Bagalso, Robert</h3>
           </div>
           <p className={`${style.padding} ${style.p}`}>
-            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          The Network administrator of crithm. He is very dedicated to his craft and also very diligent to his career. He is also seclusive yet calm-minded person. He is simple and humble to his profession.
           </p>
         </div>
         <div className={style.profilecontainer}>
@@ -105,7 +105,7 @@ export default function AboutUs() {
             <h3 className={`${style.padding} ${style.h3}`}>Esteban, Marc Steven</h3>
           </div>
           <p className={`${style.padding} ${style.p}`}>
-            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          A database manager of crithm He is responsible for developing and maintaining an organization's systems that store and organize data for companies. By implementing several security programs, they ensure the safety of stored data.
           </p>
         </div>
         <div className={style.profilecontainer}>
@@ -114,7 +114,7 @@ export default function AboutUs() {
             <h3 className={`${style.padding} ${style.h3}`}>Gonzales, Marvin</h3>
           </div>
           <p className={`${style.padding} ${style.p}`}>
-            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          QA analyst or tester of crithm, he is making sure of quality requirements are met. Looking for bugs and software flaws to avoid any software issues.
           </p>
         </div>
       </div>
