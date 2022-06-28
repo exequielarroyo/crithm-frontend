@@ -78,7 +78,7 @@ export default function AboutUs() {
             <h3 className={`${style.padding} ${style.h3}`}>Arroyo, Exequiel</h3>
           </div>
           <p className={`${style.padding} ${style.p}`}>
-            Software Developer of Crithm. A committed and humble person and a person who looks for adventure and more challenging things.
+          CEO & Software Developer, pushing the whole team to the success of software development process. A software fanatic  with a huge passion for technology and entrepreneurship.
           </p>
         </div>
         <div className={style.profilecontainer}>
