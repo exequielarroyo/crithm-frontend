@@ -1,0 +1,50 @@
+.termsContainer {
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  margin-top: 20px;
+  width: 90%;
+  height: 70vh;
+  background: linear-gradient(126deg, rgba(255, 255, 255, 0.1) 12.7%, rgba(255, 255, 255, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+
+.nav_bar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: white;
+height: 100px;
+width: 90%;
+margin-top: 30px;
+border-radius: 15px;
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+border-top: 2px solid  rgba(255, 255, 255, 0.2);
+border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav_bar h1 {
+margin-left: 30px;  
+margin-top: 15px;
+}
+
+.nav_bar .app_logo {
+width: 110.61px;
+height: 63.77px;
+left: 1619px;
+top: 145.81px;
+margin-right: 20px;
+margin-bottom: 10px;
+}

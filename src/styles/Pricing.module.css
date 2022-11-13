@@ -1,0 +1,44 @@
+.pricingcard {
+  /* rectangle glass */
+  padding-top: 50px;
+  width: 280px;
+  height: 380px;
+  text-align: center;
+
+  /* background: linear-gradient(
+    126deg,
+    rgba(1, 118, 255, 0.4) 45.52%,
+    rgba(25, 45, 106, 0.4) 83.5%
+  ); */
+  background-color: #2a7af169;
+  backdrop-filter: blur(4px);
+  /* Note: backdrop-filter has minimal browser support */
+  transition: background-color .5s ease;
+  border-radius: 16px;
+}
+.plan{
+  font-weight: bold;
+}
+.srp_price{
+  margin-top: 70px;
+  font-style: italic;
+}
+.span{
+  font-size: 20px;
+}
+.price{
+  margin-bottom: 15%;
+  margin-left: 100px;
+  text-decoration: line-through rgba(255, 255, 255, 0.5);
+  color: rgb(148, 148, 148);
+}
+
+
+.pricingcard:hover {
+  background-color: #04e1f769;
+  /* background: linear-gradient(
+    150deg,
+    rgba(11, 102, 206, 0.767) 30%,
+    rgba(23, 60, 173, 0.2) 60%
+  ); */
+}

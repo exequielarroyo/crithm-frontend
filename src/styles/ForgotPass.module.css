@@ -1,0 +1,98 @@
+.uiform{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Sf Pro Display', sans-serif;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid  rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    height: 350px;
+    width: 740px;
+  }
+  
+
+  .img {
+    position: absolute;
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    top: 0;
+    left: -120px;
+    z-index: -1;
+  }
+  .logoContainer{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .joinContainer{
+    margin-bottom: 60px;
+  }
+  
+  .content {
+    margin-top: 16px;
+    position: relative;
+  }
+  .content h1 {
+    padding: 0 0 0 0;
+    margin: 0;
+    font-family: 'korataki';
+    font-size: 4rem;
+  }
+  .content p {
+    font-size: 0.9rem;
+  }
+  
+  .text {
+      color: rgb(255, 0, 0);
+  } 
+  .subHead{
+    font-size: 150%;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    /* For pc: */
+    .uiform {
+     max-width: 47%;
+     min-width: 47%;
+    }
+    
+    .input {
+      position: relative;
+      align-items: center;
+    }
+    .buttonSub{
+      position: relative;
+    }
+    .btnBox{
+      max-width: 47%;
+      min-width: 47%;
+    }
+    
+  }
+  @media only screen and (max-width: 768px) {
+    /* For tablets: */
+    .uiform {
+      max-width: 90%;
+      min-width: 90%;
+    }
+    .btnBox{
+      max-width: 47%;
+      min-width: 47%;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+  }
+  
+  
+  

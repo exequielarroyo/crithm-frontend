@@ -1,0 +1,85 @@
+.project {
+  color: white;
+  font-family: "Sf Pro Display", sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 32px;
+}
+
+.card {
+  position: static;
+  /* width: 361px; */
+  /* height: 200px; */
+
+  background: rgba(20, 20, 20, 0.3);
+  border: 1px solid rgba(102, 102, 102, 0.17);
+  box-sizing: border-box;
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px;
+  transition: background .5s, border .5s;
+}
+
+.card:hover {
+  background: rgba(20, 20, 20, 0.616);
+  border: 1px solid rgba(255, 255, 255, 0.432);
+  cursor: pointer;
+}
+
+.insideCard {
+  padding: 20px;
+  /* padding: 20px 60px 20px 20px; */
+}
+
+.p {
+  color: #adadad;
+  font-size: 1rem;
+}
+
+.icon {
+  padding: 40px 20px;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.projectGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20px;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+  .projectGrid {
+    color: #04e1f7;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 64px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+  .projectGrid {
+    color: #04e1f7;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* For mobile phones: */
+  .projectGrid {
+    color: #05f598;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 16px;
+  }
+}

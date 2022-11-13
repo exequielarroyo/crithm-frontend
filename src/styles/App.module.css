@@ -1,0 +1,636 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.home {
+  font-family: 'SF Pro Display', sans-serif;
+  color: white;
+
+}
+
+.logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+.content {
+  margin-top: 16px;
+  position: relative;
+}
+.content h1 {
+  padding: 0 0 0 0;
+  margin: 0;
+  font-family: 'korataki';
+  font-size: 4rem;
+}
+.content p {
+  font-size: 0.9rem;
+}
+
+.img {
+  position: absolute;
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  top: 0;
+  left: -120px;
+  z-index: -1;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+header {
+  position: fixed;
+}
+.joinContainer{
+  margin-bottom: 60px;
+}
+
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+} */
+
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+
+.page3container > h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page3container .cards {
+  display: flex;
+  gap: 50px;
+}
+
+/* ------------------------------ */
+
+.termsContainer {
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 90%;
+  height: 70%;
+
+  background: linear-gradient(126deg, rgba(255, 255, 255, 0.1) 12.7%, rgba(255, 255, 255, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+}
+
+/* ------------------------------ */
+body {
+  background-color: #0d1634;
+}
+
+.ellipse {
+  position: absolute;
+  width: 639px;
+  height: 639px;
+  left: 1419px;
+  top: -353px;
+
+  background: linear-gradient(130.6deg, #05f598 11.45%, #04e1f7 58.43%, #2a7bf1 105.41%);
+  opacity: 0.6;
+  filter: blur(100px);
+}
+/* ------------------------------ */
+
+.lm_button {
+  /* button */
+  color: white;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 87px;
+
+  position: static;
+  width: 276px;
+  height: 52px;
+  left: 41px;
+  top: 395px;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 108px 0px;
+}
+
+.Learnmore {
+  /* card */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 39px 41px;
+
+  position: static;
+  width: 358px;
+  height: 486px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(126deg, rgba(38, 129, 235, 0.4) 12.7%, rgba(25, 45, 106, 0.4) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 95px;
+}
+
+.LMCard {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 1264px;
+  height: 486px;
+  left: 328px;
+  top: 366px;
+}
+.lm_img {
+  /* icon */
+  font-size: 40px;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+
+  position: static;
+  width: 60px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 22px 0px;
+}
+.lm_content {
+  /* Need applications that you demand? We are a professional group with high expertise. A company that specializes on providing high-end web solutions. */
+
+  position: static;
+  width: 276px;
+  height: 144px;
+  left: 0px;
+  top: 82px;
+
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 22px 0px;
+}
+
+/* ---------- Proccess Section ----------- */
+.process{
+  margin-bottom: 200px;
+}
+
+.page4container {
+  max-width: 80%;
+  height: 80vh;
+}
+.process_middle {
+  margin-left: 35px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+}
+.process_bottom {
+  margin-left: 50px;
+  margin-top: 20px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+}
+.process_ellipse {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00FB98;
+  margin-left: 25px;
+}
+.process_ellipse6 {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00FB98;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.process_ellipse2 {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse3 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse4 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  margin-top: 20px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_ellipse5 {
+  display: flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  margin-top: 20px;
+  background: rgba(196, 196, 196, 0.5);
+}
+.process_line1 {
+  display: flex;
+  height: 23px;
+  margin-left: 42px;
+  margin-top: -30px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line2 {
+  display: flex;
+  height: 129px;
+  margin-left: 42px;
+  margin-top: 20px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line3 {
+  display: flex;
+  height: 129px;
+  margin-left: 42px;
+  margin-top: 40px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_line4 {
+  display: flex;
+  height: 300px;
+  margin-left: 42px;
+  margin-top: 40px;
+  position: absolute;
+  border: 1px solid rgba(175, 174, 174, 0);
+  background-color: rgba(188, 188, 188, 0.5);
+}
+.process_text{
+  margin-left: 10px;
+  height: 10px;
+}
+.process_card_content {
+  margin-top: 70px;
+}
+.p_content {
+  /* Step 1 | Mapping week 1 The development team maps the whole project. We already have some concept on how to execute the whole system. As the client answer the Project Registration From (PRF), the team will have the rough idea on what the client wants. */
+
+  width: 1299px;
+  height: 95px;
+
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  /* or 36px */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0px 10px;
+}
+
+
+/* --------- Pricing Section ------------ */
+.PricingContainer{
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 100px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+.nav_bar h1 {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.nav_bar .app_logo {
+  width: 110.61px;
+  height: 63.77px;
+  left: 1619px;
+  top: 145.81px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.nav{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+
+
+/*------- Why Us Section -------*/
+.whyus{
+  margin-bottom: 200px;
+}
+
+.page6container {
+  height: 80vh;
+  max-width: 1000px;
+  margin: auto;
+}
+.WhyusCard {
+  font-family: "SF Pro Display";
+  padding: 20px;
+  justify-content: space-between;
+  margin: 10px;
+  height: 250px;
+
+  background: rgba(20, 20, 20, 0.2);
+  border: 1px solid rgba(102, 102, 102, 0.17);
+  backdrop-filter: blur(40px);
+
+  border-radius: 10px;
+}
+.WhyusCard:hover {
+  background: rgba(20, 20, 20, 0.3);
+}
+.wcardstyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.W_content_job {
+  font-size: 25px;
+}
+.W_content {
+  font-size: 15px;
+}
+.W_circle {
+  position: absolute;
+  bottom: 20px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #4292F0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.W_name {
+  font-size: 18px;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 30px;
+}
+/* -------------------------- */
+
+.navbar {
+  position: sticky;
+  font-family: 'SF Pro Display';
+  top: 0;
+  width: 100%;
+  background-color: #04e3f738;
+  backdrop-filter: blur(40px);
+}
+
+.navbar a {
+  font-size: 0.8rem;
+}
+
+.navv {
+  /* display: flex; */
+  justify-content: center;
+}
+
+.slogan-container {
+  display: flex;
+  padding: 100px;
+}
+
+.slogan {
+  /* company slogan */
+
+  width: 557px;
+  height: 80px;
+  /* left: 177px; */
+  /* top: 203px; */
+
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-right: 150px;
+  /* or 40px */
+  text-align: left;
+  color: #ffffff;
+}
+
+.slogan2 {
+  width: 748px;
+  height: 156px;
+  padding-right: 20px;
+  /* left: 995px; */
+  /* top: 203px; */
+
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.9rem;
+
+  color: #ffffff;
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: block;
+}
+
+footer {
+  font-family: 'SF Pro Display';
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+  .page2container {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+  section {
+    height: auto;
+  }
+
+  .page2container {
+    flex-direction: column;
+    padding: 30px;
+    height: auto;
+  }
+  .page2container p.part1.one {
+    flex: 1 1 50px;
+    font-size: 1.5rem;
+  }
+  .page2container p.part1.two {
+    flex: 5 5 100px;
+  }
+  .page3container .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    color: #04e1f7;
+  }
+  .upper {
+    text-align: center;
+  }
+  .wcardstyle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .WhyusCard {
+    margin: 5px;
+    height: 300px;
+  }
+  .W_content_job {
+    font-size: 20px;
+  }
+  .W_content {
+    font-size: 15px;
+  }
+  .W_name {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* For mobile phones: */
+  .img {
+    flex-direction: column;
+  }
+  .img img {
+    height: 80px;
+  }
+  footer {
+    color: #05f598;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .wcardstyle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .upper {
+    text-align: center;
+  }
+  .WhyusCard {
+    margin: 20px;
+    height: 250px;
+  }
+
+}

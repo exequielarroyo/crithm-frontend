@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  place-items: center;
+  padding: 0 0 50px 0;
+  gap: 100px;
+}
+
+.hero {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.hero img {
+  width: 80%;
+}
+.hero .content {
+  padding: 0 100px;
+  text-align: center;
+}
+.p {
+  color: #adadad;
+}
+.feature {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 100px;
+}
+.feature img {
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 100%;
+}

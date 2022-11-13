@@ -1,0 +1,71 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.form .trust {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.form .trust input {
+  background-color: #00fb98;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.container h1 {
+  cursor: pointer;
+}
+
+.social{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  transition: background-color .5s;
+}
+
+.social:hover{
+  background-color: #00fb9741;
+}
+
+.google{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/google-logo.png");
+  background-size: cover;
+  
+}
+.google:hover{
+  cursor: pointer;
+}
+.facebook{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/facebook-logo.png");
+  background-size: cover;
+  
+}
+.facebook:hover{
+  cursor: pointer;
+}
+.github{
+  width: 50px;
+  height: 50px;
+  background-image: url("../../public/assets/images/github-logo.png");
+  background-size: cover;
+  
+}
+.github:hover{
+  cursor: pointer;
+}

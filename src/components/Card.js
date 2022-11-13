@@ -1,9 +1,33 @@
-import React from 'react';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import style from "../styles/Project.module.css";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({children}) => {
-  return <div className='Learnmore'>
-   {children}
-  </div>;
+const Card = ({ title, description, id, isPaid }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (id === undefined) {
+      id = 'create';
+    }
+    navigate(`/dashboard/register/${id}`);
+  };
+
+  return (
+    <div className={style.card} onClick={isPaid ? handleClick: ()=>{navigate('/dashboard/payment')}}>
+      {!title ? (
+        <div className={style.icon}>
+          <FontAwesomeIcon icon={faPlus} size="6x" />
+        </div>
+      ) : (
+        <div className={style.insideCard}>
+          <h2>{title}</h2>
+          <p className={style.p}>{description}</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Card;

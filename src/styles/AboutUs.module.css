@@ -1,0 +1,281 @@
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* about us */
+
+.page2container {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page2container p {
+  font-size: 1rem;
+}
+
+.page2container p.part1.one {
+  flex: 1 1 300px;
+  font-size: 1.5rem;
+}
+.page2container p.part1.two {
+  flex: 5 5 400px;
+}
+.bgcolor {
+  background-color: #0b729b;
+  width: 100%;
+}
+
+/*----Join Section---*/
+.join{
+  margin-bottom: 100px;
+}
+
+.JoinCard1 {
+  border: 1px solid;
+
+  border-image-source: radial-gradient(61.01% 61.01% at 96.95% 100%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(53.67% 86.38% at 0% 9.17%, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 24px;
+
+  width: 700px;
+  height: 143px;
+
+  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+.JoinCard2 {
+  border: 1px solid;
+
+  border-image-source: radial-gradient(61.01% 61.01% at 96.95% 100%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(53.67% 86.38% at 0% 9.17%, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 24px;
+  margin-top: 2%;
+  
+  width: 700px;
+  height: 143px;
+
+  background: linear-gradient(126deg, rgba(38, 129, 235, 0.1) 12.7%, rgba(25, 45, 106, 0.1) 83.5%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+
+
+.buttonReg{
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+/* logo */
+
+.logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+.content {
+  margin-top: 16px;
+  position: relative;
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+.content h1 {
+  padding: 0 0 0 0;
+  margin: 0;
+  font-family: 'korataki';
+  font-size: 4rem;
+}
+.content p {
+  font-size: 0.9rem;
+}
+
+.img {
+  position: absolute;
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  top: 0;
+  z-index: -1;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  
+  padding: 20px;
+  height: 100vh;
+  margin-bottom: 300px;
+}
+
+.padding.h3 {
+  padding: 20px 20px 0 20px;
+}
+.padding.p {
+  padding: 0 20px 20px 20px;
+}
+
+.profilecontainer {
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: "Sf Pro Display", sans-serif;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.image1{
+  background-image: url('../../public/assets/images/jazer.jpg');
+  background-size: cover;
+  background-position-y: -70px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image2{
+  background-image: url('../../public/assets/images/exequiel.jpg');
+  background-size: cover;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image3{
+  background-image: url('../../public/assets/images/neil.jpg');
+  background-size: cover;
+  background-position-y: -40px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image4{
+  background-image: url('../../public/assets/images/robert.png');
+  background-size: cover;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image6{
+  background-image: url('../../public/assets/images/marvib.jpg');
+  background-size: cover;
+  background-position-y: -100px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.image5{
+  background-image: url('../../public/assets/images/steven.png');
+  background-size: cover;
+  background-position-y: -140px;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+
+.container h3{
+  width: 400px;
+}
+.container p{
+  width: 400px;
+}
+
+.container div {
+  width: 100%;
+}
+
+.container img {
+  height: 250px;
+  width: 100%;
+  
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+
+/* ------------------------------- */
+.nav_bar {
+  display: grid;
+
+  grid-template-rows: 60px auto;
+
+  align-content: center;
+  justify-items: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+.nav_title {
+  font-size: 60px;
+  width: 50%;
+  text-align: center;
+}
+.nav_content {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2%;
+  width: 50%;
+}
+.nav_team {
+  height: 30%;
+  width: auto;
+  margin-top: 70px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+/* ----------------------------- */
+
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+}
+@media only screen and (max-width: 768px) {
+  /* For tablets: */
+}
+@media only screen and (max-width: 480px) {
+  /* For mobile phones: */
+  .container {
+    padding: 10px;
+    width: 90vw;
+  }
+  .nav_title {
+    font-size: 40px;
+  }
+  .nav_content {
+    margin-top: 10%;
+    font-size: 10px;
+  }
+}

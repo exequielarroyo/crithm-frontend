@@ -1,0 +1,46 @@
+.container {
+  /* border-top: 1px solid #04e1f7; */
+  background: linear-gradient(126deg, #04e3f735 12.7%, #2a7af15f 83.5%);
+  box-shadow: 0 -2px 20px#04e3f735;
+  backdrop-filter: blur(40px);
+}
+
+.top {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.container div {
+  padding-left: 60px;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.links a:hover {
+  color: #04e1f7;
+}
+
+.line {
+  margin: 0 60px;
+}
+
+.copyright {
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+}
